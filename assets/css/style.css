@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
+
+/*-------------------------------------------------- Background */
+
+img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+header {
+    margin: 0;
+}
+
+/*---------------------------------------------------- General stylings */
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+/*-------------------------------------------------- Heading */
+
+.page-title {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #fafafa;
+    /*    background-color: #9659b6; /* purple */
+    /*    background-color: #e67e22; /* orange */
+    background-color: #676767;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Centre the buttons on the menu navigation bar */
+
+/* DELETE IF NOT NEEDED!
+#nav {
+    margin-left: 400px; 
+}
+*/
+
+/*-------------------------------------------------- Menu bar direct links */
+
+.menu-bar {
+    background-color: #fafafa;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.menu-title {
+    height: 80px;
+    width: 160px;
+    text-align: center;
+    padding: 0;
+}
+
+/*
+a { 
+    padding: 2px;
+}
+*/
+
+
+.menu-title a {
+    /* The anchor is the clickable area so stretch it so the whole width of container is clickable / hoverable. */
+    width: 100%;
+    height: 80px;
+}
+
+.menu-title a:focus, a:hover, a:active {
+    display: block;
+    text-decoration: none;
+    background-color: #f4f4f4;
+    transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+
+  
+/*    padding: 2px; */
+    
+}
+
+/* Target Font Awesome icons. */
+
+.menu-title a i {
+    color: #676767;
+    font-size: 18px;
+}
+
+/* Target title text like "Home", "Groups", etc. */
+
+.menu-title span {
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+    color: #676767;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 0;
+}
+
+/*-------------------------------------------------- Dropdown button [ Modified copy of example from WC3 schools - ACKNOWLEDGE!]*/
+
+/* Position the dropdown content of the menus. */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.button {
+    height: 80px;
+    width: 160px;
+    background-color: #fafafa;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+/*    border: none; */
+    border: 1px solid darkgray;
+
+}
+
+.button:hover {
+    background-color: #f4f4f4;
+}
+
+/* Dropdown content (hidden unless hovered / visited) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 240px;
+    text-align: left;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+    color: #676767;
+    padding-top: 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    /*    width: 300px; */
+}
+
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/*-------------------------------------------------- Main content */
+
+/* Right-hand panel for News and Campaign articles. */
+
+.news-title {
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.news-panel {
+    height: 300px;
+    width: 560px;
+    background-color: #2dbf7c;
+    color: #fafafa;
+    margin-top: 15px;
+    margin-left: 40px;
+    padding: 5px 5px 5px;
+    overflow-y: scroll;
+}
+
+.links-panel {
+    height: 250px;
+    width: 560px;
+    background-color: #561279;
+    color: #fafafa;
+    margin-top: 25px;
+    margin-left: 40px;
+    padding: 5px 5px 5px;
+}
+
+.transport-sites {
+    text-decoration: none;
+}
+
+/* Remove bullet points from list. */
+
+.transport-sites ul {
+    list-style: none;
+}
+
+/*-------------------------------------------------- Footer */
+
+footer {
+    height: 110px;
+    margin: 0;
+    padding: 5px;
+    background-color: #676767;;
+    color: #fafafa;
+}
+
+.footer-section {
+    font-family: "Exo", sans-serif;
+    font-weight: 300;
+}
+
+.social-media li a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    background-color: royalblue;
+    color: lightblue;
+
+/*  
+    background: #8f8f8f;
+    color: #fafafa;
+
+*/
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.social-media li a i:hover {
+/*    
+    color: #e84610;
+*/
+    color: #fafafa;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+/*-------------------------------------------------- Media Queries */
+/* DELETE IF NOT NEEDED */
+/*
+@media(min-width: 992px) {
+    .section-column {
+        padding: 0 30px 30px;
+        float: none;
+        display: table-cell;
+    }
+
+    .center-form {
+        padding-top: 10px;
+        min-height: 240px;
+        margin: 0 auto;
+        max-width: 50%;
+    }
+}
+*/
