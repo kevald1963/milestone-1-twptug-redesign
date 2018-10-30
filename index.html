@@ -15,205 +15,263 @@
 
 <body>
 
-    <!-- Header -->
+    <!-- HEADER -->
     <header class="container-fluid">
         <div class="row">
             <div class="col-md-12 page-title">
                 <h1>Tyne & Wear Public Transport Users Group</h1>
-                <nav class="menu-bar">
-                    <div id="nav" class="list-inline clearfix">
-                        
-                        <!-- HOME -->
-                        <div class="col-xs-6 col-sm-6 col-md-12 menu-title">
-                            <a href="index.html" class="uppercase"><i class="fa fa-home hidden-xs" aria-hidden="true"></i><span>Home</span></a>
-                        </div>
-                        
-                        <!-- GROUPS -->
-                        <div class="col-xs-6 col-sm-6 col-md-12 menu-title dropdown">
-                            <a href="" class="uppercase"><i class="fa fa-users hidden-xs" aria-hidden="true"></i><span>Groups</span></a>
-                            <div class="dropdown-content">
-                                <a href="/"><span>Newcastle</span></a>
-                                <a href="/"><span>Gateshead</span></a>
-                                <a href="/"><span>North Tyneside</span></a>
-                                <a href="/"><span>South Shields</span></a>
-                                <a href="/"><span>Sunderland</span></a>
-                            </div>
-                        </div>
-
-                        <!-- CALENDAR -->
-                        <div class="col-xs-6 col-sm-6 col-md-12 menu-title">
-                            <a href="calendar.html" class="uppercase"><i class="fa fa-calendar hidden-xs" aria-hidden="true"></i><span>Calendar</span></a>
-                        </div>
-
-                        <!-- MORE -->
-                        <div class="col-xs-6 col-sm-6 col-md-12 menu-title dropdown">
-                            <a href="" class="uppercase"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i><span>More</span></a>
-                            <div class="dropdown-content">
-                                <a href="/"><span>About Us</span></a>
-                                <a href="/"><span>Bus</span></a>
-                                <a href="/"><span>Rail</span></a>
-                                <a href="/"><span>Cycling</span></a>
-                                <a href="/"><span>Air Pollution</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
             </div>
         </div>
     </header>
-    <!-- /.Header -->
+    <!-- /.HEADER -->
 
-    <!-- Main content -->
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links for toggling. -->
+            <div class="collapse navbar-collapse" id="collapse-menu">
+                <ul class="nav navbar-nav">
+
+                    <!-- HOME -->
+                    <li class="active"><a href="index.html"><i class="fa fa-home hidden-xs" aria-hidden="true"></i><span> Home</span><span class="sr-only">(current)</span></a></li>
+
+                    <!-- GROUPS -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-users hidden-xs" aria-hidden="true"></i>
+                            <span> Groups</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="newcastle.html">Newcastle</a></li>
+                            <li><a href="gateshead.html">Gateshead</a></li>
+                            <li><a href="northtyneside.html">North Tyneside</a></li>
+                            <li><a href="southshields.html">South Shields</a></li>
+                            <li><a href="sunderland.html">Sunderland</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- BUS -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-bus hidden-xs" aria-hidden="true"></i>
+                            <span> Bus</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="busfacts.html">Bus Facts</a></li>
+                            <li><a href="reregulation.html"><span>Re-regulation</span></a></li>
+                            <li><a href="hospitalbuses.html"><span>Hospital Buses</span></a></li>
+                        </ul>
+                    </li>
+
+                    <!-- CYCLING -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-bicycle hidden-xs" aria-hidden="true"></i>
+                            <span> Cycling</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="cyclingcampaigns.html">Campaigns</a></li>
+                            <li><a href="https://newcycling.org" target="_blank"><span>NewCycling Group</span></a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="https://www.sustrans.org.uk" target="_blank"><span>Sustrans</span></a></li>
+                        </ul>
+                    </li>
+
+                    <!-- RAIL -->
+                    <li><a href="rail.html"><i class="fa fa-train hidden-xs" aria-hidden="true"></i><span> Rail</span></a></li>
+
+                    <!-- CALENDAR (Disabled in this release) -->
+                    <li role="presentation" class="disabled"><a href="#"><i class="fa fa-calendar hidden-xs" aria-hidden="true"></i><span> Calendar</span></a></li>
+
+                    <!-- MORE -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span>More</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="partners.html">Partners</a></li>
+                            <li><a href="airpollution.html"><span>Air Pollution</span></a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="http://www.passengertransport.co.uk" target="_blank"><span>Passenger Transport Magazine</span></a></li>
+                            <li><a href="https://www.transportfocus.org.uk/news-events-media/news/" target="_blank">Transport Focus News</a></li>
+                            <li><a href="https://bettertransport.org.uk/" target="_blank">Campaign for Better Transport</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- ABOUT -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="about.html">About</a></li>
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- NAVBAR -->
+
+    <!-- MAIN -->
     <main class="container-fluid">
         <section class="row">
-            
-            <!-- Image panel -->
-            <div class="hidden-xs hidden-sm col-md-6 inline-block">
+
+            <!-- IMAGE -->
+            <div class="hidden-xs col-sm-12 col-md-6 inline-block">
                 <img src="../assets/images/logo.png" alt="Large circle with picture of Metro in station. Smaller circles around the edge show Shields Ferry, a cyclist, a bus and a Green Man Walking traffic signal.">
             </div>
-            <!-- /.Image panel -->
+            <!-- /.IMAGE -->
 
-            <div class="col-xs-6 col-sm-6 col-md-6">
-                <div class="row">
-                    <div class="col-xs-12">
-            
-                        <!-- News panel -->
-                        <div class="news-panel">
-                            <article>
-                                <h4 class="uppercase news-title">Current News / Campaigns</h4>
-                                <!-- <<                                                                          >> -->
-                                <!-- << INSERT NEWS & CAMPAIGN ARTICLES HERE                                     >> -->
-                                <!-- <<                                                                          >> -->
-                                <!-- << Instructions for updating content:                                       >> -->
-                                <!-- <<                                                                          >> -->
-                                <!-- << 1. Copy and paste the topmost link between the <a> and /a> tags.         >> -->
-                                <!-- << 2. Replace the href with the new website address.                        >> -->
-                                <!-- << 3. Replace the description between the <p> and </p> tags.                >> -->
-                                <a href="https://www.theguardian.com/world/2018/oct/15/fall-in-local-uk-bus-journeys-to-12-year-low-prompts-talk-of-crisis?CMP=Share_iOSApp_Other" target="_blank">
-                                    <p>Fall in local UK bus journeys to 12-year low prompts talk of crisis.</p>
-                                </a>    
-                
-                                <a href="https://www.theguardian.com/world/2018/oct/15/fall-in-local-uk-bus-journeys-to-12-year-low-prompts-talk-of-crisis?CMP=Share_iOSApp_Other" target="_blank">
-                                    <p>Second council signs cleaner air charter.</p>
-                                </a>    
-                
-                                <a href="" target="_blank">
-                                    <p>Electric vehicles and pavement clutter - read Living Streets' response to the Prime Minister's announcement of measures to support the uptake of electric vehicles (EVs).</p>
-                                </a>    
-                
-                                <a href="" target="_blank">
-                                    <p>Guardian view on climate change: a global emergency - Editorial</p>
-                                </a>    
-                
-                                <a href="" target="_blank">
-                                    <p>UNICEF UK anti-pollution campaign - "EVERY CHILD'S BREATH UNDER THREAT, LET'S CHANGE THAT". Please sign the petition on their website. Thank you!</p>
-                                </a>    
-                
-                                <a href="" target="_blank">
-                                    <p>The UK’s most congested cities and A-roads revealed.</p>
-                                </a>    
-                
-                                <a href="" target="_blank">
-                                    <p>Transport gap: London gets £419 more per head than north of England - Guardian article.</p>
-                                </a>    
-                
-                                <a href="" target="_blank">
-                                    <p>"What is a good public transport service? And how do we get it?" Join our discussion with CHRISTIAN WOLMAR, award winning writer, broadcaster & public transport campaigner, at the Station Hotel, Newcastle on 15th Oct 2018. Admission is
-                                        FREE but advance registration is REQUIRED. Please click here for details .</p>
-                                </a>    
-                            
-                                <p>Police chief reveals Metro fears as youths armed with booze 'cause chaos' at the coast - Chronicle Live article.</p>
-                
-                                <p>Several French cities have made public transport free, working on the same principle as Ken Livingstone's 'Fare's Fair'. It saves money in the end to subsidise public transport. See map for the towns in France where you can travel around 
-                                   for free.</p>
-                
-                                <p>Guardian Opinion by John Vidal: Air pollution is a lethal blight that shames our politicians.</p>
-                
-                                <p>Labour launches rare bid to dock Transport Secretary Chris Grayling's wages by £2,400.</p>
-                
-                                <p>City AM article: MPs launch inquiry into East Coast rail franchise failure saying "serious questions" need to be asked. Transport Committee inquiry started 21 May 2018.</p>
-                
-                                <p>Grayling plans to put utilities under pavements to cut potholes.</p>
-                
-                                <p>Nexus timetable consultation 2018 - click here for results.</p>
-                
-                                <p>£4m 'rapid charging' vehicle points in place for Newcastle and Sunderland.</p>
-                
-                                <p>Government 'protects' free bus pass but LGA decries funding gap.</p>
-                            </article>
-                        </div>
-                        <!-- /.News panel -->
+            <!-- Wrap the News and Local Operators together. -->
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 news-and-operators-wrapper">
+                <!-- NEWS -->
+                <div class="news">
+                    <span class="uppercase news-title">Current News & Campaigns...</span><br>
+                    <!-- <<                                                                          >> -->
+                    <!-- << INSERT NEWS & CAMPAIGN ARTICLES HERE                                     >> -->
+                    <!-- <<                                                                          >> -->
+                    <!-- << Instructions for updating content:                                       >> -->
+                    <!-- <<                                                                          >> -->
+                    <!-- << 1. Copy and paste the topmost link between the <a> and /a> tags.         >> -->
+                    <!-- << 2. Replace the href with the new website address.                        >> -->
+                    <!-- << 3. Replace the description between the <p> and </p> tags.                >> -->
+                    <a href="https://www.theguardian.com/world/2018/oct/15/fall-in-local-uk-bus-journeys-to-12-year-low-prompts-talk-of-crisis?CMP=Share_iOSApp_Other" target="_blank">
+                        <p>Fall in local UK bus journeys to 12-year low prompts talk of crisis.</p>
+                    </a>
+
+                    <a href="https://www.theguardian.com/world/2018/oct/15/fall-in-local-uk-bus-journeys-to-12-year-low-prompts-talk-of-crisis?CMP=Share_iOSApp_Other" target="_blank">
+                        <p>Second council signs cleaner air charter.</p>
+                    </a>
+
+                    <a href="https://www.livingstreets.org.uk/who-we-are/press-media/pm-announces-actions-to-support-electric-vehicle-uptake" target="_blank">
+                        <p>Electric vehicles and pavement clutter - read Living Streets' response to the Prime Minister's announcement of measures to support the uptake of electric vehicles (EVs).</p>
+                    </a>
+
+                    <a href="https://www.theguardian.com/commentisfree/2018/oct/08/the-guardian-view-on-climate-change-a-global-emergency" target="_blank">
+                        <p>Guardian view on climate change: a global emergency - Editorial</p>
+                    </a>
+
+                    <a href="https://act.unicef.org.uk/page/29595/petition/1?ea.tracking.id=uuk-website&_ga=2.60959148.1223070613.1538924291-1181986388.1538924291" target="_blank">
+                        <p>UNICEF UK anti-pollution campaign - "EVERY CHILD'S BREATH UNDER THREAT, LET'S CHANGE THAT". Please sign the petition on their website. Thank you!</p>
+                    </a>
+
+                    <a href="https://inews.co.uk/essentials/lifestyle/cars/car-news/the-uks-most-congested-cities-and-a-roads-revealed" target="_blank">
+                        <p>The UK’s most congested cities and A-roads revealed.</p>
+                    </a>
+
+                    <a href="https://www.theguardian.com/politics/2018/aug/01/transport-spending-gap-london-north-of-england-ippr" target="_blank">
+                        <p>Transport gap: London gets £419 more per head than north of England.</p>
+                    </a>
+
+                    <a href="https://www.chroniclelive.co.uk/news/north-east-news/police-chief-reveals-metro-fears-14982004" target="_blank">
+                        <p>Police chief reveals Metro fears as youths armed with booze 'cause chaos' at the coast.</p>
+                    </a>
+
+                    <a href="https://www.thelocal.fr/20180320/the-towns-in-france-where-you-can-travel-around-for-free" target="_blank">
+                        <p>Several French cities have made public transport free, working on the same principle as Ken Livingstone's 'Fare's Fair'. See map for the towns in France where you can travel around for free.</p>
+                    </a>
+
+                    <a href="https://www.theguardian.com/commentisfree/2018/aug/08/toxic-air-pollution-lethal-blight-politicians-failure-shame-heart-disease?CMP=share_btn_link" target="_blank">
+                        <p>Guardian Opinion by John Vidal: Air pollution is a lethal blight that shames our politicians.</p>
+                    </a>
+
+                    <a href="https://news.sky.com/story/labour-launches-rare-bid-to-dock-chris-graylings-wages-by-2400-11382291" target="_blank">
+                        <p>Labour launches rare bid to dock Transport Secretary Chris Grayling's wages by £2,400.</p>
+                    </a>
+
+                    <a href="https://www.civilserviceworld.com/articles/news/mps-launch-inquiry-dft-bidding-process-after-east-coast-mainline-franchise-failure" target="_blank">
+                        <p>MPs launch inquiry into DfT bidding process after East Coast Mainline franchise failure. Transport Committee inquiry started 21 May 2018.</p>
+                    </a>
+
+                    <a href="https://www.transport-network.co.uk/Grayling-plans-to-put-utilities-under-pavements-to-cut-potholes/15010" target="_blank">
+                        <p>Grayling plans to put utilities under pavements to cut potholes.</p>
+                    </a>
+
+                    <a href="../assets/documents/Metro%20timetable%20consultation%20%202018%20results.pdf" target="_blank">
+                        <p>Nexus timetable consultation 2018 results [PDF].</p>
+                    </a>
+
+                    <a href="https://bdaily.co.uk/articles/2018/04/13/4m-rapid-charging-vehicle-points-in-place-for-newcastle-and-sunderland?utm_source=bulletin&utm_medium=email&utm_campaign=2018-04-13-north-east&utm_content=readmore" target="_blank">
+                        <p>£4m 'rapid charging' vehicle points in place for Newcastle and Sunderland.</p>
+                    </a>
+
+                    <a href="https://www.transport-network.co.uk/Govt-protects-free-bus-pass-but-LGA-decries-funding-gap/14965" target="_blank">
+                        <p>Government 'protects' free bus pass but LGA decries funding gap.</p>
+                    </a>
+                </div>
+                <!-- /.NEWS -->
+
+                <!-- LOCAL OPERATORS -->
+                <!-- Wrap the text with the button group. -->
+                <div class="local-operators">
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <p class="local-operators-text">Looking for local transport info? Check these out...</p>
+                    </div>
+
+                    <!-- Display a horizontal button group menu for sm, md and lg devices. -->
+                    <div class="btn-group hidden-xs col-sm-12 col-md-12 col-lg-12" role="group" aria-label="Local transport operator links">
+                        <span class="btn btn-success"><a href="https://www.nexus.org.uk" target="_blank">Nexus</a></span>
+                        <span class="btn btn-warning"><a href="https://www.stagecoachbus.com" target="_blank">Stagecoach</a></span>
+                        <span class="btn btn-danger"><a href="https://www.gonortheast.co.uk/timesfares" target="_blank">Go North East</a></span>
+                        <span class="btn arriva-corporate"><a href="https://www.arrivabus.co.uk/north-east" target="_blank">Arriva</a></span>
+                        
+                    </div>
+
+                    <!-- Display a vertical button group menu for xs devices only. -->
+                    <div class="btn-group-vertical custom-width col-xs-12 hidden-sm hidden-md hidden-lg" role="group" aria-label="Local transport operator links">
+                        <span class="btn btn-success"><a href="https://www.nexus.org.uk" target="_blank">Nexus</a></span>
+                        <span class="btn btn-warning"><a href="https://www.stagecoachbus.com" target="_blank">Stagecoach</a></span>
+                        <span class="btn btn-danger"><a href="https://www.gonortheast.co.uk/timesfares" target="_blank">Go North East</a></span>
+                        <span class="btn arriva-corporate"><a href="https://www.arrivabus.co.uk/north-east" target="_blank">Arriva</a></span>
                     </div>
                 </div>
+                <!-- /.LOCAL OPERATORS -->
 
-                <div class="row">
-                    <div class="col-xs-12">
-                        <!-- Links panel -->
-                        <div class="links-panel inline-block">
-                            <h4>Looking for local transport info? Then try some of these links:</h4>
-                            <div class="list-inline clearfix transport-sites">
-                                <ul>
-                                    <li>
-                                        <p><a href="https://www.nexus.org.uk/" target="_blank">Nexus</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a href="https://www.stagecoachbus.com/" target="_blank">Stagecoach</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a href="https://www.gonortheast.co.uk/timesfares/" target="_blank">Go North East</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a href="https://www.arrivabus.co.uk/north-east/" target="_blank">Arriva</a></p>
-                                    </li>
-                                </ul>
-                            </div>    
-                            <h4>Other useful links:</h4>
-                            <div class="list-inline clearfix transport-sites">
-                                <ul>
-                                    <li>
-                                        <p><a href="https://www.transportfocus.org.uk/news-events-media/news/" target="_blank">Transport Focus | News</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a href="https://bettertransport.org.uk/" target="_blank">Campaign for Better Transport</a></p>
-                                    </li>
-                                </ul>            
-                            </div>
-                        </div>
-                        <!-- /.Links panel -->
-                    </div>
-                </div>
             </div>
+
         </section>
     </main>
-    <!-- Main content -->
+    <!-- /.MAIN -->
 
+    <!-- FOOTER -->
     <footer class="container-fluid">
         <!-- Split Footer into 3 columns -->
         <div class="row">
 
             <!-- About -->
-            <div class="col-sm-4">
+            <div class="col-xs-12 col-sm-12 col-md-4">
                 <h5 class="uppercase footer-section">About</h5>
                 <p class="inline-block">
-                    TWPTUG campaigns for an integrated and publicly-accountable transport system connecting Tyne and Wear, Northumberland and County Durham.
+                    TWPTUG campaigns for an integrated, publicly-accountable transport system connecting Tyne and Wear, Northumberland and County Durham.
                 </p>
             </div>
 
             <!-- Contact -->
-            <div class="col-sm-4">
+            <div class="col-md-4">
                 <h5 class="uppercase footer-section">Email us</h5>
                 <p class="inline-block">
-                    Any questions about TWPTUG or want to report website errors? Please click here.
-                    <a href="/" target="_blank"><i class="fa fa-email" aria-hidden="true"></i></a>
+                    Any questions about TWPTUG or want to report a website issue? Please click <a href="/" target="_blank">here.<i class="fa fa-email" aria-hidden="true"></i></a>
                 </p>
             </div>
-            
+
             <!-- Social Media -->
-            <div class="col-sm-4">
+            <div class="col-md-4">
                 <h5 class="uppercase footer-section">Social Media</h5>
                 <ul class="list-inline social-media">
-                    <li><a target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/twptug/"><i class="fa fa-facebook"></i></a></li>
+                    <li><a target="_blank" href="https://twitter.com/twptug"><i class="fa fa-twitter"></i></a></li>
                     <!-- Leave these here in case they are needed in the future:
                     <li><a target="_blank" href="#"><i class="fa fa-pinterest"></i></a></li>
                     <li><a target="_blank" href="#"><i class="fa fa-youtube"></i></a></li>
@@ -222,17 +280,11 @@
             </div>
         </div>
 
-<!--
-        <div class="row">
-            <div class="col-xs-6 col-sm-3 col-md-12 footer-bar">
-                <div>
-                    <h4>Contact Us</h4>
-                </div>
-            </div>
-        </div>
--->      
     </footer>
+    <!-- /.FOOTER -->
 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </body>
 
