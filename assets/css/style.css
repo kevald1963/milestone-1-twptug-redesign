@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700');
 
 /*-------------------------------------------------- Background */
 
@@ -30,6 +30,10 @@ ul {
     display: inline-block;
 }
 
+.panel-title {
+    text-align: center;
+    font-weight: bold;
+}
 
 /*-------------------------------------------------- Heading */
 
@@ -57,6 +61,8 @@ ul {
 
 /*-------------------------------------------------- Main content */
 
+/*-------------------------------------------------- Home Page */
+
 .news {
     max-height: 480px;
     max-width: 560px;
@@ -70,11 +76,6 @@ ul {
 
 .news a {
     color: #fafafa;
-}
-
-.news-title {
-    font-weight: 400;
-    font-size: 24px;
 }
 
 .local-operators {
@@ -97,6 +98,81 @@ ul {
 
 .arriva-corporate {
     background-color: #12868a;
+}
+
+/*-------------------------------------------------- All Local Groups */
+
+.welcome {
+    max-width: 430px;
+    min-height: 584px;
+    background-color: #5cb85c;
+    color: #fafafa;
+    margin-top: 15px;
+    margin-left: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+.welcome a {
+    color: #fafafa;
+}
+
+.column-positioning {
+    margin-left: -12px;
+}
+
+.local-news {
+    max-width: 430px;
+    background-color: #f0ad4e;
+    margin-top: 15px;
+    margin-left: 0;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.local-news a {
+    color: #000;
+}
+
+.campaigns {
+    min-height: 410px;
+    max-width: 899px;
+    background-color: #fff;
+    margin-top: 15px;
+    margin-left: 0px;
+    padding: 5px;
+}
+
+.campaigns ul {
+    list-style: disc;
+}
+
+.campaigns li {
+    margin-top: 10px;
+}
+
+.campaigns li:first-child {
+    margin-top:0;
+}
+
+/*-------------------------------------------------- Newcastle Group */
+.image-newcastle {
+    max-width: 64%;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+/*-------------------------------------------------- North Tyneside Group */
+
+.image-north-tyneside {
+    max-width: 64%;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0;
 }
 
 /*-------------------------------------------------- Footer */
@@ -155,7 +231,7 @@ footer {
         max-height: 250px;
     }
 
-    .news-and-operators-wrapper {
+    .panel-wrapper {
         padding-left: 0;
         padding-right: 0;
     }
@@ -171,10 +247,19 @@ footer {
     .custom-width {
         max-width: 150px;
     }
+
+    .campaigns {
+        min-height: 100px;
+        overflow-y: auto;
+    }
+
+    .column-positioning {
+        margin-left: 0;
+    }
+
     footer {
         margin-top: 20px;
     }
 
 }
 
-/*-------------------------------------------------- Experimental */
