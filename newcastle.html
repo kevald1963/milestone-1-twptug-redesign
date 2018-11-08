@@ -53,9 +53,9 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="newcastle.html">Newcastle</a></li>
-                            <li><a href="gateshead.html">Gateshead</a></li>
                             <li><a href="northtyneside.html">North Tyneside</a></li>
-                            <li><a href="southshields.html">South Shields</a></li>
+                            <li><a href="gateshead.html">Gateshead</a></li>
+                            <li><a href="southtyneside.html">South Tyneside</a></li>
                             <li><a href="sunderland.html">Sunderland</a></li>
                         </ul>
                     </li>
@@ -161,12 +161,12 @@
                             <i><b>Enquiries</b></i>
                         </p>
                         <p>
-                            Please email our Secretary at <a href="mailto:nptugsecretary@outlook.com?subject=Newcastle PTUG enquiry">nptugsecretary@outlook.com</a>.
-                            Alternatively, use our <a href="#">online form</a> to contact us.
+                            Please email us here.<a href="" class="email-link" data-toggle="modal" data-target="#emailModalNewcastle"><i class="fa fa-envelope" aria-hidden="true"></i></a><br>
+                            Alternatively, email our Secretary at <a href="mailto:nctugsecretary@outlook.com">nctugsecretary@outlook.com</a>.
                         </p>
-                        
+
                     </div>
-                    <!-- WELCOME -->
+                    <!-- /.WELCOME -->
                 </div>
             </div>
 
@@ -199,8 +199,8 @@
                     <!-- /.CAMPAIGNS -->
                 </div>
 
-                <!-- LOCAL NEWS AND EVENTS -->
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 column-positioning">
+                    <!-- LOCAL NEWS AND EVENTS -->
                     <div class="local-news">
                         <span class="uppercase panel-title">Local News & Events</span><br>
                         <p>Our next public meeting will be held on Tuesday 27th November at 5.30pm in the Community Room 15, LNER Offices, Newcastle Central Station. <b>All welcome!</b></p>
@@ -223,25 +223,26 @@
         <!-- Split Footer into 3 columns -->
         <div class="row">
 
-            <!-- About -->
+            <!-- ABOUT -->
             <div class="col-xs-12 col-sm-12 col-md-4">
-                <h5 class="uppercase footer-section">About</h5>
+                <h5 class="uppercase footer">About</h5>
                 <p class="inline-block">
                     TWPTUG campaigns for an integrated, publicly-accountable transport system connecting Tyne and Wear, Northumberland and County Durham.
                 </p>
             </div>
 
-            <!-- Contact -->
+            <!-- CONTACT -->
             <div class="col-md-4">
-                <h5 class="uppercase footer-section">Email us</h5>
+                <h5 class="uppercase footer">Email us</h5>
                 <p class="inline-block">
-                    Any questions about TWPTUG or want to report a website issue? Please click <a href="/" target="_blank">here.<i class="fa fa-email" aria-hidden="true"></i></a>
+                    Any questions about TWPTUG or want to report a website issue?<br>
+                    Email us here.<a href="" class="email-link" data-toggle="modal" data-target="#emailModalTWPTUG"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                 </p>
             </div>
 
-            <!-- Social Media -->
+            <!-- SOCIAL MEDIA -->
             <div class="col-md-4">
-                <h5 class="uppercase footer-section">Social Media</h5>
+                <h5 class="uppercase footer">Social Media</h5>
                 <ul class="list-inline social-media">
                     <li><a target="_blank" href="https://www.facebook.com/twptug/"><i class="fa fa-facebook"></i></a></li>
                     <li><a target="_blank" href="https://twitter.com/twptug"><i class="fa fa-twitter"></i></a></li>
@@ -255,6 +256,76 @@
 
     </footer>
     <!-- /.FOOTER -->
+
+    <!-- MODAL EMAIL FORM (TO: TWPTUG SECRETARY) -->
+    <div class="modal fade" id="emailModalTWPTUG" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Email Us</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="acknowledgement.html">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="email" placeholder="To: TWPTUG Secretary" disabled>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder="Your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email-confirm" placeholder="Email address confirmation" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="subject" placeholder="Subject for your message" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="5" cols="20" class="form-control" id="message" placeholder="Your message" required></textarea>
+                        </div>
+                        <button type="reset" class="btn btn-warning">Clear</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-success">Submit</button></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.MODAL EMAIL FORM (TO: TWPTUG SECRETARY) -->
+
+    <!-- MODAL EMAIL FORM (TO: LOCAL GROUP SECRETARY) -->
+    <div class="modal fade" id="emailModalNewcastle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Email Us</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="acknowledgement.html">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="email" placeholder="To: Newcastle Secretary" disabled>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder="Your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email-confirm" placeholder="Email address confirmation" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="subject" placeholder="Subject for your message" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="5" cols="20" class="form-control" id="message" placeholder="Your message" required></textarea>
+                        </div>
+                        <button type="reset" class="btn btn-warning">Clear</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-success">Submit</button></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.MODAL EMAIL FORM (TO: LOCAL GROUP SECRETARY) -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
