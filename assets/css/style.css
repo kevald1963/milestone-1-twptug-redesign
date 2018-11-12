@@ -193,20 +193,24 @@ ul {
 
 /*-------------------------------------------------- Message Acknowledgement Page */
 
-.msg-acknowledgement-title {
+.jumbotron {
     text-align: center;
     background-color: #5cb85c;
     color: #fafafa;
-    margin: 150px;
-    padding: 55px;
-    border-radius: 15px;
+    margin-top: 30px;
 }
 
-.msg-acknowledgement-body {
-    font-size: 30px;
+.jumbotron h1 {
+    color: white;
+    margin-bottom: 30px;
 }
 
-
+/*-------------------------------------------------- Modal Window for Video */
+.modal-content iframe {
+    margin: 0 auto;
+    display: block;
+}
+    
 /*-------------------------------------------------- Footer */
 
 footer {

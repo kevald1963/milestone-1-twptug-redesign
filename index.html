@@ -129,7 +129,7 @@
 
             <!-- IMAGE -->
             <div class="hidden-xs col-sm-12 col-md-6 inline-block">
-                <img src="../assets/images/logo.png" alt="Large circle with picture of Metro in station. Smaller circles around the edge show Shields Ferry, a cyclist, a bus and a Green Man Walking traffic signal.">
+                <img src="assets/images/logo.png" alt="Large circle with picture of Metro in station. Smaller circles around the edge show Shields Ferry, a cyclist, a bus and a Green Man Walking traffic signal.">
             </div>
             <!-- /.IMAGE -->
 
@@ -146,6 +146,9 @@
                     <!-- << 1. Copy and paste the topmost link between the <a> and /a> tags.         >> -->
                     <!-- << 2. Replace the href with the new website address.                        >> -->
                     <!-- << 3. Replace the description between the <p> and </p> tags.                >> -->
+                    <a href="" data-toggle="modal" data-target="#videoModal">
+                        <p>Video: Transport Committee inquiry into the health of the bus market, Tuesday 30 October 2018.</p>
+                    </a>
                     <a href="https://www.theguardian.com/world/2018/oct/15/fall-in-local-uk-bus-journeys-to-12-year-low-prompts-talk-of-crisis?CMP=Share_iOSApp_Other" target="_blank">
                         <p>Fall in local UK bus journeys to 12-year low prompts talk of crisis.</p>
                     </a>
@@ -319,9 +322,47 @@
     </div>
     <!-- /.MODAL EMAIL FORM (TO: TWPTUG SECRETARY) -->
 
+    <!-- MODAL VIDEO -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Transport Committee Inquiry: Health of the Bus Market</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-video">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe id="committeeVideo" autoplay frameborder="0" allowfullscreen class="embed-responsive-item" src="https://videoplayback.parliamentlive.tv/Player/Index/f36c8ac5-83d9-4ddb-9929-d74048f5aec0?in=2018-10-30T09%3A50%3A00%2B00%3A00&amp;out=2018-10-30T12%3A12%3A00%2B00%3A00&amp;audioOnly=False&amp;autoStart=False&amp;statsEnabled=True" id="UKPPlayer" name="UKPPlayer" title="UK Parliament Player" seamless="seamless" style="width:100%; height:100%;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.MODAL VIDEO -->
+
+    <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+    
+    <script type="text/javascript">  
+        $(document).ready(function() {  
+            /* Get iframe src attribute value i.e. video url and store it in a variable. */  
+            var url = $("#committeeVideo").attr('src');  
+            /* Assign empty url value to the iframe src attribute when modal hide, which stops the video playing. */  
+            $("#videoModal").on('hide.bs.modal', function() {  
+                $("#committeeVideo").attr('src', '');  
+            });  
+            /* Assign the initially stored url back to the iframe src attribute when modal is displayed again. */  
+            $("#videoModalModal").on('show.bs.modal', function() {  
+                $("#committeeVideo").attr('src', url);  
+            });  
+        });  
+    </script>
+    
 </body>
 
 </html>
