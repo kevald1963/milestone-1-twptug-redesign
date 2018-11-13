@@ -50,6 +50,28 @@ ul {
     -o-transition: all 0.5s ease-in-out;
 }
 
+/*-------------------------------------------------- Alert */
+
+.alert-container .col-xs-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.test-only-alert {
+    color: #544600;
+    background-color: #eec802;
+    border-color: #eec802;
+    padding: 5px 15px;
+    margin-bottom: 0;
+    border: 1px solid transparent;
+    border-radius: 0;
+}
+
+.live-link {
+    text-decoration: none;
+    color: #fafafa;
+}
+
 /*-------------------------------------------------- Heading */
 
 .page-title {
@@ -119,14 +141,14 @@ ul {
 
 .welcome {
     max-width: 430px;
-    min-height: 584px;
+    max-height: 600px;
     background-color: #5cb85c;
     color: #fafafa;
     margin-top: 15px;
     margin-left: 5px;
     padding: 5px;
     border-radius: 6px;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .welcome a {
@@ -197,20 +219,22 @@ ul {
     text-align: center;
     background-color: #5cb85c;
     color: #fafafa;
-    margin-top: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 60px;
 }
 
 .jumbotron h1 {
     color: white;
     margin-bottom: 30px;
 }
-
-/*-------------------------------------------------- Modal Window for Video */
-.modal-content iframe {
-    margin: 0 auto;
-    display: block;
+.jumbotron h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 30px;
 }
-    
+
 /*-------------------------------------------------- Footer */
 
 footer {
@@ -289,6 +313,14 @@ footer {
     .column-positioning {
         margin-left: 0;
     }
+    
+    .jumbotron {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+
+
 
     footer {
         margin-top: 20px;
