@@ -69,8 +69,24 @@ ul {
 
 .live-link {
     text-decoration: none;
-    color: #fafafa;
+    color: #000;
 }
+
+.live-link:hover {
+    color: green;
+}
+
+.live-link:focus {
+    text-decoration: none;
+    color: green;
+}
+
+.live-link:visited {
+    text-decoration: none;
+    color: #000;
+}
+
+
 
 /*-------------------------------------------------- Heading */
 
