@@ -1,17 +1,118 @@
 # Tyne & Wear Public Transport Users Group website redesign
 
-One or two paragraphs providing an overview of your project.
+Organisational overview:
 
-Essentially, this part is your sales pitch.
- 
+Tyne & Wear Passenger Transport Users Group (TWPTUG) is voluntary community group that campaigns for the full integration of public transport 
+in Tyne & Wear, such as rail, Metro, bus and ferry with private transport modes such as of walking, cycling and driving. TWPTUG believes such 
+integration can only be achieved through local public ownership of public transport. TWPTUG covers the five boroughs of Tyne & Wear, namely 
+Newcastle, Gateshead, North Tyneside, South Tyneside and Sunderland. Only Newcastle and North Tyneside are running at the moment. Gateshead and
+South Shields did start up but have since stopped due to various reasons like members moving out of the area, ill-health, and the distraction
+of other issues affecting the community like hospital closures. TWPTUG is run by a Management Committee, the members of which are elected 
+by individuals within the local groups and partner organisations. TWPTUG’s members include individuals as well as a number of partner 
+organisations such as cycling groups, pensioners’ groups, union community branches and other community transport groups from across the UK. 
+TWPTUG also works closely with bus operating companies, local authorities and Nexus to influence general transport policy. Nexus is the Passenger 
+Transport Executive for Tyne & Wear, which directly operates the Metro and the Shields Ferry on behalf of the five boroughs and secures some 
+essential local bus services ran by the private bus operators.
+
+Current website:
+
+The current website (www.twptug.org.uk) was created in 2010 using a website builder called Webeden. This tool is a somewhat dated product, has 
+little documentation to support it, and has some time-consuming bugs to work around. It is awkward to use for both maintaining and developing the site. The TWPTUG site was not built with 
+responsive design in mind. It may not have even been available then. There is now some support for displaying on a mobile but the results are 
+far from perfect e.g. elements and components are too wide making it necessary to scroll from left to right on a narrow screen. This seems to 
+have been done all automatically. It is not clear how the width can be reduced, or elements can be styled differently to the default. The TWPTUG
+site has a primitive blogging page that supports basic text and image formatting. It is not currently used but there is an intention to do some 
+blogging activity in the future. TWPTUG have both a Facebook and Twitter account but connection to social media is only currently available via  
+the blog page, which appears to be built into the page already. The current logo (entitled “Action on Public Transport”) does not look particularly
+professional. It is also not clear from the website what "Action on Public Transport" is. It is, in fact, an alternative name later suggested for
+TWPTUG, because it was thought "Tyne & Wear Passenger Transport Users Group" was too long. However, the latter has stuck with many people, though
+they tend to abbreviate it to "PTUG", so it's not so easy to change it now. Putting both logos up is a bit of a silly fudge, so for the redesigned
+website, I will be dropping the “Action on Public Transport” logo so as to avoid visitor confusion over which organisation the site is supposed
+to represent. The content of the live site is quite dynamic as news articles, events, files and meeting notices are posted to it regularly, and 
+old stuff is taken down. The website averages around 3000 hits per calendar month.
+
+Website purpose:
+
+a)	Disseminate information on transport issues, including air pollution.
+b)	Disseminate information on campaigns, petitions, protests, events and regular local group and Transport Forum meetings. 
+c)	Signpost people looking for transport information to Nexus, local bus operating companies and train companies.
+
+Long-term aims:
+
+I am currently responsible for maintaining the website, which is a quite tedious task using the site builder. Therefore, my long-term aim is 
+to re-design the website in HTML5, CSS3, Bootstrap and JavaScript. At some point in the future, I would like to also separate the content from
+the presentation by using an open source content management system (CMS). A CMS is needed because the organisation does not have the finances
+to employ a professional developer, and I may not be available for whatever reason. I want to develop a system that its members can update easily
+themselves, without having to rely on me to do it for them. For example, I would prefer local group secretaries to post their own group meetings 
+and events, rather than email details to me to post on their behalf.
+
+Aims for this release:
+
+As per the milestone project criteria, my aim is to initially prototype a responsive front-end website using HTML5, CSS3 and Bootstrap. I want
+to give it a fresher, more appealing look while still retaining most of the existing features and adding some new ones. I particularly want to
+display more images and icons across the site. I think it is probably a good idea to create all the necessary menu buttons but without adding 
+content (other than standard content) to all the pages not included in this release. Instead I will create them but display them show them as 
+‘Under construction’, with a Back button, if they are entered.
+
+It is not necessary to construct most of the website in the first phase of development phase for the following reasons:
+
+a)	First and foremost, the new site would need to be ‘sold’ to the Management Committee, so a minimum-build agile development will be 
+    sufficient to give it an idea of how it will look and function.
+b)	The existing site, though outdated and clunky, is still functioning and its content is still being regularly updated.
+c)	The amount of development work involved for the front-end is too much for me to complete in a reasonable timescale.
+
+Minimum pages/modals to implement and add styled content to:
+
+Home (News will be a feature on the Home page not a separate page) 
+Local Groups (5 in total i.e. Newcastle, Gateshead, North Tyneside, South Tyneside, Sunderland) 
+About Us (existing Partners page info will be merged with this page) 
+Email acknowledgement
+Under construction
+Modal email form
+Modal video
+
+Pages to be displayed as Under construction:
+
+Re-regulation
+Hospital Buses
+Bus Facts
+Rail
+Cycling
+Transport Select Committee
+Air pollution
+Media
+Pensioners
+Disability
+Blog
+
+Addressing the other milestone project criteria:
+
+Assets: A number of photos and a few video clips of TWPTUG events, demos and interviews have been posted. [There may also be some
+audio files available where Officers have been interviewed on local radio!]
+
 ## UX
  
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+[Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.]
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
+Website audience:
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+Public transport users, local group activists, Management Committee members, partner organisations, Media organisations, other UK community transport organisations, Nexus officials, and local councillors.
+
+[In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
+- As a user type, I want to perform an action, so that I can achieve a goal.]
+
+User stories:
+
+1) I am a public transport user interested in finding information on local transport only.
+
+2) I am a first time visitor and public transport user interested in finding information about the organisation.
+
+3) I am a regular public transport user or activist interested in reading information about transport issues in general.
+
+4) I am an activist interested in finding information on local group meetings, events, demonstrations, etc.
+
+
+[This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.]
 
 ## Features
 
