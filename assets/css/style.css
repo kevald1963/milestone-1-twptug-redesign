@@ -229,7 +229,7 @@ ul {
     padding: 0;
 }
 
-/*-------------------------------------------------- Message Acknowledgement Page */
+/*-------------------------------------------------- Acknowledgement Page */
 
 .jumbotron {
     text-align: center;
@@ -238,6 +238,10 @@ ul {
     margin-left: 60px;
     margin-right: 60px;
     margin-top: 60px;
+}
+
+.under-construction {
+    background-color: #337ab7;
 }
 
 .jumbotron h1 {
@@ -250,6 +254,14 @@ ul {
     font-size: 24px;
     margin-bottom: 30px;
 }
+
+/*-------------------------------------------------- 'Under Construction' Page - Can be used for any page yet to be developed e.g, rail.html, calendar.html, etc.     */
+/*-------------------------------------------------- As pages are developed, this class and related html can be removed from the file. It was thought better to have  */
+/*-------------------------------------------------- undeveloped pages handled like this, rather than let users see a Not Found error or pages with no MAIN content.  */                                      
+.under-construction {
+    background-color: #337ab7;
+}
+
 
 /*-------------------------------------------------- Footer */
 

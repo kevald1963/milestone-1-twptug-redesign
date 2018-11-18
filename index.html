@@ -103,7 +103,7 @@
                     <li><a href="rail.html"><i class="fa fa-train hidden-xs" aria-hidden="true"></i><span> Rail</span></a></li>
 
                     <!-- CALENDAR -->
-                    <li><a href="#"><i class="fa fa-calendar hidden-xs" aria-hidden="true"></i><span> Calendar</span></a></li>
+                    <li><a href="calendar.html"><i class="fa fa-calendar hidden-xs" aria-hidden="true"></i><span> Calendar</span></a></li>
 
                     <!-- MORE -->
                     <li class="dropdown">
@@ -361,8 +361,8 @@
                 <div class="modal-body">
                     <div class="modal-video">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <video class="embed-responsive-item" width="560px" height="240px" controls autoplay>
-    						    <source src="assets/videos/tom_and_jerry.mp4" type="video/mp4">
+                            <video class="embed-responsive-item" width="560px" height="240px" controls>
+    						    <source src="assets/videos/transport_committee_30-10-18_09-49-29.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -375,7 +375,14 @@
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
+
+    <!--Stop video from playing when modal is closed. -->
+    <script>
+        $('body').on('hidden.bs.modal', '.modal', function () {
+            $('video').trigger('pause');
+        });
+    </script>
+
 </body>
 
 </html>
