@@ -42,9 +42,9 @@ Long-term aims:
 I am currently responsible for maintaining the website, which is a quite tedious task using the site builder. Therefore, my long-term aim is 
 to re-design the website in HTML5, CSS3, Bootstrap and JavaScript. At some point in the future, I would like to also separate the content from
 the presentation by using an open source content management system (CMS). A CMS is needed because the organisation does not have the finances
-to employ a professional developer, and I may not be available for whatever reason. I want to develop a system that its members can update easily
-themselves, without having to rely on me to do it for them. For example, I would prefer local group secretaries to post their own group meetings 
-and events, rather than email details to me to post on their behalf.
+to employ a professional developer, and I may not be available, for whatever reason. I want to develop a system that members can update easily
+themselves, without having to rely on me. For example, I would prefer local group secretaries to post their own group meetings and events, 
+rather than email details to me to post on their behalf.
 
 Aims for this release:
 
@@ -61,17 +61,18 @@ a)	First and foremost, the new site would need to be ‘sold’ to the Managemen
 b)	The existing site, though outdated and clunky, is still functioning and its content is still being regularly updated.
 c)	The amount of development work involved for the front-end is too much for me to complete in a reasonable timescale.
 
-Minimum pages/modals to implement and add styled content to:
+Pages/modals to implement and add styled content to:
 
-Home (News will be a feature on the Home page not a separate page) 
+Home
 Local Groups (5 in total i.e. Newcastle, Gateshead, North Tyneside, South Tyneside, Sunderland) 
 About Us (existing Partners page info will be merged with this page) 
 Email acknowledgement
 Under construction
 Modal email form
-Modal video
+Modal video (launched from News panel)
+Modal audio (launched from News panel)
 
-Pages to be displayed as Under construction:
+Pages to be displayed as Under Construction:
 
 Re-regulation
 Hospital Buses
@@ -85,10 +86,12 @@ Pensioners
 Disability
 Blog
 
-Addressing the other milestone project criteria:
+External links:
 
-Assets: A number of photos and a few video clips of TWPTUG events, demos and interviews have been posted. [There may also be some
-audio files available where Officers have been interviewed on local radio!]
+Sustrans
+Passenger Transport Magazine
+Transport Focus News
+Campaign for Better Transport
 
 ## UX
  
@@ -99,18 +102,18 @@ Website audience:
 Public transport users, local group activists, Management Committee members, partner organisations, Media organisations, other UK community transport organisations, Nexus officials, and local councillors.
 
 [In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.]
 
 User stories:
 
-1) I am a public transport user interested in finding information on local transport only.
+1) As a public transport user, I want to follow a link to find local transport information like timetables, fares, etc.
 
-2) I am a first time visitor and public transport user interested in finding information about the organisation.
+2) As a first time visitor, I want to find out more information about the organisation and transport issues.
 
-3) I am a regular public transport user or activist interested in reading information about transport issues in general.
+3) As an activist, I want to find out information about transport issues local group meetings, events, demonstrations, etc.
 
-4) I am an activist interested in finding information on local group meetings, events, demonstrations, etc.
+4) As an TWPTUG local group officer, I want to find out information about local group meetings and Transport Forum meetings.
 
+5) As an TWPTUG Management Committee officer, I want to find out information about, Management Committee meetings.
 
 [This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.]
 

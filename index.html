@@ -152,29 +152,44 @@
                 <!-- NEWS -->
                 <div class="news">
                     <span class="uppercase panel-title">Current News & Campaigns...</span><br><br>
-                    <!-- <<                                                                          >> -->
-                    <!-- << INSERT NEWS & CAMPAIGN ARTICLES HERE                                     >> -->
-                    <!-- <<                                                                          >> -->
-                    <!-- << Instructions for updating content:                                       >> -->
-                    <!-- <<                                                                          >> -->
-                    <!-- << 1. Copy and paste the topmost link between the <a> and /a> tags.         >> -->
-                    <!-- << 2. Replace the href with the new website address.                        >> -->
-                    <!-- << 3. Replace the description between the <p> and </p> tags.                >> -->
+                    <!-- <<                                                                       >> -->
+                    <!-- << INSERT NEWS & CAMPAIGN ARTICLES HERE                                  >> -->
+                    <!-- <<                                                                       >> -->
+                    <!-- << General instructions for updating content:                            >> -->
+                    <!-- <<                                                                       >> -->
+                    <!-- << 1. Copy and paste the topmost item between the <a> and </a> tags.     >> -->
+                    <!-- << 2. Replace the href with the new website address.                     >> -->
+                    <!-- << 3. Replace the description between the <p> and </p> tags.             >> -->
+                    <!-- <<                                                                       >> -->
+                    <!-- << For content to be shown in modal windows, do as above but replace     >> -->
+                    <!-- << the opening <a> tag with following template and customise to suit:    >> -->
+                    <!-- << <a href="" data-toggle="modal" data-target="#NameOfModal">            >> -->
+                    <!-- << Note that href must be left null. Copy new modal from existing modal  >> -->
+                    <!-- << further down in document.                                             >> -->
+
+                    <a href="" data-toggle="modal" data-target="#audioModal">
+                        <p><i class="fa fa-volume-up multi-media-icon"></i>Reinventing Transport podcast: Multimodal transport - Todd Litman explains how and why.</p>
+                    </a>
+
                     <a href="https://betterbusesgm.org.uk/better-buses-manchester-homepage" target="_blank">
                         <p>Our buses aren't good enough - Better Buses for Greater Manchester petition to Mayor Andy Burnham. 
                            YOU CAN SIGN IN SOLIDARITY if you live outside of Greater Manchester; you don't have to be a Mancunian
                            to express your support!</p>
                     </a>
+
+                    <a href="" data-toggle="modal" data-target="#videoModal">
+                        <p><i class="fa fa-tv font-awesome-icon"></i>Video of Transport Select Committee inquiry into the health of the bus market, Tuesday 30 October 2018.</p>
+                    </a>
+
                     <a href="https://www.mirror.co.uk/news/politics/bus-firms-pay-fat-cats-13540251" target="_blank">
                         <p>Bus firms pay fat cats £1.5 BILLION - while prices go up 55% and routes are axed - Mirror article.</p>
                     </a>
+
                     <a href="assets/documents/TWPTUG%20Annual%20Report%202018.pdf">
                         <p>Paul Baker (outgoing TWPTUG Secretary) submits 2018 AGM report to the Transport Select Committee's 
                            inquiry into the decline of Britain's bus services. See pages 5-7 and the conclusion on page 19.</p>
                     </a>
-                    <a href="" data-toggle="modal" data-target="#videoModal">
-                        <p>Video: Transport Committee inquiry into the health of the bus market, Tuesday 30 October 2018.</p>
-                    </a>
+
                     <a href="https://www.theguardian.com/world/2018/oct/15/fall-in-local-uk-bus-journeys-to-12-year-low-prompts-talk-of-crisis?CMP=Share_iOSApp_Other" target="_blank">
                         <p>Fall in local UK bus journeys to 12-year low prompts talk of crisis.</p>
                     </a>
@@ -372,14 +387,48 @@
     </div>
     <!-- /.MODAL VIDEO -->
 
+    <!-- MODAL AUDIO -->
+    <div class="modal fade" id="audioModal" tabindex="-1" role="dialog" aria-labelledby="modal-audio-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <a href="https://www.reinventingtransport.org/" target="_blank">
+                        <img src="assets/images/RT_podcast_art.png" class="RT-logo">
+                    </a>    
+                    <h4 class="modal-title">Multimodal transport: Todd Litman explains how and why.</h4>
+                </div>
+                <div class="modal-body">
+                    <audio controls>
+					    <source src="assets/audio/RT_3_Todd_Litman_ds.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="modal-footer">
+                    <span><i class="fa fa-creative-commons"></i> Please note this podcast is shared under a Creative Commons <a class="cc-licence-link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode" target="_blank">licence</a>.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.MODAL AUDIO -->
+
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <!--Stop video from playing when modal is closed. -->
+    <!--Stop video playing when modal is closed. -->
     <script>
         $('body').on('hidden.bs.modal', '.modal', function () {
             $('video').trigger('pause');
+        });
+    </script>
+
+    <!--Stop audio playing when modal is closed. -->
+    <script>
+        $('body').on('hidden.bs.modal', '.modal', function () {
+            $('audio').trigger('pause');
         });
     </script>
 

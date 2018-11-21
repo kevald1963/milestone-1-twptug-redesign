@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700');
 
-/*-------------------------------------------------- Background */
-
+/*---------------------------------------------------- Miscellaneous stylings */
 img {
     width: 100%;
     margin: 0;
@@ -14,8 +13,6 @@ header {
 }
 
 
-/*---------------------------------------------------- General stylings */
-
 /* Remove bullet points from lists. */
 
 ul {
@@ -24,6 +21,12 @@ ul {
 
 .uppercase {
     text-transform: uppercase;
+}
+
+.RT-logo {
+    width: 90px;
+    height: 90px;
+    padding-right: 10px;
 }
 
 .inline-block {
@@ -50,7 +53,40 @@ ul {
     -o-transition: all 0.5s ease-in-out;
 }
 
-/*-------------------------------------------------- Alert */
+.modal-footer {
+    text-align: left;
+}
+
+.fa-arrow-icon {
+    padding-right: 5px;
+}
+
+.fa-facebook-icon {
+    padding-right: 9px;
+}
+
+
+.cc-licence-link {
+    text-decoration: none;
+    color: royalblue;
+}    
+
+.cc-licence-link:hover {
+    text-decoration: none;
+    color: darkred;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;    
+}
+
+.cc-licence-link:visited {
+    text-decoration: none;
+    color: darkred;
+}    
+
+
+/*-------------------------------------------------- Header Alert */
 
 .alert-container .col-xs-12 {
     padding-left: 0;
@@ -112,9 +148,7 @@ ul {
     font-size: medium;
 }
 
-/*-------------------------------------------------- Main content */
-
-/*---------------------------------------------- Home Page */
+/*-------------------------------------------------- Home Page */
 
 .news {
     max-height: 480px;
@@ -229,6 +263,18 @@ ul {
     padding: 0;
 }
 
+/*-------------------------------------------------- About Page */
+.about-heading {
+    text-align: center;
+    color: #337ab7;;
+}
+
+.about-subheading {
+    color: #337ab7;;
+}
+
+
+
 /*-------------------------------------------------- Acknowledgement Page */
 
 .jumbotron {
@@ -238,10 +284,6 @@ ul {
     margin-left: 60px;
     margin-right: 60px;
     margin-top: 60px;
-}
-
-.under-construction {
-    background-color: #337ab7;
 }
 
 .jumbotron h1 {
@@ -347,8 +389,6 @@ footer {
         margin-right: 10px;
         margin-top: 10px;
     }
-
-
 
     footer {
         margin-top: 20px;
