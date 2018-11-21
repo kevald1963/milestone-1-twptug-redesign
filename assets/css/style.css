@@ -57,6 +57,12 @@ ul {
     text-align: left;
 }
 
+/* Font Awesome spacings */
+.multi-media-icon {
+    padding-right: 7px;
+    color: #f0ad4e;
+}
+
 .fa-arrow-icon {
     padding-right: 5px;
 }
@@ -64,7 +70,6 @@ ul {
 .fa-facebook-icon {
     padding-right: 9px;
 }
-
 
 .cc-licence-link {
     text-decoration: none;
