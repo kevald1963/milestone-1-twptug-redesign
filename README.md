@@ -55,31 +55,28 @@ content (other than standard content like menus and footers) to all the pages NO
 
 ## UX
  
-[Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.]
-
 ### Website Audience
 
 This consists of public transport users, local group activists, Management Committee members, partner organisations, Media organisations, other UK community transport organisations, Nexus officials, and local councillors.
 
 ### User Stories
 
-- As a public transport user, I want to follow a link to find local transport information like timetables, fares, etc.
-- As a non-activist (individual, journalist), I want to find out more information about the organisation and transport issues.
-- As an activist, I want to find out information about transport issues local group meetings, events, demonstrations, etc.
-- As an official (councillor, bus company manager, etc), I want to find out information about Transport Forum meetings.
-- As an TWPTUG local group officer, I want to find reminders about local group meetings and Transport Forum meetings details.
-- As an TWPTUG Management Committee officer, I want to find reminders about Management Committee meetings details.
+User stories to be catered for in this release:
+- As a public transport user, I want to find local transport information like timetables, fares, ticket-types, etc.
+- As a non-activist (member of the public, journalist, researcher, etc), I want to read information about the organisation and/or transport issues.
+- As a non-activist, I want to contact someone to ask further questions about the organisation and/or transport issues.
+- As an activist, I want to read information about transport issues local group meetings, events, demonstrations, etc.
+- As an official (councillor, bus company manager, etc), I want to view information about Transport Forum meetings and other public events.
+- As an official (councillor, bus company manager, etc), I want to contact someone to ask further questions about Transport Forum meetings and other public events.
 
 ### Layouts
 
-These are stored in the __Project Documentation_ folder on GitHub. I drew out the Home page layout first, but I didn't stick to
-as it just didn't look right on the page. I changed the navigation menu from vertical to horizontal, but this altered everything else. The later pages reflect the new design. The layout diagrams show both the wide screen and mobile layouts.
+The files shown below are stored in the __Project Documentation_ folder in the GitHub repository. The layout diagrams show both wide screen and mobile layouts. I drew out the Home page layout first, but I didn't stick to it as it didn't look right on the page. The later pages reflect the new design. Even then, I haven't followed the later designs to the letter, but repositioned elements according to what looked right in practice. I did not design layouts for the Acknowledgement page as it consisted only of a simple banner message and a Return button. Similarly for the 'Under construction' pages, as these were cloned from the Acknowledgement page, though styled with a different background colour. 
 
 - Proposed menu and page structure.pdf
-- Home page layouts.pdf
-- Group page layouts.pdf (This is a general template for the 5 Local Groups)
-- About page layouts.pdf
-- Acknowledgement layouts.pdf (Feedback page for submitted email forms)
+- Home page layouts.jpg
+- Group page layouts.jpg (This is a general template for the 5 Local Groups)
+- About page layouts.jpg
 
 ## Features
 
@@ -111,89 +108,83 @@ as it just didn't look right on the page. I changed the navigation menu from ver
 - All pages:
     - A comprehensive Bootstrap menu that collapses into a hamburger icon when screen size is less that 768px.
     - A footer showing summary About info, an email link and social media links.
+
 - index.html:
     - Scrolling News panel with links to external websites, pdfs, video and audio files.
+    - Modal windows for playing video and audio.
     - A horizontal button group that become vertical when screen size is less that 768px.
+
 - acknowledgement.html:
     - Displays a Bootstrap jumbotron 'Thank You' message after user has submitted an email to the site. Includes a Return button to go back to the previous page, where the email facility was invoked. (I considered a Bootstrap modal window to do this initially but it isn't recommend by them.)
-    - Displays a Bootstrap jumbotron 'Under Construction' message after user has submitted an email to the site. Includes a Return button to go back to the previous page, where the current page was was invoked. This page is a template of the 'Thank You' page, though it is coloured differently to indicate a different purpose.
+
+- All undeveloped pages (e.g. busfacts.html, rail.html, blog.html, etc):
+    - Displays a Bootstrap jumbotron 'Under Construction' message when a enters an undeveloped page. Includes a Return button to go back to the previous page, where the current page was was invoked. Although this is just a prototype site, I did not want users to get a Not Found error when accessing an undeveloped page. This page is a template of the 'Thank You' message page, though it is coloured differently to indicate a different purpose.
 
 - about.html:
-    - Displays tool tips describing the photos when the images are hovered over.
+    - Displays tooltip text describing the photos when the images are hovered over.
 
 ### Features Left to Implement
 
 - Fully develop content and layout for pages currently displayed as Under Construction (referenced above).
 - Validation of email forms, particularly to check the first email address matches the confirmation email.
 - Get the site to send real emails to a test email account.
-- Use JavaScript (or some other language) to send the media link to video and audio modals, so that only one instance of each is required in 
-the HTML. I don't know how to do this currently, so individual blocks of HTML have to copied and modified for every video or audio file that is shown in the news panel. This could make the HTML very cumbersome to load.
-- Find a way to create just one instance of a common element, such as the navigation menu or footer (which can then be 'called' into each page as required) so it can be maintained in just one place. This especially important on big sites because no-one wants to, for example, insert (and test!) a new menu dropdown item for a 50-page site. From my searches online, I understand this can be achieved using either server side includes or a programming language.
+- Use JavaScript (or some other language) to send the media link to video and audio modals, so that only one code instance of each is required in a page.
+I don't know how to do this currently, so individual blocks of HTML have to copied and modified for every video or audio file that is shown in the news panel. This could make the HTML very cumbersome and slow to load.
+- Find a way to create just one instance of a common element, such as the navigation menu or footer (which can then be 'called' into each page as required) so it can be maintained in just one place. This especially important on big sites because no-one wants to, for example, to insert (and test!) a new menu dropdown item for each page on a large site. From my searches online, I understand this can be achieved using either server side includes or a programming language.
 
 ## Technologies Used
 
-- [HTML5]( https://www.w3.org/TR/html52/) 
+- [HTML5](https://www.w3.org/TR/html52/) 
   - To build page structure and content
 
-- [CSS3]( https://www.w3.org/standards/techs/css#w3c_all)
+- [CSS3](https://www.w3.org/standards/techs/css#w3c_all)
   - To style page structure and content.
 
-- [Bootstrap 3.3.7]( https://getbootstrap.com/docs/3.3/getting-started/)
-  - To use template components to easily create and style responsive elements like the navigation menu, buttons, call-outs, etc.
+- [Bootstrap 3.3.7](https://getbootstrap.com/docs/3.3/getting-started/)
+  - To provide template components to easily create and style responsive elements like the navigation menu, buttons, banners, etc.
 
-- [Google Fonts]( https://fonts.google.com/)
+- [Google Fonts](https://fonts.google.com/)
   - For 'Roboto' font style used on all pages.
 
-- [Font Awesome 5]( https://fontawesome.com/)
+- [Font Awesome 5](https://fontawesome.com/icons?d=gallery)
   - Used to create 'icon' characters for menus, video and audio links, social media, external links, etc.
 
 - [JQuery](https://jquery.com)
-  - Snippet added to pause both modal video and audio playback when modal widow is closed.
-  - Snippet added to allow user to return back to previous page after a message acknowledgement or navigating to an 'Under construction' page.
+  - Used to simplify DOM manipulation.
 
-### STILL TO COMPLETE! >>
+- [JavaScript](https://www.w3schools.com/js/js_versions.asp) snippets added to:
+  - pause both modal video and audio playback when modal widow is closed.
+  - allow return back to previous page after a message acknowledgement or navigating to an 'Under construction' page.
+  - clear modal email forms after form is submitted.
 
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+Excel workbook,'Test plan - TWPTUG redesign', stored in the __Project Documentation_ folder in the GitHub repository, details all the functional and responsivity tests carried out across several popular browsers. I have not followed the user stories because there is too much overlap. Instead, I've tested everything that could possible be tested at this stage of the website's development.
 
 ## Deployment
-
-The project is deployed on GitHub Pages at https://kevald1963.github.io/milestone-1-twptug-redesign/
+The Project is deployed on GitHub Pages at https://kevald1963.github.io/milestone-1-twptug-redesign/
 
 ## Credits
 
 ### Content
-- The text for the Welcome sections on the Group pages was copied from the TWPTUG 2018 Annual Report though edited to suit.
+- The text for the Welcome sections on the Group pages was copied from the TWPTUG 2018 Annual Report, and edited to suit.
 - The text for the About page comes from a combination of the About and Partner pages on the live TWPTUG website.
-- The News panel articles on the Home page are all real and are replicated from the Home page of the live TWPTUG website.
+- The News panel articles on the Home and Group pages are replicated from the the live TWPTUG website.
 
 ### Media
-- The photos used in this site were obtained from 
-    - Pixabay( https://pixabay.com/en/). These are the large images on the Group pages, except for Sunderland.
+- The images used in this site were obtained from 
+    - [Pixabay](https://pixabay.com/en/). These are the large images on the Group pages, except for South Shields and Sunderland.
     - Existing TWPTUG resources, mostly photos taken by activists. These are the images on the About page.
-    - Reinventing Transport (for the RT logo in the audio modal) shared under a Creative Commons licence (linkable from modal).
-    - Facebook page photographic page - check out owner!
+    - [Reinventing Transport](https://www.reinventingtransport.org/) logo, shared under a Creative Commons licence. Logo is used in the audio modal as a link to the RT website. A link to the CC licence (which must be shown) is provided in the footer of the modal.
+    - The large images on the South Shields and Sunderland group pages were licensed by TWPTUG from John R. Short, author of Facebook page [See Tyne and Wear Differently'](https://www.facebook.com/ctynewear/).
+- The embedded video file is from [Parliament TV](https://www.parliamentlive.tv)
+- The embedded audio file is from Reinventing Transport (above)
+
+### Code Snippets
+- to pause modal video/audio playback when modal widow is closed is credited to user3376436 on Stack Overflow at https://stackoverflow.com/questions/5958132/javascript-to-stop-html5-video-playback-on-modal-window-close
+- to allow user to return back to previous page credited to W3 Schools at https://www.w3schools.com/jsref/met_his_back.asp
+- to clear modal email forms is credited to user3127109 on Stack Overflow at https://stackoverflow.com/questions/15827262/how-to-reset-form-body-in-bootstrap-modal-box
 
 ### Acknowledgements
 
-- I received inspiration for this project from my mentor, Chris Zielinski who patiently showed me how to use Bootstrap properly. Also many thanks to Slack regulars / mentors 'Jo Wings' and 'Eventyret_mentor' for sorting out my stupid mistakes and misunderstandings.
-   
-
-
+- I received inspiration for this project from Paul Baker and Vicki Glbert who work tirelessly on behalf of TWPTUG. Many thanks also to my mentor, Chris Zielinski, for his expertise advice and guidance, particularly on responsivity. Also thanks to Slack regulars 'Jo Wings' and 'Eventyret_mentor' for sorting out my mistakes and misunderstandings.
