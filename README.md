@@ -175,15 +175,7 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
-
+The project is deployed on GitHub Pages at https://kevald1963.github.io/milestone-1-twptug-redesign/
 
 ## Credits
 
@@ -201,7 +193,7 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 ### Acknowledgements
 
-- I received inspiration for this project from my mentor, Chris Zielinski who patiently showed me how to use Bootstrap columns properly. Also many thanks to Slack regulars / mentors 'Jo Wings' and 'Eventyret_mentor' for sorting out my stupid mistakes and misunderstandings.
+- I received inspiration for this project from my mentor, Chris Zielinski who patiently showed me how to use Bootstrap properly. Also many thanks to Slack regulars / mentors 'Jo Wings' and 'Eventyret_mentor' for sorting out my stupid mistakes and misunderstandings.
    
 
 

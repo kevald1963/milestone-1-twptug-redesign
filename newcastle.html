@@ -143,8 +143,8 @@
 
             <div class="row">
                 <!-- IMAGE -->
-                <div class="hidden-xs col-sm-12 col-md-8 col-lg-8 image-newcastle inline-block">
-                    <img src="assets/images/central_station.jpg" alt="Looking west inside Newcastle Central Station main hall, showing the big clock suspended from the roof arch girders.">
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <img class="group-image" src="assets/images/central_station.jpg" alt="Looking west inside Newcastle Central Station main hall, showing the big clock suspended from the roof arch girders.">
                 </div>
                 <!-- /.IMAGE -->
 
@@ -178,6 +178,7 @@
                             Please email us here.<a href="" class="email-link" data-toggle="modal" data-target="#emailModalNewcastle"><i class="fa fa-envelope" aria-hidden="true"></i></a><br>
                             Alternatively, email our Secretary at <a href="mailto:nctugsecretary@outlook.com">nctugsecretary@outlook.com</a>.
                         </p>
+                        <!-- 'list-inline' is a Bootstrap class. -->
                         <ul class="list-inline social-media">
                             <li>
                                 Follow us on our <i>Platform</i> page on Facebook.
@@ -190,7 +191,7 @@
             </div>
 
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 inline-block">
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                     <!-- CAMPAIGNS -->
                     <div class="campaigns">
                         <h3 class="uppercase">Campaigns and Activities</h3><br>
@@ -204,8 +205,8 @@
                             
                             <li>Newcastle City Council Bus Shelter Consultation – on-going NPTUG campaign to achieve Real Time Bus Information at stops. Contact with Sally Herbert City Council.</li>
                             
-                            <li>On-going Development of “Platform” Facebook page as main vehicle to widen membership.</li>
-                            
+                            <li>On-going Development of <a target="_blank" href="https://www.facebook.com/PlatformNewcastle/"><i>Platform</i></a> Facebook page as main vehicle to widen membership.</li>
+
                             <li>We have responded to City Council consultations on air pollution. The City Council are formulating an Air Pollution Strategy joint with Gateshead and North Tyneside Councils. This is on-going and the policy must be decided
                                 early 2019. We have conducted pollution monitoring in City “hotspots”. Collaboration with Kingston Park Neighbourhood Forum who have conducted air pollution monitoring in Kingston Park under the ausices of Newcastle University
                                 Urban Observatory.</li>
@@ -231,16 +232,22 @@
                     <!-- /.CAMPAIGNS -->
                 </div>
 
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 column-positioning">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <!-- LOCAL NEWS AND EVENTS -->
                     <div class="local-news">
                         <span class="uppercase panel-title">Local News & Events</span><br>
-                        <p>Our next public meeting will be held on Tuesday 27th November at 5.30pm in the Community Room 15, LNER Offices, Newcastle Central Station. <b>All welcome!</b></p>
+                        <p>
+                            Our next public meeting will be held on Tuesday 27th November at 5.30pm in the Community Room 15, LNER Offices, Newcastle Central Station. <b>All welcome!</b>
+                        </p>
 
-                        <p>‘Let’s talk transport – Re-Newcastle’ – development programme update to Newcastle City Council Overview and Scrutiny Committee (opens as a PDF)</p>
-
-                        <p>Update: Our 38 Degrees petition 'Release grant funding for new Metro trains now!' to the Secretary of State for Transport has been successful! Click
-                            <a href="https://you.38degrees.org.uk/petitions/government-funding-for-tyne-and-wear-metro" target="_blank"><b>here</b></a> for our response on the 38 Degrees website.</p>
+                        <p>
+                            ‘Let’s talk transport – Re-Newcastle’ – development programme update to Newcastle City Council Overview and Scrutiny Committee. View PDF 
+                            <a href="assets/documents/Lets%20talk%20transport%20-%20Re-Newcastle%20-%20development%20programme%20update.pdf" target="_blank"><b>here</b></a>.
+                        </p>
+                        <p>
+                            Update: Our 38 Degrees petition 'Release grant funding for new Metro trains now!' to the Secretary of State for Transport has been successful! Click
+                            <a href="https://you.38degrees.org.uk/petitions/government-funding-for-tyne-and-wear-metro" target="_blank"><b>here</b></a> for our response on the 38 Degrees website.
+                        </p>
                     </div>
                     <!-- /.LOCAL NEWS AND EVENTS -->
                 </div>
@@ -275,6 +282,7 @@
             <!-- SOCIAL MEDIA -->
             <div class="col-md-4">
                 <h5 class="uppercase footer">Social Media</h5>
+                <!-- 'list-inline' is a Bootstrap class. -->
                 <ul class="list-inline social-media">
                     <li><a target="_blank" href="https://www.facebook.com/twptug/"><i class="fa fa-facebook"></i></a></li>
                     <li><a target="_blank" href="https://twitter.com/twptug"><i class="fa fa-twitter"></i></a></li>
@@ -361,6 +369,18 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!--Clear TWPTUG email form when modal submitted. -->
+    <script>
+        $modal=$('#emailModalTWPTUG');
+        $modal.find('form')[0].reset();
+    </script>
+
+    <!--Clear Local Group email form when submitted. -->
+    <script>
+        $modal=$('#emailModalNewcastle');
+        $modal.find('form')[0].reset();
+    </script>
 
 </body>
 

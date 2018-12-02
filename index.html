@@ -142,8 +142,8 @@
         <section class="row">
 
             <!-- IMAGE -->
-            <div class="hidden-xs col-sm-12 col-md-6 inline-block">
-                <img src="assets/images/logo.png" alt="Large circle with picture of Metro in station. Smaller circles around the edge show Shields Ferry, a cyclist, a bus and a Green Man Walking traffic signal.">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <img class="group-image" src="assets/images/logo.png" alt="Large circle with picture of Metro in station. Smaller circles around the edge show Shields Ferry, a cyclist, a bus and a Green Man Walking traffic signal.">
             </div>
             <!-- /.IMAGE -->
 
@@ -242,7 +242,7 @@
                         <p>Grayling plans to put utilities under pavements to cut potholes.</p>
                     </a>
 
-                    <a href="../assets/documents/Metro%20timetable%20consultation%20%202018%20results.pdf" target="_blank">
+                    <a href="assets/documents/Metro%20timetable%20consultation%202018%20results.pdf" target="_blank">
                         <p>Nexus timetable consultation 2018 results [PDF].</p>
                     </a>
 
@@ -264,17 +264,16 @@
                         <p class="local-operators-text">Looking for local transport info? Check these out...</p>
                     </div>
 
-                    <!-- Display a horizontal button group menu for sm, md and lg devices. -->
-                    <div class="btn-group hidden-xs col-sm-12 col-md-12 col-lg-12" role="group" aria-label="Local transport operator links">
+                    <!-- Display a horizontal button group menu for md and lg devices. -->
+                    <div class="btn-group custom-width hidden-xs hidden-sm col-md-12 col-lg-12" role="group" aria-label="Local transport operator links">
                         <span class="btn btn-success"><a href="https://www.nexus.org.uk" target="_blank">Nexus</a></span>
                         <span class="btn btn-warning"><a href="https://www.stagecoachbus.com" target="_blank">Stagecoach</a></span>
                         <span class="btn btn-danger"><a href="https://www.gonortheast.co.uk/timesfares" target="_blank">Go North East</a></span>
                         <span class="btn arriva-corporate"><a href="https://www.arrivabus.co.uk/north-east" target="_blank">Arriva</a></span>
-                        
                     </div>
 
-                    <!-- Display a vertical button group menu for xs devices only. -->
-                    <div class="btn-group-vertical custom-width col-xs-12 hidden-sm hidden-md hidden-lg" role="group" aria-label="Local transport operator links">
+                    <!-- Display a vertical button group menu for xs and sm devices only. -->
+                    <div class="btn-group-vertical custom-width col-xs-12 col-sm-12 hidden-md hidden-lg" role="group" aria-label="Local transport operator links">
                         <span class="btn btn-success"><a href="https://www.nexus.org.uk" target="_blank">Nexus</a></span>
                         <span class="btn btn-warning"><a href="https://www.stagecoachbus.com" target="_blank">Stagecoach</a></span>
                         <span class="btn btn-danger"><a href="https://www.gonortheast.co.uk/timesfares" target="_blank">Go North East</a></span>
@@ -296,7 +295,7 @@
 
             <!-- About -->
             <div class="col-xs-12 col-sm-12 col-md-4">
-                <h5 class="uppercase footer-section">About</h5>
+                <h5 class="uppercase footer">About</h5>
                 <p class="inline-block">
                     TWPTUG campaigns for an integrated, publicly-accountable transport system connecting Tyne and Wear, Northumberland and County Durham.
                 </p>
@@ -304,7 +303,7 @@
 
             <!-- Contact -->
             <div class="col-md-4">
-                <h5 class="uppercase footer-section">Email us</h5>
+                <h5 class="uppercase footer">Email us</h5>
                 <p class="inline-block">
                     Any questions about TWPTUG or want to report a website issue?<br>
                     Email us here.<a href="" class="email-link" data-toggle="modal" data-target="#emailModalTWPTUG"><i class="fa fa-envelope" aria-hidden="true"></i></a>
@@ -313,7 +312,8 @@
 
             <!-- Social Media -->
             <div class="col-md-4">
-                <h5 class="uppercase footer-section">Social Media</h5>
+                <h5 class="uppercase footer">Social Media</h5>
+                <!-- 'list-inline' is a Bootstrap class. -->
                 <ul class="list-inline social-media">
                     <li><a target="_blank" href="https://www.facebook.com/twptug/"><i class="fa fa-facebook"></i></a></li>
                     <li><a target="_blank" href="https://twitter.com/twptug"><i class="fa fa-twitter"></i></a></li>
@@ -337,7 +337,7 @@
                     <h4 class="modal-title" id="myModalLabel">Email Us</h4>
                 </div>
                 <div class="modal-body">
-                    <form action="acknowledgement.html">
+                    <form id="emailForm" action="acknowledgement.html">
                         <div class="form-group">
                             <input type="text" class="form-control" id="email" placeholder="To: TWPTUG Secretary" disabled>
                         </div>
@@ -430,6 +430,12 @@
         $('body').on('hidden.bs.modal', '.modal', function () {
             $('audio').trigger('pause');
         });
+    </script>
+    
+    <!--Clear email form when submitted. -->
+    <script>
+        $modal=$('#emailModalTWPTUG');
+        $modal.find('form')[0].reset();
     </script>
 
 </body>

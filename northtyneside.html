@@ -143,8 +143,8 @@
 
             <div class="row">
                 <!-- IMAGE -->
-                <div class="hidden-xs col-sm-12 col-md-8 col-lg-8 image-newcastle inline-block">
-                    <img src="assets/images/st_marys_lighthouse.jpg" alt="St Mary's Lighthouseide Newcastle Central Station main hall, showing the big clock suspended from the roof arch girders.">
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <img class="group-image" src="assets/images/st_marys_lighthouse.jpg" alt="St Mary's Lighthouseide Newcastle Central Station main hall, showing the big clock suspended from the roof arch girders.">
                 </div>
                 <!-- /.IMAGE -->
 
@@ -178,7 +178,7 @@
                             4 to 5 times each year and, unlike Newcastle Transport Forum, our Forum is open to the public to attend, so that their views and suggestions on
                             public transport in the area can be heard and acted upon. The Forum moves around the borough, to allow residents from the different parts of North
                             Tyneside to attend. The venue is always a local library eg, Whitley Bay, North Shields, Wallsend, Killingworth and is advertised in the local press.
-                            We are grateful to John Cram, Transport Officer for the borough, for organizing each event with Nexus support.
+                            We are grateful to John Cram, Transport Officer for the borough, for organising each event with Nexus support.
                             and other interested groups. etc. 
                         </p>
                         <p>
@@ -205,7 +205,7 @@
                             <li>We campaigned against the enactment of the Bus Services Bill in its initial form  and against several of the clauses, the most pernicious being Clause 21 
                                 that would deprive local councils from being allowed to own and operate their own municipal bus company. Given that the 11 remaining municipal companies 
                                 are the only ones that win any awards for service we felt very strongly about this. We were joined in our campaign by the Northern Group of Labour MPs and
-                                both Alan Campbell MP and our Mayor, Norma Redfearn both joined us at one of the photo-shoots we organized to publicise the issue. Despite severe criticism
+                                both Alan Campbell MP and our Mayor, Norma Redfearn both joined us at one of the photo-shoots we organised to publicise the issue. Despite severe criticism
                                 from both the House of Lords and the Transport Select Committee, the Government ignored this and passed the Bill with the clause intact and we now have the
                                 Bus Services Act to deal with and hopefully, get amended.</li>
                             
@@ -245,7 +245,7 @@
                     <!-- /.CAMPAIGNS -->
                 </div>
 
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 column-positioning">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <!-- LOCAL NEWS AND EVENTS -->
                     <div class="local-news">
                         <span class="uppercase panel-title">Local News & Events</span><br>
@@ -290,6 +290,7 @@
             <!-- SOCIAL MEDIA -->
             <div class="col-md-4">
                 <h5 class="uppercase footer">Social Media</h5>
+                <!-- 'list-inline' is a Bootstrap class. -->
                 <ul class="list-inline social-media">
                     <li><a target="_blank" href="https://www.facebook.com/twptug/"><i class="fa fa-facebook"></i></a></li>
                     <li><a target="_blank" href="https://twitter.com/twptug"><i class="fa fa-twitter"></i></a></li>
@@ -376,6 +377,18 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <!--Clear TWPTUG email form when modal submitted. -->
+    <script>
+        $modal=$('#emailModalTWPTUG');
+        $modal.find('form')[0].reset();
+    </script>
+
+    <!--Clear Local Group email form when submitted. -->
+    <script>
+        $modal=$('#emailModalNTyneside');
+        $modal.find('form')[0].reset();
+    </script>
 
 </body>
 

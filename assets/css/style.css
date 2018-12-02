@@ -1,22 +1,52 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700');
 
 /*---------------------------------------------------- Miscellaneous stylings */
-img {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    float: left;
-}
 
 header {
     margin: 0;
 }
 
-
-/* Remove bullet points from lists. */
+/* Remove bullet points from lists by default. */
 
 ul {
     list-style: none;
+}
+
+.group-image {
+    max-width: 100%;
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.about-image {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.photo-credit {
+    background-color: #e5e5e5;
+    color: #000;
+    padding-left: 3px;
+}
+
+.photo-credit a {
+    color: #337ab7;
+}
+
+.photo-credit a:hover {
+    color: darkblue;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.photo-credit a:focus {
+    color: darkblue;
+    text-decoration: none;
 }
 
 .uppercase {
@@ -53,11 +83,8 @@ ul {
     -o-transition: all 0.5s ease-in-out;
 }
 
-.modal-footer {
-    text-align: left;
-}
+/*-------------------------------------------------- Font Awesome stylings */
 
-/* Font Awesome spacings */
 .multi-media-icon {
     padding-right: 7px;
     color: #f0ad4e;
@@ -71,26 +98,6 @@ ul {
     padding-right: 9px;
 }
 
-.cc-licence-link {
-    text-decoration: none;
-    color: royalblue;
-}    
-
-.cc-licence-link:hover {
-    text-decoration: none;
-    color: darkred;
-    transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;    
-}
-
-.cc-licence-link:visited {
-    text-decoration: none;
-    color: darkred;
-}    
-
-
 /*-------------------------------------------------- Header Alert */
 
 .alert-container .col-xs-12 {
@@ -101,10 +108,9 @@ ul {
 .test-only-alert {
     color: #544600;
     background-color: #eec802;
-    border-color: #eec802;
+    border: none;
     padding: 5px 15px;
     margin-bottom: 0;
-    border: 1px solid transparent;
     border-radius: 0;
 }
 
@@ -163,7 +169,7 @@ ul {
     margin-top: 15px;
     margin-left: 40px;
     padding: 0px 0px 5px 5px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .news a {
@@ -196,22 +202,25 @@ ul {
 
 .welcome {
     max-width: 430px;
-    max-height: 600px;
+    max-height: 635px;
     background-color: #5cb85c;
     color: #fafafa;
     margin-top: 15px;
-    margin-left: 5px;
     padding: 5px;
     border-radius: 6px;
-    overflow-y: scroll;
+    overflow-y: auto;
+}
+
+.welcome-south-tyneside {
+    max-height: 645px;
 }
 
 .welcome a {
     color: #fafafa;
 }
 
-.column-positioning {
-    margin-left: -16px;
+.welcome-highlighting{
+    color: yellow;
 }
 
 .local-news {
@@ -228,7 +237,6 @@ ul {
 }
 
 .campaigns {
-    min-height: 410px;
     max-width: 899px;
     background-color: #fff;
     margin-top: 15px;
@@ -249,38 +257,49 @@ ul {
     margin-top:0;
 }
 
-/*-------------------------------------------------- Newcastle Group */
-.image-newcastle {
-    max-width: 64%;
-    margin-left: 15px;
-    margin-top: 15px;
-    margin-bottom: 0;
-    padding: 0;
-}
-
-/*-------------------------------------------------- North Tyneside Group */
-
-.image-north-tyneside {
-    max-width: 64%;
-    margin-left: 15px;
-    margin-top: 15px;
-    margin-bottom: 0;
-    padding: 0;
-}
-
 /*-------------------------------------------------- About Page */
+
 .about-heading {
     text-align: center;
-    color: #337ab7;;
+    color: #337ab7;
 }
 
-.about-subheading {
-    color: #337ab7;;
+.our-structure, .our-partners {
+    color: #000;
+    padding-left: 5px;    
 }
 
+.our-structure-heading, .our-partners-heading {
+    color: #337ab7;
+    margin-top: 0;    
+    padding-top: 5px;    
+}
 
+.our-objectives-bullet-points {
+    list-style: disc;
+}
+
+.our-objectives, .membership {
+    background-color: #337ab7;
+    color: #fafafa;
+    padding-left: 5px;    
+    padding-bottom: 5px;    
+}
+
+.our-objectives-heading, .membership-heading {
+    padding-top: 5px;    
+}
+
+.col-md-7, .col-lg-7 {
+    padding-left: 0;
+    padding-right: 0;
+}
 
 /*-------------------------------------------------- Acknowledgement Page */
+
+.body-container {
+    min-height: calc(100vh - 245px);
+}
 
 .jumbotron {
     text-align: center;
@@ -302,13 +321,37 @@ ul {
     margin-bottom: 30px;
 }
 
-/*-------------------------------------------------- 'Under Construction' Page - Can be used for any page yet to be developed e.g, rail.html, calendar.html, etc.     */
-/*-------------------------------------------------- As pages are developed, this class and related html can be removed from the file. It was thought better to have  */
-/*-------------------------------------------------- undeveloped pages handled like this, rather than let users see a Not Found error or pages with no MAIN content.  */                                      
+/*-------------------------------------------------- 'Under Construction' Page - Use this for any page that is yet to be developed e.g, rail.html, calendar.html, etc.  */
+/*                                                   As pages are developed, this class and related html can be removed from the file. It was thought better to have    */
+/*                                                   undeveloped pages handled like this, rather than let users see a Not Found error or pages with no MAIN content.    */                                      
 .under-construction {
     background-color: #337ab7;
 }
 
+/*-------------------------------------------------- Modals */
+
+.modal-footer {
+    text-align: left;
+}
+
+.cc-licence-link {
+    text-decoration: none;
+    color: royalblue;
+}    
+
+.cc-licence-link:hover {
+    text-decoration: none;
+    color: darkblue;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;    
+}
+
+.cc-licence-link:focus {
+    text-decoration: none;
+    color: royalblue;
+}    
 
 /*-------------------------------------------------- Footer */
 
@@ -322,7 +365,8 @@ footer {
 
 .footer {
     font-family: "Exo", sans-serif;
-    font-weight: 300;
+    font-weight: 500;
+    color: #f0ad4e;
 }
 
 .social-media li a i {
@@ -351,7 +395,7 @@ footer {
 
 /*-------------------------------------------------- Media Queries */
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
 
     .page-title h1 {
         margin-top: 0;
@@ -359,8 +403,9 @@ footer {
     }
 
     .news {
-        margin: 0;
-        max-height: 250px;
+        margin: auto;
+        margin-top: 15px;
+        max-height: 300px;
     }
 
     .panel-wrapper {
@@ -369,7 +414,7 @@ footer {
     }
 
     .local-operators {
-        margin: 0;
+        margin: auto;
     }
 
     .local-operators-text {
@@ -385,19 +430,68 @@ footer {
         overflow-y: scroll;
     }
 
-    .column-positioning {
-        margin-left: 0;
+    .welcome, .local-news {
+        margin: auto;
+        margin-top: 15px;
+        min-width: 100%;
     }
-    
+
     .jumbotron {
         margin-left: 10px;
         margin-right: 10px;
         margin-top: 10px;
     }
-
+    
+    ul {
+        padding-left: 10px;
+    }
     footer {
         margin-top: 20px;
     }
-
 }
 
+@media (min-width:768px) and (max-width:991px) {
+
+    .news {
+        margin: auto;
+        margin-top: 15px;
+        max-height: 500px;
+        min-width: 680px;
+    }
+ 
+    .local-operators {
+        margin: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .custom-width {
+        max-width: 150px;
+    }
+
+    .welcome, .local-news {
+        margin: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        min-width: 100%;
+    }
+
+    .about-image {
+        margin: auto;
+        margin-top: 15px;
+        min-width: 100%;
+    }
+    
+    footer {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    
+    .about-image {
+        margin: auto;
+        margin-top: 15px;
+        min-width: 100%;
+    }
+}
