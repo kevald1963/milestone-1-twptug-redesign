@@ -421,10 +421,6 @@ footer {
         margin-top: 10px;
     }
 
-    .custom-width {
-        max-width: 150px;
-    }
-
     .campaigns {
         min-height: 100px;
         overflow-y: scroll;
@@ -460,13 +456,9 @@ footer {
     }
  
     .local-operators {
-        margin: auto;
+        margin: 0;
         margin-top: 15px;
         margin-bottom: 15px;
-    }
-
-    .custom-width {
-        max-width: 150px;
     }
 
     .welcome, .local-news {
