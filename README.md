@@ -159,7 +159,11 @@ I don't know how to do this currently, so individual blocks of HTML have to copi
 
 ## Testing
 
-Excel workbook,'Test plan - TWPTUG redesign', stored in the __Project Documentation_ folder in the GitHub repository, details all the functional and responsivity tests carried out across several popular browsers. I have not followed the user stories because there is too much overlap. Instead, I've tested everything that could possible be tested at this stage of the website's development.
+- Excel workbook,'Test plan - TWPTUG redesign', stored in the __Project Documentation_ folder in the GitHub repository, details all the functional and responsiveness tests carried out across several popular browsers.
+
+- As the site gets bigger I will definitely need to create some automated test scripts, because manual testing will just get too slow and tedious to carry out. I did consider doing it for this particular phase of 
+  development, using a product, based on Selenium IDE, called Katalon Recorder but, after a bit of experimentation, I found it was not sophisticated enough to capture page and window identifying information without 
+  writing some programming code in its sister product Katalon Studio. This is too much of a learning curve for me at this point in time.
 
 ## Deployment
 The Project is deployed on GitHub Pages at https://kevald1963.github.io/milestone-1-twptug-redesign/
