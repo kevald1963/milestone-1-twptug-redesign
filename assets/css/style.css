@@ -17,18 +17,25 @@ ul {
     margin-top: 15px;
     margin-bottom: 0;
     padding: 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
 }
 
-.about-image {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
+.group-image-special {
+    border-radius: 6px 6px 0px 0px;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.12), 0 0 4px 0 rgba(0,0,0,0.08);
 }
 
 .photo-credit {
     background-color: #e5e5e5;
     color: #000;
     padding-left: 3px;
+    border-radius: 0px 0px 6px 6px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+}
+
+.photo-credit-special {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
 }
 
 .photo-credit a {
@@ -57,6 +64,13 @@ ul {
     width: 90px;
     height: 90px;
     padding-right: 10px;
+}
+
+.about-image {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.12), 0 0 4px 0 rgba(0,0,0,0.08);
 }
 
 .inline-block {
@@ -161,28 +175,12 @@ ul {
 
 /*-------------------------------------------------- Home Page */
 
-.news {
-    max-height: 480px;
-    max-width: 560px;
-    background-color: #337ab7;
-    color: #fafafa;
-    margin-top: 15px;
-    margin-left: 40px;
-    padding: 0px 0px 5px 5px;
-    overflow-y: auto;
-}
-
-.news a {
-    color: #fafafa;
-}
-
 .local-operators {
     max-width: 560px;
     color: #000;
     background-color: #fff;
+    margin: auto;
     margin-top: 25px;
-    margin-left: 20px;
-    padding: 3px 5px 5px;
 }
 
 .local-operators-text {
@@ -198,6 +196,27 @@ ul {
     background-color: #12868a;
 }
 
+.btn-group, .btn-group-vertical {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+}
+
+.news {
+    max-height: 500px;
+    max-width: 560px;
+    background-color: #337ab7;
+    color: #fafafa;
+    margin: auto;
+    margin-top: 25px;
+    padding: 2px 2px 5px 5px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+    overflow-y: auto;
+}
+
+.news a {
+    color: #fafafa;
+}
+
 /*-------------------------------------------------- All Local Groups */
 
 .welcome {
@@ -209,6 +228,7 @@ ul {
     padding: 5px;
     border-radius: 6px;
     overflow-y: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
 }
 
 .welcome-south-tyneside {
@@ -230,6 +250,7 @@ ul {
     margin-left: 0;
     padding: 5px;
     border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
 }
 
 .local-news a {
@@ -402,25 +423,6 @@ footer {
         margin-bottom: 0;
     }
 
-    .news {
-        margin: auto;
-        margin-top: 15px;
-        max-height: 300px;
-    }
-
-    .panel-wrapper {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .local-operators {
-        margin: auto;
-    }
-
-    .local-operators-text {
-        margin-top: 10px;
-    }
-
     .campaigns {
         min-height: 100px;
         overflow-y: scroll;
@@ -451,16 +453,11 @@ footer {
     .news {
         margin: auto;
         margin-top: 15px;
+        margin-bottom: 15px;
         max-height: 500px;
         min-width: 680px;
     }
  
-    .local-operators {
-        margin: 0;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-
     .welcome, .local-news {
         margin: auto;
         margin-top: 15px;

@@ -166,7 +166,7 @@ I don't know how to do this currently, so individual blocks of HTML have to copi
   writing some programming code in its sister product Katalon Studio. This is too much of a learning curve for me at this point in time.
 
 ## Deployment
-The Project is deployed on GitHub Pages at https://kevald1963.github.io/milestone-1-twptug-redesign/
+- The Project is deployed on GitHub Pages, using the default settings. Click [here](https://kevald1963.github.io/milestone-1-twptug-redesign/) to view.
 
 ## Credits
 
