@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
 </head>
 
 <body>
@@ -52,7 +52,7 @@
                 <ul class="nav navbar-nav">
 
                     <!-- HOME -->
-                    <li class="active"><a href="index.html"><i class="fa fa-home hidden-xs" aria-hidden="true"></i><span> Home</span><span class="sr-only">(current)</span></a></li>
+                    <li class="active"><a href="{{ url_for('index') }}"><i class="fa fa-home hidden-xs" aria-hidden="true"></i><span> Home</span><span class="sr-only">(current)</span></a></li>
 
                     <!-- GROUPS -->
                     <li class="dropdown">
@@ -233,7 +233,7 @@
                     <div class="modal-video">
                         <div class="embed-responsive embed-responsive-16by9">
                             <video class="embed-responsive-item" width="560px" height="240px" controls>
-    						    <source src="assets/videos/transport_committee_30-10-18_09-49-29.mp4" type="video/mp4">
+    						    <source src="static/videos/transport_committee_30-10-18_09-49-29.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -252,13 +252,13 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <a href="https://www.reinventingtransport.org/" target="_blank">
-                        <img src="assets/images/RT_podcast_art.png" class="RT-logo">
+                        <img src="static/images/RT_podcast_art.png" class="RT-logo">
                     </a>
                     <h4 class="modal-title">Multimodal transport: Todd Litman explains how and why.</h4>
                 </div>
                 <div class="modal-body">
                     <audio controls>
-					    <source src="assets/audio/RT_3_Todd_Litman_ds.mp3" type="audio/mpeg">
+					    <source src="static/audio/RT_3_Todd_Litman_ds.mp3" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
