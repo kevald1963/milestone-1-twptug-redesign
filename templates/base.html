@@ -128,7 +128,7 @@
                 <!-- ABOUT -->
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="blog.html">Blog</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
                 </ul>
 
             </div>
@@ -274,24 +274,31 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <!--Stop video playing when modal is closed. -->
+    <!-- Stop video playing when modal is closed. -->
     <script>
         $('body').on('hidden.bs.modal', '.modal', function () {
             $('video').trigger('pause');
         });
     </script>
 
-    <!--Stop audio playing when modal is closed. -->
+    <!-- Stop audio playing when modal is closed. -->
     <script>
         $('body').on('hidden.bs.modal', '.modal', function () {
             $('audio').trigger('pause');
         });
     </script>
 
-    <!--Clear email form when submitted. -->
+    <!-- Clear email form when submitted. -->
     <script>
         $modal=$('#emailModalTWPTUG');
         $modal.find('form')[0].reset();
+    </script>
+
+    <!-- Enable Bootstrap tooltips -->
+    <script>
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
     </script>
 
 </body>
