@@ -78,9 +78,9 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="busfacts.html">Bus Facts</a></li>
-                            <li><a href="reregulation.html"><span>Re-regulation</span></a></li>
-                            <li><a href="hospitalbuses.html"><span>Hospital Buses</span></a></li>
+                            <li><a href="{{ url_for('busfacts') }}">Bus Facts</a></li>
+                            <li><a href="{{ url_for('reregulation') }}"><span>Re-regulation</span></a></li>
+                            <li><a href="{{ url_for('hospitalbuses') }}"><span>Hospital Buses</span></a></li>
                         </ul>
                     </li>
 
@@ -92,7 +92,7 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="cyclingcampaigns.html">Campaigns</a></li>
+                            <li><a href="{{ url_for('cyclingcampaigns') }}">Campaigns</a></li>
                             <li class="divider" role="separator" ></li>
                             <li><a href="https://newcycling.org" target="_blank"><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> NewCycling Group</span></a></li>
                             <li><a href="https://www.sustrans.org.uk" target="_blank"><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Sustrans</span></a></li>
@@ -100,10 +100,10 @@
                     </li>
 
                     <!-- RAIL -->
-                    <li><a href="rail.html"><i class="fa fa-train hidden-xs" aria-hidden="true"></i><span> Rail</span></a></li>
+                    <li><a href="{{ url_for('rail') }}"><i class="fa fa-train hidden-xs" aria-hidden="true"></i><span> Rail</span></a></li>
 
                     <!-- CALENDAR -->
-                    <li><a href="calendar.html"><i class="fa fa-calendar hidden-xs" aria-hidden="true"></i><span> Calendar</span></a></li>
+                    <li><a href="{{ url_for('calendar') }}"><i class="fa fa-calendar hidden-xs" aria-hidden="true"></i><span> Calendar</span></a></li>
 
                     <!-- MORE -->
                     <li class="dropdown">
@@ -112,11 +112,11 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="pensioners.html"><span>Pensioners' Travel</span></a></li>
-                            <li><a href="disability.html"><span>Disability</span></a></li>
-                            <li><a href="airpollution.html"><span>Air Pollution</span></a></li>
-                            <li><a href="transpcomm.html"><span>Transport Select Committee</span></a></li>
-                            <li><a href="media.html"><span>Media</span></a></li>
+                            <li><a href="{{ url_for('pensioners') }}"><span>Pensioners' Travel</span></a></li>
+                            <li><a href="{{ url_for('disability') }}"><span>Disability</span></a></li>
+                            <li><a href="{{ url_for('airpollution') }}"><span>Air Pollution</span></a></li>
+                            <li><a href="{{ url_for('transpcomm') }}"><span>Transport Select Committee</span></a></li>
+                            <li><a href="{{ url_for('media') }}"><span>Media</span></a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="http://www.passengertransport.co.uk" target="_blank"><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Passenger Transport Magazine</span></a></li>
                             <li><a href="https://www.transportfocus.org.uk/news-events-media/news" target="_blank"><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Transport Focus News</span></a></li>
@@ -127,7 +127,7 @@
 
                 <!-- ABOUT -->
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="{{ url_for('blog') }}">Blog</a></li>
                     <li><a href="{{ url_for('about') }}">About</a></li>
                 </ul>
 
@@ -297,8 +297,15 @@
     <!-- Enable Bootstrap tooltips -->
     <script>
         $(function () {
-          $('[data-toggle="tooltip"]').tooltip()
+            $('[data-toggle="tooltip"]').tooltip()
         })
+    </script>
+
+    <!-- Go back to previous page when Return button clicked. -->
+    <script>
+        function goBack() {
+            window.history.back();
+        };
     </script>
 
 </body>
