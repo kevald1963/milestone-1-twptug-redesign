@@ -1,158 +1,176 @@
 {% extends 'base.html' %}
 {% block content %}
-        <section class="row">
 
-            <!-- IMAGE -->
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <img class="group-image" src="static/images/logo.png" alt="Large circle with picture of Metro in station. Smaller circles around the edge show Shields Ferry, a cyclist, a bus and a Green Man Walking traffic signal.">
-            </div>
-            <!-- /.IMAGE -->
+<section class="row">
 
-            <!-- Wrap the News and Local Operators together. -->
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <!-- IMAGE -->
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <img class="group-image" src="static/images/logo.png" alt="Large circle with picture of Metro in station.
+            Smaller circles around the edge show Shields Ferry, a cyclist, a bus and a Green Man Walking traffic signal.">
+    </div>
+    <!-- /.IMAGE -->
 
-                <!-- LOCAL OPERATORS -->
-                <!-- Wrap the heading text with the button group. -->
-                <div class="local-operators">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <p class="local-operators-text">Looking for local transport info? Check these out...</p>
-                        </div>
-                    </div>
+    <!-- Wrap the News and Local Operators together. -->
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 
-                    <div class="row">
-
-                        <!-- Display a horizontal button group menu for sm, md and lg devices. -->
-                        <div class="hidden-xs col-sm-12 col-md-12 col-lg-12">
-                            <div class="btn-group" role="group" aria-label="Local transport operator links">
-                                <span class="btn btn-success"><a href="https://www.nexus.org.uk" target="_blank">Nexus</a></span>
-                                <span class="btn btn-warning"><a href="https://www.stagecoachbus.com" target="_blank">Stagecoach</a></span>
-                                <span class="btn btn-danger"><a href="https://www.gonortheast.co.uk/timesfares" target="_blank">Go North East</a></span>
-                                <span class="btn arriva-corporate"><a href="https://www.arrivabus.co.uk/north-east" target="_blank">Arriva</a></span>
-                            </div>
-                        </div>
-
-                        <!-- Display a vertical button group menu for xs devices only. -->
-                        <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
-                            <div class="btn-group-vertical" role="group" aria-label="Local transport operator links">
-                                <span class="btn btn-success"><a href="https://www.nexus.org.uk" target="_blank">Nexus</a></span>
-                                <span class="btn btn-warning"><a href="https://www.stagecoachbus.com" target="_blank">Stagecoach</a></span>
-                                <span class="btn btn-danger"><a href="https://www.gonortheast.co.uk/timesfares" target="_blank">Go North East</a></span>
-                                <span class="btn arriva-corporate"><a href="https://www.arrivabus.co.uk/north-east" target="_blank">Arriva</a></span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- /.LOCAL OPERATORS -->
+        <!-- LOCAL OPERATORS -->
+        <!-- Wrap the heading text with the button group. -->
+        <div class="local-operators">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <p class="local-operators-text">Looking for local transport info? Check these out...</p>
                 </div>
-
-                <!-- NEWS -->
-                <div class="news">
-                    <span class="uppercase panel-title">Current News & Campaigns...</span><br><br>
-                    <!-- <<                                                                       >> -->
-                    <!-- << INSERT NEWS & CAMPAIGN ARTICLES HERE                                  >> -->
-                    <!-- <<                                                                       >> -->
-                    <!-- << General instructions for updating content:                            >> -->
-                    <!-- <<                                                                       >> -->
-                    <!-- << 1. Copy and paste the topmost item between the <a> and </a> tags.     >> -->
-                    <!-- << 2. Replace the href with the new website address.                     >> -->
-                    <!-- << 3. Replace the description between the <p> and </p> tags.             >> -->
-                    <!-- <<                                                                       >> -->
-                    <!-- << For content to be shown in modal windows, do as above but replace     >> -->
-                    <!-- << the opening <a> tag with following template and customise to suit:    >> -->
-                    <!-- << <a href="" data-toggle="modal" data-target="#NameOfModal">            >> -->
-                    <!-- << Note that href must be left null. Copy new modal from existing modal  >> -->
-                    <!-- << further down in document.                                             >> -->
-
-                    <a href="" data-toggle="modal" data-target="#audioModal">
-                        <p><i class="fa fa-volume-up multi-media-icon"></i>Reinventing Transport podcast: Multimodal transport - Todd Litman explains how and why.</p>
-                    </a>
-
-                    <a href="https://betterbusesgm.org.uk/better-buses-manchester-homepage" target="_blank">
-                        <p>Our buses aren't good enough - Better Buses for Greater Manchester petition to Mayor Andy Burnham.
-                           YOU CAN SIGN IN SOLIDARITY if you live outside of Greater Manchester; you don't have to be a Mancunian
-                           to express your support!</p>
-                    </a>
-
-                    <a href="" data-toggle="modal" data-target="#videoModal">
-                        <p><i class="fa fa-tv multi-media-icon"></i>Video of Transport Select Committee inquiry into the health of the bus market, Tuesday 30 October 2018.</p>
-                    </a>
-
-                    <a href="https://www.mirror.co.uk/news/politics/bus-firms-pay-fat-cats-13540251" target="_blank">
-                        <p>Bus firms pay fat cats £1.5 BILLION - while prices go up 55% and routes are axed - Mirror article.</p>
-                    </a>
-
-                    <a href="static/documents/TWPTUG%20Annual%20Report%202018.pdf">
-                        <p>Paul Baker (outgoing TWPTUG Secretary) submits 2018 AGM report to the Transport Select Committee's
-                           inquiry into the decline of Britain's bus services. See pages 5-7 and the conclusion on page 19.</p>
-                    </a>
-
-                    <a href="https://www.theguardian.com/world/2018/oct/15/fall-in-local-uk-bus-journeys-to-12-year-low-prompts-talk-of-crisis?CMP=Share_iOSApp_Other" target="_blank">
-                        <p>Fall in local UK bus journeys to 12-year low prompts talk of crisis.</p>
-                    </a>
-
-                    <a href="https://www.oxford.gov.uk/news/article/876/southampton_joins_oxford_in_the_fight_against_dirty_air_by_signing_cleaner_air_charter" target="_blank">
-                        <p>Second council signs cleaner air charter.</p>
-                    </a>
-
-                    <a href="https://www.livingstreets.org.uk/who-we-are/press-media/pm-announces-actions-to-support-electric-vehicle-uptake" target="_blank">
-                        <p>Electric vehicles and pavement clutter - read Living Streets' response to the Prime Minister's announcement of measures to support the uptake of electric vehicles (EVs).</p>
-                    </a>
-
-                    <a href="https://www.theguardian.com/commentisfree/2018/oct/08/the-guardian-view-on-climate-change-a-global-emergency" target="_blank">
-                        <p>Guardian view on climate change: a global emergency - Editorial</p>
-                    </a>
-
-                    <a href="https://act.unicef.org.uk/page/29595/petition/1?ea.tracking.id=uuk-website&_ga=2.60959148.1223070613.1538924291-1181986388.1538924291" target="_blank">
-                        <p>UNICEF UK anti-pollution campaign - "EVERY CHILD'S BREATH UNDER THREAT, LET'S CHANGE THAT". Please sign the petition on their website. Thank you!</p>
-                    </a>
-
-                    <a href="https://inews.co.uk/essentials/lifestyle/cars/car-news/the-uks-most-congested-cities-and-a-roads-revealed" target="_blank">
-                        <p>The UK’s most congested cities and A-roads revealed.</p>
-                    </a>
-
-                    <a href="https://www.theguardian.com/politics/2018/aug/01/transport-spending-gap-london-north-of-england-ippr" target="_blank">
-                        <p>Transport gap: London gets £419 more per head than north of England.</p>
-                    </a>
-
-                    <a href="https://www.chroniclelive.co.uk/news/north-east-news/police-chief-reveals-metro-fears-14982004" target="_blank">
-                        <p>Police chief reveals Metro fears as youths armed with booze 'cause chaos' at the coast.</p>
-                    </a>
-
-                    <a href="https://www.thelocal.fr/20180320/the-towns-in-france-where-you-can-travel-around-for-free" target="_blank">
-                        <p>Several French cities have made public transport free, working on the same principle as Ken Livingstone's 'Fare's Fair'. See map for the towns in France where you can travel around for free.</p>
-                    </a>
-
-                    <a href="https://www.theguardian.com/commentisfree/2018/aug/08/toxic-air-pollution-lethal-blight-politicians-failure-shame-heart-disease?CMP=share_btn_link" target="_blank">
-                        <p>Guardian Opinion by John Vidal: Air pollution is a lethal blight that shames our politicians.</p>
-                    </a>
-
-                    <a href="https://news.sky.com/story/labour-launches-rare-bid-to-dock-chris-graylings-wages-by-2400-11382291" target="_blank">
-                        <p>Labour launches rare bid to dock Transport Secretary Chris Grayling's wages by £2,400.</p>
-                    </a>
-
-                    <a href="https://www.civilserviceworld.com/articles/news/mps-launch-inquiry-dft-bidding-process-after-east-coast-mainline-franchise-failure" target="_blank">
-                        <p>MPs launch inquiry into DfT bidding process after East Coast Mainline franchise failure. Transport Committee inquiry started 21 May 2018.</p>
-                    </a>
-
-                    <a href="https://www.transport-network.co.uk/Grayling-plans-to-put-utilities-under-pavements-to-cut-potholes/15010" target="_blank">
-                        <p>Grayling plans to put utilities under pavements to cut potholes.</p>
-                    </a>
-
-                    <a href="static/documents/Metro%20timetable%20consultation%202018%20results.pdf" target="_blank">
-                        <p>Nexus timetable consultation 2018 results [PDF].</p>
-                    </a>
-
-                    <a href="https://bdaily.co.uk/articles/2018/04/13/4m-rapid-charging-vehicle-points-in-place-for-newcastle-and-sunderland?utm_source=bulletin&utm_medium=email&utm_campaign=2018-04-13-north-east&utm_content=readmore" target="_blank">
-                        <p>£4m 'rapid charging' vehicle points in place for Newcastle and Sunderland.</p>
-                    </a>
-
-                    <a href="https://www.transport-network.co.uk/Govt-protects-free-bus-pass-but-LGA-decries-funding-gap/14965" target="_blank">
-                        <p>Government 'protects' free bus pass but LGA decries funding gap.</p>
-                    </a>
-                </div>
-                <!-- /.NEWS -->
             </div>
 
-        </section>
+            <div class="row">
+
+                <!-- Display a horizontal button group menu for sm, md and lg devices. -->
+                <div class="hidden-xs col-sm-12 col-md-12 col-lg-12">
+                    <div class="btn-group" role="group" aria-label="Local transport operator links">
+                        <span class="btn btn-success"><a href="https://www.nexus.org.uk" target="_blank">Nexus</a></span>
+                        <span class="btn btn-warning"><a href="https://www.stagecoachbus.com" target="_blank">Stagecoach</a></span>
+                        <span class="btn btn-danger"><a href="https://www.gonortheast.co.uk/timesfares" target="_blank">Go North East</a></span>
+                        <span class="btn arriva-corporate"><a href="https://www.arrivabus.co.uk/north-east" target="_blank">Arriva</a></span>
+                    </div>
+                </div>
+
+                <!-- Display a vertical button group menu for xs devices only. -->
+                <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+                    <div class="btn-group-vertical" role="group" aria-label="Local transport operator links">
+                        <span class="btn btn-success"><a href="https://www.nexus.org.uk" target="_blank">Nexus</a></span>
+                        <span class="btn btn-warning"><a href="https://www.stagecoachbus.com" target="_blank">Stagecoach</a></span>
+                        <span class="btn btn-danger"><a href="https://www.gonortheast.co.uk/timesfares" target="_blank">Go North East</a></span>
+                        <span class="btn arriva-corporate"><a href="https://www.arrivabus.co.uk/north-east" target="_blank">Arriva</a></span>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.LOCAL OPERATORS -->
+        </div>
+
+        <!-- NEWS -->
+        <div class="news">
+            <span class="uppercase panel-title">Current News & Campaigns...</span><br><br>
+            <!-- <<                                                                       >> -->
+            <!-- << INSERT NEWS & CAMPAIGN ARTICLES HERE                                  >> -->
+            <!-- <<                                                                       >> -->
+            <!-- << General instructions for updating content:                            >> -->
+            <!-- <<                                                                       >> -->
+            <!-- << 1. Copy and paste the topmost item between the <a> and </a> tags.     >> -->
+            <!-- << 2. Replace the href with the new website address.                     >> -->
+            <!-- << 3. Replace the description between the <p> and </p> tags.             >> -->
+            <!-- <<                                                                       >> -->
+            <!-- << For content to be shown in modal windows, do as above but replace     >> -->
+            <!-- << the opening <a> tag with following template and customise to suit:    >> -->
+            <!-- << <a href="" data-toggle="modal" data-target="#NameOfModal">            >> -->
+            <!-- << Note that href must be left null. Copy new modal from existing modal  >> -->
+            <!-- << further down in document.                                             >> -->
+
+
+
+            <a href="https://mailchi.mp/85315aeb93a6/the-better-places-network-digest-issue-35-new-walking-cycling-commissioner-for-lcr-car-free-portsmouth-new-sustrans-research-and-lots-more-2509006?e=c796d20f1c" target="_blank">
+                <p>The Better Places Network Digest, Issue 48 - The latest planning and policy news from the
+                   fields of active travel, public health, safety, urban realm and air quality. Also see our
+                   permanent newsletter link in Useful Links menu.
+                </p>
+            </a>
+
+            <a href="https://capx.co/driving-change-how-hydrogen-can-fuel-a-transport-revolution/" target="_blank">
+                <p>Driving change: how hydrogen can fuel a transport revolution</p>
+            </a>
+
+            <a href="" data-toggle="modal" data-target="#audioModal">
+                <p><i class="fa fa-volume-up multi-media-icon"></i>
+                    Reinventing Transport podcast: Multi-modal transport - Todd Litman explains how and why.
+                </p>
+            </a>
+
+            <a href="https://betterbusesgm.org.uk/better-buses-manchester-homepage" target="_blank">
+                <p>Our buses aren't good enough - Better Buses for Greater Manchester petition to Mayor Andy Burnham.
+                   YOU CAN SIGN IN SOLIDARITY if you live outside of Greater Manchester; you don't have to be a Mancunian
+                   to express your support!</p>
+            </a>
+
+            <a href="" data-toggle="modal" data-target="#videoModal">
+                <p><i class="fa fa-tv multi-media-icon"></i>Video of Transport Select Committee inquiry into the health of the bus market, Tuesday 30 October 2018.</p>
+            </a>
+
+            <a href="https://www.mirror.co.uk/news/politics/bus-firms-pay-fat-cats-13540251" target="_blank">
+                <p>Bus firms pay fat cats £1.5 BILLION - while prices go up 55% and routes are axed - Mirror article.</p>
+            </a>
+
+            <a href="static/documents/TWPTUG%20Annual%20Report%202018.pdf">
+                <p>Paul Baker (outgoing TWPTUG Secretary) submits 2018 AGM report to the Transport Select Committee's
+                   inquiry into the decline of Britain's bus services. See pages 5-7 and the conclusion on page 19.</p>
+            </a>
+
+            <a href="https://www.theguardian.com/world/2018/oct/15/fall-in-local-uk-bus-journeys-to-12-year-low-prompts-talk-of-crisis?CMP=Share_iOSApp_Other" target="_blank">
+                <p>Fall in local UK bus journeys to 12-year low prompts talk of crisis.</p>
+            </a>
+
+            <a href="https://www.oxford.gov.uk/news/article/876/southampton_joins_oxford_in_the_fight_against_dirty_air_by_signing_cleaner_air_charter" target="_blank">
+                <p>Second council signs cleaner air charter.</p>
+            </a>
+
+            <a href="https://www.livingstreets.org.uk/who-we-are/press-media/pm-announces-actions-to-support-electric-vehicle-uptake" target="_blank">
+                <p>Electric vehicles and pavement clutter - read Living Streets' response to the Prime Minister's announcement of measures to support the uptake of electric vehicles (EVs).</p>
+            </a>
+
+            <a href="https://www.theguardian.com/commentisfree/2018/oct/08/the-guardian-view-on-climate-change-a-global-emergency" target="_blank">
+                <p>Guardian view on climate change: a global emergency - Editorial</p>
+            </a>
+
+            <a href="https://act.unicef.org.uk/page/29595/petition/1?ea.tracking.id=uuk-website&_ga=2.60959148.1223070613.1538924291-1181986388.1538924291" target="_blank">
+                <p>UNICEF UK anti-pollution campaign - "EVERY CHILD'S BREATH UNDER THREAT, LET'S CHANGE THAT". Please sign the petition on their website. Thank you!</p>
+            </a>
+
+            <a href="https://inews.co.uk/essentials/lifestyle/cars/car-news/the-uks-most-congested-cities-and-a-roads-revealed" target="_blank">
+                <p>The UK’s most congested cities and A-roads revealed.</p>
+            </a>
+
+            <a href="https://www.theguardian.com/politics/2018/aug/01/transport-spending-gap-london-north-of-england-ippr" target="_blank">
+                <p>Transport gap: London gets £419 more per head than north of England.</p>
+            </a>
+
+            <a href="https://www.chroniclelive.co.uk/news/north-east-news/police-chief-reveals-metro-fears-14982004" target="_blank">
+                <p>Police chief reveals Metro fears as youths armed with booze 'cause chaos' at the coast.</p>
+            </a>
+
+            <a href="https://www.thelocal.fr/20180320/the-towns-in-france-where-you-can-travel-around-for-free" target="_blank">
+                <p>Several French cities have made public transport free, working on the same principle as Ken Livingstone's 'Fare's Fair'. See map for the towns in France where you can travel around for free.</p>
+            </a>
+
+            <a href="https://www.theguardian.com/commentisfree/2018/aug/08/toxic-air-pollution-lethal-blight-politicians-failure-shame-heart-disease?CMP=share_btn_link" target="_blank">
+                <p>Guardian Opinion by John Vidal: Air pollution is a lethal blight that shames our politicians.</p>
+            </a>
+
+            <a href="https://news.sky.com/story/labour-launches-rare-bid-to-dock-chris-graylings-wages-by-2400-11382291" target="_blank">
+                <p>Labour launches rare bid to dock Transport Secretary Chris Grayling's wages by £2,400.</p>
+            </a>
+
+            <a href="https://www.civilserviceworld.com/articles/news/mps-launch-inquiry-dft-bidding-process-after-east-coast-mainline-franchise-failure" target="_blank">
+                <p>MPs launch inquiry into DfT bidding process after East Coast Mainline franchise failure. Transport Committee inquiry started 21 May 2018.</p>
+            </a>
+
+            <a href="https://www.transport-network.co.uk/Grayling-plans-to-put-utilities-under-pavements-to-cut-potholes/15010" target="_blank">
+                <p>Grayling plans to put utilities under pavements to cut potholes.</p>
+            </a>
+
+            <a href="static/documents/Metro%20timetable%20consultation%202018%20results.pdf" target="_blank">
+                <p>Nexus timetable consultation 2018 results [PDF].</p>
+            </a>
+
+            <a href="https://bdaily.co.uk/articles/2018/04/13/4m-rapid-charging-vehicle-points-in-place-for-newcastle-and-sunderland?utm_source=bulletin&utm_medium=email&utm_campaign=2018-04-13-north-east&utm_content=readmore" target="_blank">
+                <p>£4m 'rapid charging' vehicle points in place for Newcastle and Sunderland.</p>
+            </a>
+
+            <a href="https://www.transport-network.co.uk/Govt-protects-free-bus-pass-but-LGA-decries-funding-gap/14965" target="_blank">
+                <p>Government 'protects' free bus pass but LGA decries funding gap.</p>
+            </a>
+        </div>
+        <!-- /.NEWS -->
+    </div>
+
+</section>
+
 {% endblock %}
