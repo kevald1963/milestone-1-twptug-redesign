@@ -46,9 +46,9 @@ def cyclingcampaigns():
     return render_template("cyclingcampaigns.html")
 
 
-@app.route('/busfacts')
-def busfacts():
-    return render_template("busfacts.html")
+@app.route('/busnews')
+def busnews():
+    return render_template("busnews.html")
 
 
 @app.route('/rail')
