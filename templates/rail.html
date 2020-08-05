@@ -3,53 +3,64 @@
 
 <section class="row">
 
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="row">
 
-        <!-- IMAGE -->
-        <img class="group-image rail-image" src="static/images/metro_lobby.jpg"
-             alt="Metro Futures Parliamentary Promotion with TWPTUG Chair, Vicki Gilbert, and
-             NECA South Tyneside Transport Committee members, Councillors Alan Smith and Gladys Hobson.">
-        <!-- /.IMAGE -->
+            <!-- NEWS -->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                <div class="news-rail">
+                    <span class="uppercase panel-title">Rail News...</span><br><br>
+                    <!-- <<                                                                       >> -->
+                    <!-- << INSERT NEWS ARTICLES HERE                                             >> -->
+                    <!-- <<                                                                       >> -->
+                    <!-- << General instructions for updating content:                            >> -->
+                    <!-- <<                                                                       >> -->
+                    <!-- << 1. Copy and paste the topmost item between the <a> and </a> tags.     >> -->
+                    <!-- << 2. Replace the href with the new website address.                     >> -->
+                    <!-- << 3. Replace the description between the <p> and </p> tags.             >> -->
+                    <!-- <<                                                                       >> -->
+                    <!-- << For content to be shown in modal windows, do as above but replace     >> -->
+                    <!-- << the opening <a> tag with following template and customise to suit:    >> -->
+                    <!-- << <a href="" data-toggle="modal" data-target="#NameOfModal">            >> -->
+                    <!-- << Note that href must be left null. Copy new modal from existing modal  >> -->
+                    <!-- << further down in document.                                             >> -->
 
-        <!-- VIDEO -->
-        <div class="embed-responsive embed-responsive-16by9">
-            <video class="embed-responsive-item" width="560px" height="240px" controls>
-                <source src="https://www.youtube.com/watch?time_continue=14&v=188H4pLy9H8&feature=emb_logo">
-            </video>
+                    <a href="https://bdaily.co.uk/articles/2019/05/15/eco-friendly-train-firm-creates-new-jobs-ahead-of-schedule" target="_blank">
+                        <p>Eco-friendly train firm creates new jobs ahead of schedule, </p>
+                    </a>
+
+                    <a href="https://www.transport-network.co.uk/Tracking-passengers-who-need-assistance/15874/" target="_blank">
+                        <p>Tracking passengers who need assistance</p>
+                    </a>
+
+                    <a href=""
+                        id="video-2"
+                        data-toggle="modal"
+                        data-target="#videoModal"
+                        data-video-type="youtube"
+                        data-title = "Cat Hobbs at the Labour post-budget rally, Nov 2017: We're taking back our services!"
+                        data-video-source="https://www.youtube.com/embed/188H4pLy9H8"
+                        onclick="showModal(this)">
+                        <p><i class="fa fa-tv multi-media-icon"></i>
+                            Video of Cat Hobbs at the Labour post-budget rally, Nov 2017: "We're taking back our services!"
+                        </p>
+                    </a>
+
+                </div>
+            </div>
+            <!-- /.NEWS -->
         </div>
-        <!-- /.VIDEO -->
     </div>
 
-    <!-- NEWS PANEL -->
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <div class="news">
-            <span class="uppercase panel-title">Rail News...</span><br><br>
-            <!-- <<                                                                       >> -->
-            <!-- << INSERT NEWS ARTICLES HERE                                             >> -->
-            <!-- <<                                                                       >> -->
-            <!-- << General instructions for updating content:                            >> -->
-            <!-- <<                                                                       >> -->
-            <!-- << 1. Copy and paste the topmost item between the <a> and </a> tags.     >> -->
-            <!-- << 2. Replace the href with the new website address.                     >> -->
-            <!-- << 3. Replace the description between the <p> and </p> tags.             >> -->
-            <!-- <<                                                                       >> -->
-            <!-- << For content to be shown in modal windows, do as above but replace     >> -->
-            <!-- << the opening <a> tag with following template and customise to suit:    >> -->
-            <!-- << <a href="" data-toggle="modal" data-target="#NameOfModal">            >> -->
-            <!-- << Note that href must be left null. Copy new modal from existing modal  >> -->
-            <!-- << further down in document.                                             >> -->
-
-            <a href="https://bdaily.co.uk/articles/2019/05/15/eco-friendly-train-firm-creates-new-jobs-ahead-of-schedule" target="_blank">
-                <p>Eco-friendly train firm creates new jobs ahead of schedule, </p>
-            </a>
-
-            <a href="https://www.transport-network.co.uk/Tracking-passengers-who-need-assistance/15874/" target="_blank">
-                <p>Tracking passengers who need assistance</p>
-            </a>
-
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <!-- IMAGE -->
+            <img class="group-image rail-image" src="static/images/metro_lobby.jpg"
+                 alt="Metro Futures Parliamentary Promotion with TWPTUG Chair, Vicki Gilbert, and
+                 NECA South Tyneside Transport Committee members, Councillors Alan Smith and Gladys Hobson.">
+            <!-- /.IMAGE -->
         </div>
     </div>
-     <!-- /.NEWS PANEL-->
 
 </section>
 

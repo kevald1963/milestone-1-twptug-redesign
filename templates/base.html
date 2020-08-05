@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Tyne & Wear Public Transport Users Group | Home</title>
+    <title>Tyne & Wear Public Transport Users Group | {{ title }}</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -140,7 +140,7 @@
     <!-- NAVBAR -->
 
     <!-- MAIN -->
-    <main class="container-fluid">
+    <main class="container">
         {% block content %}
         {% endblock %}
     </main>
@@ -186,8 +186,8 @@
     </footer>
     <!-- /.FOOTER -->
 
-    <!-- MODAL EMAIL FORM (TO: TWPTUG SECRETARY) -->
-    <div class="modal fade" id="emailModalTWPTUG" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <!-- MODAL EMAIL FORM -->
+    <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -219,7 +219,7 @@
             </div>
         </div>
     </div>
-    <!-- /.MODAL EMAIL FORM (TO: TWPTUG SECRETARY) -->
+    <!-- /.MODAL EMAIL FORM -->
 
     <!-- MODAL VIDEO -->
     <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
@@ -229,15 +229,13 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h4 class="modal-title">Transport Committee Inquiry: Health of the Bus Market</h4>
+                    <div id="modal-title">
+                        <!-- Title is placed here by javascript -->
+                    </div>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-video">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <video class="embed-responsive-item" width="560px" height="240px" controls>
-    						    <source src="static/videos/transport_committee_30-10-18_09-49-29.mp4" type="video/mp4">
-                            </video>
-                        </div>
+                    <div class="modal-video" id="modal-video">
+                        <!-- Embedded video (mp4) or iframe (Youtube) HTML is placed here by javascript -->
                     </div>
                 </div>
             </div>
@@ -276,6 +274,40 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <script>
+        function showModal(videoItem) {
+            var title = videoItem.getAttribute("data-title");
+            var videoType = videoItem.getAttribute("data-video-type");
+            var videoSource = videoItem.getAttribute("data-video-source");
+
+            // Set title of video in the modal window.
+            $("#modal-title").html(title);
+
+            // Set type of video to display in the modal window.
+            if (videoType == "mp4") {
+                var videoHTML = ' \
+                <div class="embed-responsive embed-responsive-16by9"> \
+                    <video class="embed-responsive-item" width="560px" height="240px" controls> \
+                        <source id="source" src="" type="video/mp4"> \
+                    </video> \
+                </div>';
+            } else {
+                if (videoType == "youtube") {
+                    var videoHTML = ' \
+                    <iframe id="source" width="560" height="315" \
+                        src="" \
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" \
+                        allowfullscreen> \
+                    </iframe>';
+                } else {
+                    var videoHTML = '<p>Sorry, this video format is not supported.</p>';
+                }
+            };
+            $("#modal-video").html(videoHTML);
+            $("#source").attr("src", videoSource);
+        };
+    </script>
+
     <!-- Stop video playing when modal is closed. -->
     <script>
         $('body').on('hidden.bs.modal', '.modal', function () {
@@ -292,7 +324,7 @@
 
     <!-- Clear email form when submitted. -->
     <script>
-        $modal=$('#emailModalTWPTUG');
+        $modal=$('#emailModal');
         $modal.find('form')[0].reset();
     </script>
 

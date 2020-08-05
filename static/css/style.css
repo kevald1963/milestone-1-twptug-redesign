@@ -1,80 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700');
 
-/*---------------------------------------------------- Miscellaneous stylings */
+/*---------------------------------------------------- General stylings */
 
 header {
     margin: 0;
 }
 
 /* Remove bullet points from lists by default. */
-
 ul {
     list-style: none;
 }
 
-.group-image {
-    max-width: 100%;
-    margin-top: 15px;
-    margin-bottom: 0;
-    padding: 0;
-    border-radius: 6px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
-}
-
-.group-image-special {
-    border-radius: 6px 6px 0px 0px;
-    box-shadow: 0 0 8px 0 rgba(0,0,0,0.12), 0 0 4px 0 rgba(0,0,0,0.08);
-}
-
-.busnews-image {
-    min-width: 88%;
-}
-
-.photo-credit {
-    background-color: #e5e5e5;
-    color: #000;
-    padding-left: 3px;
-    border-radius: 0px 0px 6px 6px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
-}
-
-.photo-credit-special {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
-}
-
-.photo-credit a {
-    color: #337ab7;
-}
-
-.photo-credit a:hover {
-    color: darkblue;
-    text-decoration: none;
-    transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-}
-
-.photo-credit a:focus {
-    color: darkblue;
-    text-decoration: none;
-}
-
 .uppercase {
     text-transform: uppercase;
-}
-
-.RT-logo {
-    width: 90px;
-    height: 90px;
-    padding-right: 10px;
-}
-
-.about-image {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    box-shadow: 0 0 8px 0 rgba(0,0,0,0.12), 0 0 4px 0 rgba(0,0,0,0.08);
 }
 
 .inline-block {
@@ -151,9 +89,7 @@ ul {
     color: #000;
 }
 
-
-
-/*-------------------------------------------------- Heading */
+/*-------------------------------------------------- Header */
 
 .page-title {
     font-family: 'Roboto', sans-serif;
@@ -175,6 +111,79 @@ ul {
 .navbar {
     margin-bottom: 0;
     font-size: medium;
+}
+
+/*-------------------------------------------------- Modal Windows */
+/* Modal windows are used show email contact forms, videos and audio podcasts. */
+
+.modal-footer {
+    text-align: left;
+}
+
+/* RT - Re-inventing Transport (audio podcast) */
+.RT-logo {
+    width: 90px;
+    height: 90px;
+    padding-right: 10px;
+}
+
+.cc-licence-link {
+    text-decoration: none;
+    color: royalblue;
+}
+
+.cc-licence-link:hover {
+    text-decoration: none;
+    color: darkblue;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.cc-licence-link:focus {
+    text-decoration: none;
+    color: royalblue;
+}
+
+/*-------------------------------------------------- Footer */
+
+footer {
+    min-height: 110px;
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #676767;
+    color: #fafafa;
+}
+
+.footer {
+    font-family: "Exo", sans-serif;
+    font-weight: 500;
+    color: #f0ad4e;
+}
+
+.social-media li a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    background-color: royalblue;
+    color: lightblue;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.social-media li a i:hover {
+    color: #fafafa;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
 }
 
 /*-------------------------------------------------- Home Page */
@@ -261,6 +270,51 @@ ul {
     color: #000;
 }
 
+.group-image {
+    max-width: 100%;
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+}
+
+.group-image-special {
+    border-radius: 6px 6px 0px 0px;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.12), 0 0 4px 0 rgba(0,0,0,0.08);
+}
+
+.photo-credit {
+    background-color: #e5e5e5;
+    color: #000;
+    padding-left: 3px;
+    border-radius: 0px 0px 6px 6px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+}
+
+.photo-credit-special {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+}
+
+.photo-credit a {
+    color: #337ab7;
+}
+
+.photo-credit a:hover {
+    color: darkblue;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.photo-credit a:focus {
+    color: darkblue;
+    text-decoration: none;
+}
+
+
 .campaigns {
     max-width: 899px;
     background-color: #fff;
@@ -282,11 +336,48 @@ ul {
     margin-top:0;
 }
 
+/*-------------------------------------------------- Bus News Page */
+
+.image-bus-news {
+    min-width: 88%;
+}
+
+/*-------------------------------------------------- Rail Page */
+.news-rail {
+    max-height: 500px;
+    max-width: 560px;
+    background-color: #337ab7;
+    color: #fafafa;
+    margin: auto;
+    margin-top: 25px;
+    padding: 2px 2px 5px 5px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+    overflow-y: auto;
+}
+
+.news-rail a {
+    color: #fafafa;
+}
+
+.video-rail {
+    padding: 0;
+    margin-top: 20px;
+}
+
+
 /*-------------------------------------------------- About Page */
 
 .about-heading {
     text-align: center;
     color: #337ab7;
+}
+
+.about-image {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.12), 0 0 4px 0 rgba(0,0,0,0.08);
 }
 
 .our-structure, .our-partners {
@@ -351,71 +442,6 @@ ul {
 /*                                                   undeveloped pages handled like this, rather than let users see a Not Found error or pages with no MAIN content.    */                                      
 .under-construction {
     background-color: #337ab7;
-}
-
-/*-------------------------------------------------- Modals */
-
-.modal-footer {
-    text-align: left;
-}
-
-.cc-licence-link {
-    text-decoration: none;
-    color: royalblue;
-}    
-
-.cc-licence-link:hover {
-    text-decoration: none;
-    color: darkblue;
-    transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;    
-}
-
-.cc-licence-link:focus {
-    text-decoration: none;
-    color: royalblue;
-}    
-
-/*-------------------------------------------------- Footer */
-
-footer {
-    min-height: 110px;
-    margin-top: 5px;
-    padding: 5px;
-    background-color: #676767;
-    color: #fafafa;
-}
-
-.footer {
-    font-family: "Exo", sans-serif;
-    font-weight: 500;
-    color: #f0ad4e;
-}
-
-.social-media li a i {
-    width: 32px;
-    height: 32px;
-    padding: 12px 0;
-    border-radius: 50%;
-    font-size: 13px;
-    line-height: 7px;
-    text-align: center;
-    background-color: royalblue;
-    color: lightblue;
-    transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-}
-
-.social-media li a i:hover {
-    color: #fafafa;
-    transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
 }
 
 /*-------------------------------------------------- Media Queries */
