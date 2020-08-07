@@ -343,13 +343,22 @@ footer {
 }
 
 /*-------------------------------------------------- Rail Page */
+.rail-image {
+    max-width: 100%;
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+}
+
 .news-rail {
-    max-height: 500px;
+    height: 370px;
     max-width: 560px;
     background-color: #337ab7;
     color: #fafafa;
     margin: auto;
-    margin-top: 25px;
+    margin-top: 15px;
     padding: 2px 2px 5px 5px;
     border-radius: 6px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
@@ -360,11 +369,20 @@ footer {
     color: #fafafa;
 }
 
-.video-rail {
-    padding: 0;
-    margin-top: 20px;
+.rail-lobby-image {
+    min-width: 100%;
+    margin-left: 15px;
 }
 
+.rail-lobby-text {
+    min-height: 360px;
+    margin-top: 15px;
+    margin-left: 0;
+    margin-left: 0;
+    padding: 5px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+}
 
 /*-------------------------------------------------- About Page */
 

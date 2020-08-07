@@ -277,8 +277,13 @@
     <script>
         function showModal(videoItem) {
             var title = videoItem.getAttribute("data-title");
-            var videoType = videoItem.getAttribute("data-video-type");
+            var videoType = videoItem.getAttribute("data-video-type");  // 'mp4' or 'youtube'
             var videoSource = videoItem.getAttribute("data-video-source");
+
+            // Add the autoplay parameter to the source for Youtube videos.
+            if (videoType == 'youtube') {
+                videoSource = videoSource + "?&autoplay=1";
+            };
 
             // Set title of video in the modal window.
             $("#modal-title").html(title);
@@ -287,7 +292,7 @@
             if (videoType == "mp4") {
                 var videoHTML = ' \
                 <div class="embed-responsive embed-responsive-16by9"> \
-                    <video class="embed-responsive-item" width="560px" height="240px" controls> \
+                    <video class="embed-responsive-item" width="560px" height="240px" controls autoplay> \
                         <source id="source" src="" type="video/mp4"> \
                     </video> \
                 </div>';
@@ -296,11 +301,16 @@
                     var videoHTML = ' \
                     <iframe id="source" width="560" height="315" \
                         src="" \
-                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" \
+                        frameborder="0" picture-in-picture autoplay \
                         allowfullscreen> \
                     </iframe>';
                 } else {
-                    var videoHTML = '<p>Sorry, this video format is not supported.</p>';
+                    if (videoType == "") {
+                        var videoHTML = "<p>Sorry, video format is set to blank. Please contact Web Administrator.</p>";
+                    } else {
+                        var videoHTML = "<p>Sorry, this video format (" + videoType + ") is not supported. \
+                                            Please contact Web Administrator.</p>";
+                    }
                 }
             };
             $("#modal-video").html(videoHTML);
@@ -312,6 +322,13 @@
     <script>
         $('body').on('hidden.bs.modal', '.modal', function () {
             $('video').trigger('pause');
+        });
+    </script>
+
+    <!-- Stop Youtube video playing when modal is closed. -->
+    <script>
+        $('#videoModal').on('hidden.bs.modal', function () {
+            $('#modal-video iframe').attr('src', '');
         });
     </script>
 
