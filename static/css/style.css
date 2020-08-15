@@ -351,6 +351,9 @@ footer {
     border-radius: 6px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
 }
+.rail-image-metro {
+    max-width: 560px;
+}
 
 .news-rail {
     height: 370px;
@@ -369,13 +372,13 @@ footer {
     color: #fafafa;
 }
 
-.rail-lobby-image {
-    min-width: 100%;
+.metro-lobby-image {
+    min-width: 94%;
     margin-left: 15px;
 }
 
-.rail-lobby-text {
-    min-height: 360px;
+.metro-lobby-text {
+    min-height: 335px;
     margin-top: 15px;
     margin-left: 0;
     margin-left: 0;
