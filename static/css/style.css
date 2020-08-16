@@ -15,6 +15,11 @@ ul {
     text-transform: uppercase;
 }
 
+.col-md-7, .col-lg-7, {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .inline-block {
     display: inline-block;
 }
@@ -380,8 +385,8 @@ footer {
 .metro-lobby-text {
     min-height: 335px;
     margin-top: 15px;
-    margin-left: 0;
-    margin-left: 0;
+    margin-left: -15px;
+    margin-right: 0;
     padding: 5px;
     border-radius: 6px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
@@ -425,11 +430,6 @@ footer {
 
 .our-objectives-heading, .membership-heading {
     padding-top: 5px;    
-}
-
-.col-md-7, .col-lg-7 {
-    padding-left: 0;
-    padding-right: 0;
 }
 
 /*-------------------------------------------------- Acknowledgement Page */
