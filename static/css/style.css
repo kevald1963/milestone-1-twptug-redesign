@@ -24,6 +24,10 @@ ul {
     display: inline-block;
 }
 
+/* Prevent anchor tags causing line breaks in text blocks. */
+.inline {
+    display: inline;
+}
 .panel-title {
     text-align: center;
     font-weight: bold;
@@ -218,8 +222,8 @@ footer {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
 }
 
-.news {
-    max-height: 500px;
+.home-page-news {
+    max-height: 420px;
     max-width: 560px;
     background-color: #337ab7;
     color: #fafafa;
@@ -231,7 +235,7 @@ footer {
     overflow-y: auto;
 }
 
-.news a {
+.home-page-news a {
     color: #fafafa;
 }
 
@@ -261,14 +265,17 @@ footer {
     color: yellow;
 }
 
-.local-news {
-    max-width: 430px;
+.local-news, .bus-news, .deregulation, .reregulation {
     background-color: #f0ad4e;
     margin-top: 15px;
     margin-left: 0;
     padding: 5px;
     border-radius: 6px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+}
+
+.reregulation {
+    background-color: white;
 }
 
 .local-news a {
@@ -345,6 +352,14 @@ footer {
 
 .image-bus-news {
     min-width: 88%;
+}
+
+.bus-news {
+    height: 555px;
+}
+
+.bus-news a {
+    color: black;
 }
 
 /*-------------------------------------------------- Rail Page */
@@ -479,7 +494,7 @@ footer {
         overflow-y: scroll;
     }
 
-    .welcome, .local-news {
+    .welcome, .local-news, .deregulation .reregulation {
         margin: auto;
         margin-top: 15px;
         min-width: 100%;
