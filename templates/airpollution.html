@@ -1,21 +1,87 @@
 {% extends 'base.html' %}
 {% block content %}
-        <section class="body-container">
 
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <!-- UNDER CONSTRUCTION MESSAGE -->
-                    <div class="jumbotron under-construction">
-                        <h1><b>Sorry, this page is still under construction!</b></h1>
-                        <p>
-                           Please click the button below to return to the last page.
-                        </p>
-                        <br></br>
-                        <p><button class="btn btn-lg btn-warning" onclick="goBack()">Return</button></p>
-                    </div>
-                    <!-- /.UNDER CONSTRUCTION MESSAGE -->
-                </div>
+<section class="row">
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <img class="air-pollution-image" src="static/images/air_pollution_campaign.jpg"
+                     alt="TWPTUG wants to see a a vast reduction in air pollution deaths and suffering
+                     (TWPTUG AGM, 19 October 2015)."
+                     data-toggle="tooltip" data-placement="bottom"
+                     title="TWPTUG wants to see a a vast reduction in air pollution deaths and suffering
+                     (TWPTUG AGM, 19 October 2015).">
             </div>
 
-        </section>
+            <!-- NEWS -->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                <div class="news-rail">
+                    <span class="uppercase panel-title">Air Pollution News</span><br><br>
+                    <!-- <<                                                                       >> -->
+                    <!-- << INSERT NEWS ARTICLES HERE                                             >> -->
+                    <!-- <<                                                                       >> -->
+                    <!-- << General instructions for updating content:                            >> -->
+                    <!-- <<                                                                       >> -->
+                    <!-- << 1. Copy and paste the topmost item between the <a> and </a> tags.     >> -->
+                    <!-- << 2. Replace the href with the new website address.                     >> -->
+                    <!-- << 3. Replace the description between the <p> and </p> tags.             >> -->
+                    <!-- <<                                                                       >> -->
+                    <!-- << For content to be shown in modal windows, do as above but replace     >> -->
+                    <!-- << the opening <a> tag with following template and customise to suit:    >> -->
+                    <!-- << <a href="" data-toggle="modal" data-target="#NameOfModal">            >> -->
+                    <!-- << Note that href must be left null. Copy new modal from existing modal  >> -->
+                    <!-- << further down in document.                                             >> -->
+
+                    <a href="https://bdaily.co.uk/articles/2019/05/15/eco-friendly-train-firm-creates-new-jobs-ahead-of-schedule" target="_blank">
+                        <p>Reducing the carbon footprint of a city: Newcastle</p>
+                    </a>
+
+                    <a href="" target="_blank">
+                        <p>Make a small footprint - How to reduce your own carbon output.</p>
+                    </a>
+
+                    <a href="" target="_blank">
+                        <p>Newcastle Hospitals NHS Trust cut carbon-emissions using cargo bikes.</p>
+                    </a>
+
+                    <a href="" target="_blank">
+                        <p>Air pollution may be making us less intelligent.</p>
+                    </a>
+                </div>
+            </div>
+            <!-- /.NEWS -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <img class="rail-image metro-lobby-image" src="static/images/metro_lobby.jpg"
+                 alt="Metro Futures Parliamentary Promotion with TWPTUG Chair, Vicki Gilbert, and
+                 NECA South Tyneside Transport Committee members, Councillors Alan Smith and Gladys Hobson.">
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <div class="metro-lobby-text">
+                <span class="uppercase panel-title">Metro Futures Campaign</span><br><br>
+                <p>
+                    A Parliamentary lobby for Metro Futures in 2016 with TWPTUG Chair, Vicki Gilbert (left), and
+                    NECA South Tyneside Transport Committee members, Councillors Alan Smith (centre) and Gladys Hobson
+                    (right).
+                </p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <img class="rail-image rail-image-metro" src="static/images/metro_at_a_station.jpg"
+                 alt="Metro train standing at an unknown station."
+                 data-toggle="tooltip" data-placement="bottom"
+                 title="Metro train standing at an unknown station.">
+        </div>
+
+    </div>
+
+</section>
+
 {% endblock %}

@@ -101,6 +101,9 @@
                     <!-- RAIL -->
                     <li><a href="{{ url_for('rail') }}"><i class="fa fa-train hidden-xs" aria-hidden="true"></i><span> Rail</span></a></li>
 
+                    <!-- AIR POLLUTION -->
+                    <li><a href="{{ url_for('airpollution') }}"><i class="fa fa-cloud hidden-xs" aria-hidden="true"></i><span> Air Pollution</span></a></li>
+
                     <!-- CALENDAR -->
                     <li><a href="{{ url_for('calendar') }}"><i class="fa fa-calendar hidden-xs" aria-hidden="true"></i><span> Calendar</span></a></li>
 
@@ -108,14 +111,11 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-link hidden-xs" aria-hidden="true"></i>
-                            <span> Related Links</span>
+                            <span> More</span>
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ url_for('pensioners') }}"><span>Pensioners' Travel</span></a></li>
-                            <li><a href="{{ url_for('disability') }}"><span>Disability</span></a></li>
                             <li><a href="{{ url_for('airpollution') }}"><span>Air Pollution</span></a></li>
-                            <li><a href="{{ url_for('transpcomm') }}"><span>Transport Select Committee</span></a></li>
                             <li><a href="{{ url_for('media') }}"><span>Media</span></a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="http://www.passengertransport.co.uk" target="_blank"><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Passenger Transport Magazine</span></a></li>
