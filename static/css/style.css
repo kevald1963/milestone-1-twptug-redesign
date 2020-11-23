@@ -363,8 +363,11 @@ footer {
 }
 
 /*-------------------------------------------------- Rail Page */
-.rail-image {
+.image-rail {
     max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 15px;
     margin-bottom: 0;
     padding: 0;
@@ -372,7 +375,7 @@ footer {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
 }
 
-.rail-image-metro {
+.image-rail-metro {
     max-width: 576px;
 }
 
@@ -393,17 +396,20 @@ footer {
     color: #fafafa;
 }
 
-.metro-lobby-image {
+.image-metro-lobby {
     min-width: 94%;
     margin-left: 15px;
 }
 
-.metro-lobby-text {
+.text-metro-lobby {
     min-height: 335px;
+    height: auto;
     margin-top: 15px;
     margin-left: -15px;
     margin-right: 0;
     padding: 5px;
+    background-color: #337ab7;
+    color: #fafafa;
     border-radius: 6px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
 }
