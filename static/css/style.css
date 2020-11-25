@@ -600,7 +600,14 @@ footer {
     }
 }
 
-/* Collapse the Navbar at 1030px and below. This is to stop the expanded menu wrapping.
+@media (max-width:991px) {
+
+    .text-metro-lobby {
+        min-height: 450px;
+    }
+}
+
+/* Collapse the Navbar at 1030px and below. This is to stop the expanded menu wrapping.*/
 @media (max-width: 1030px) {
 
     .navbar-header {
