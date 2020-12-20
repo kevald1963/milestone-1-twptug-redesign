@@ -566,6 +566,13 @@ footer {
         min-width: 100%;
     }
 
+    .text-metro-lobby {
+        min-height: 450px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .about-image {
         margin: auto;
         margin-top: 15px;
@@ -577,6 +584,11 @@ footer {
     }
 }
 
+@media (max-width:991px) {
+    .image-metro-lobby {
+        margin-left: auto;
+    }
+}
 @media (min-width:992px) and (max-width:1199px) {
     
     .about-image {
@@ -600,10 +612,21 @@ footer {
     }
 }
 
-@media (max-width:991px) {
+@media (max-width:767px) {
 
     .text-metro-lobby {
-        min-height: 450px;
+        min-height: auto;
+        display: block;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .image-metro-lobby {
+        min-width: 94%;
+    }
+
+    .image-rail-metro {
+        max-width: 96%;
     }
 }
 
