@@ -14,176 +14,181 @@
 </head>
 
 <body>
+    <div id="page-container">
+        <div id="content-wrap">
 
-    <!-- HEADER -->
-    <div class="container-fluid alert-container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="test-only-alert alert alert-warning">
-                    <strong>Please note this is a test site only.</strong> Click <a class="live-link" href="http://www.twptug.org.uk/" target="_blank"><strong>here</strong></a> for TWPTUG's live website.
+            <!-- HEADER -->
+            <div class="container-fluid alert-container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="test-only-alert alert alert-warning">
+                            <strong>Please note this is a test site only.</strong> Click <a class="live-link" href="http://www.twptug.org.uk/" target="_blank"><strong>here</strong></a> for TWPTUG's live website.
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <header class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 page-title">
+                        <h1>Tyne & Wear Public Transport Users Group</h1>
+                    </div>
+                </div>
+            </header>
+            <!-- /.HEADER -->
+
+            <!-- NAVBAR -->
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-menu" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Collect the nav links for toggling. -->
+                    <div class="collapse navbar-collapse" id="collapse-menu">
+                        <ul class="nav navbar-nav">
+
+                            <!-- HOME -->
+                            <li class="active"><a href="{{ url_for('index') }}"><i class="fa fa-home hidden-xs" aria-hidden="true"></i><span> Home</span><span class="sr-only">(current)</span></a></li>
+
+                            <!-- GROUPS -->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-users hidden-xs" aria-hidden="true"></i>
+                                    <span> Groups</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ url_for('newcastle') }}">Newcastle</a></li>
+                                    <li><a href="{{ url_for('northtyneside') }}">North Tyneside</a></li>
+                                    <li><a href="{{ url_for('gateshead') }}">Gateshead</a></li>
+                                    <li><a href="{{ url_for('southtyneside') }}">South Tyneside</a></li>
+                                    <li><a href="{{ url_for('sunderland') }}">Sunderland</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- BUS -->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-bus hidden-xs" aria-hidden="true"></i>
+                                    <span> Bus</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ url_for('busnews') }}">Bus News</a></li>
+                                    <li><a href="{{ url_for('reregulation') }}"><span>Reregulation</span></a></li>
+                                </ul>
+                            </li>
+
+                            <!-- RAIL -->
+                            <li><a href="{{ url_for('rail') }}"><i class="fa fa-train hidden-xs" aria-hidden="true"></i><span> Rail</span></a></li>
+
+                            <!-- CYCLING -->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-bicycle hidden-xs" aria-hidden="true"></i>
+                                    <span> Cycling</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ url_for('cyclingcampaigns') }}">Campaigns & News</a></li>
+                                    <li class="divider" role="separator" ></li>
+                                    <li><a href="https://newcycling.org" target="_blank"><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> NewCycling Group</span></a></li>
+                                    <li><a href="https://www.sustrans.org.uk" target="_blank"><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Sustrans</span></a></li>
+                                </ul>
+                            </li>
+
+                            <!-- AIR POLLUTION -->
+                            <li><a href="{{ url_for('airpollution') }}"><i class="fa fa-cloud hidden-xs" aria-hidden="true"></i><span> Air Pollution</span></a></li>
+
+                            <!-- CALENDAR -->
+                            <li><a href="{{ url_for('calendar') }}"><i class="fa fa-calendar hidden-xs" aria-hidden="true"></i><span> Calendar</span></a></li>
+
+                            <!-- MORE -->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-link hidden-xs" aria-hidden="true"></i>
+                                    <span> More</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ url_for('airpollution') }}"><span>Air Pollution</span></a></li>
+                                    <li><a href="{{ url_for('media') }}"><span>Media</span></a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="http://www.passengertransport.co.uk" target="_blank"><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Passenger Transport Magazine</span></a></li>
+                                    <li><a href="https://www.transportfocus.org.uk/news-events-media/news" target="_blank"><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Transport Focus News</span></a></li>
+                                    <li><a href="https://bettertransport.org.uk" target="_blank"><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Campaign for Better Transport</span></a></li>
+                                    <li><a href="https://us3.campaign-archive.com/home/?u=380073952ff0d9c6b5c5c5850&id=c6b51d956f" target="_blank"><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Better Places Network newsletters</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <!-- ABOUT -->
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="{{ url_for('blog') }}">Blog</a></li>
+                            <li><a href="{{ url_for('about') }}">About</a></li>
+                        </ul>
+
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+            </nav>
+            <!-- NAVBAR -->
+
+            <!-- MAIN -->
+            <main class="container">
+                {% block content %}
+                {% endblock %}
+            </main>
+            <!-- /.MAIN -->
+
         </div>
+
+        <!-- FOOTER -->
+        <footer class="container-fluid">
+            <!-- Split Footer into 3 columns -->
+            <div class="row">
+
+                <!-- About -->
+                <div class="col-xs-12 col-sm-12 col-md-4">
+                    <h5 class="uppercase footer">About</h5>
+                    <p class="inline-block">
+                        TWPTUG campaigns for an integrated, publicly-accountable transport system connecting Tyne and Wear, Northumberland and County Durham.
+                    </p>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-md-4">
+                    <h5 class="uppercase footer">Email us</h5>
+                    <p class="inline-block">
+                        Any questions about TWPTUG or want to report a website issue?<br>
+                        Email us here.<a href="" class="email-link" data-toggle="modal" data-target="#emailModalTWPTUG"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                    </p>
+                </div>
+
+                <!-- Social Media -->
+                <div class="col-md-4">
+                    <h5 class="uppercase footer">Social Media</h5>
+                    <!-- 'list-inline' is a Bootstrap class. -->
+                    <ul class="list-inline social-media">
+                        <li><a target="_blank" href="https://www.facebook.com/twptug/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a target="_blank" href="https://twitter.com/twptug"><i class="fa fa-twitter"></i></a></li>
+                        <!-- Leave these here in case they are needed in the future:
+                        <li><a target="_blank" href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-youtube"></i></a></li>
+                         -->
+                    </ul>
+                </div>
+            </div>
+
+        </footer>
+        <!-- /.FOOTER -->
     </div>
-
-    <header class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 page-title">
-                <h1>Tyne & Wear Public Transport Users Group</h1>
-            </div>
-        </div>
-    </header>
-    <!-- /.HEADER -->
-
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-menu" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-
-            <!-- Collect the nav links for toggling. -->
-            <div class="collapse navbar-collapse" id="collapse-menu">
-                <ul class="nav navbar-nav">
-
-                    <!-- HOME -->
-                    <li class="active"><a href="{{ url_for('index') }}"><i class="fa fa-home hidden-xs" aria-hidden="true"></i><span> Home</span><span class="sr-only">(current)</span></a></li>
-
-                    <!-- GROUPS -->
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-users hidden-xs" aria-hidden="true"></i>
-                            <span> Groups</span>
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ url_for('newcastle') }}">Newcastle</a></li>
-                            <li><a href="{{ url_for('northtyneside') }}">North Tyneside</a></li>
-                            <li><a href="{{ url_for('gateshead') }}">Gateshead</a></li>
-                            <li><a href="{{ url_for('southtyneside') }}">South Tyneside</a></li>
-                            <li><a href="{{ url_for('sunderland') }}">Sunderland</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- BUS -->
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-bus hidden-xs" aria-hidden="true"></i>
-                            <span> Bus</span>
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ url_for('busnews') }}">Bus News</a></li>
-                            <li><a href="{{ url_for('reregulation') }}"><span>Reregulation</span></a></li>
-                        </ul>
-                    </li>
-
-                    <!-- CYCLING -->
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-bicycle hidden-xs" aria-hidden="true"></i>
-                            <span> Cycling</span>
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ url_for('cyclingcampaigns') }}">Campaigns</a></li>
-                            <li class="divider" role="separator" ></li>
-                            <li><a href="https://newcycling.org" target="_blank"><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> NewCycling Group</span></a></li>
-                            <li><a href="https://www.sustrans.org.uk" target="_blank"><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Sustrans</span></a></li>
-                        </ul>
-                    </li>
-
-                    <!-- RAIL -->
-                    <li><a href="{{ url_for('rail') }}"><i class="fa fa-train hidden-xs" aria-hidden="true"></i><span> Rail</span></a></li>
-
-                    <!-- AIR POLLUTION -->
-                    <li><a href="{{ url_for('airpollution') }}"><i class="fa fa-cloud hidden-xs" aria-hidden="true"></i><span> Air Pollution</span></a></li>
-
-                    <!-- CALENDAR -->
-                    <li><a href="{{ url_for('calendar') }}"><i class="fa fa-calendar hidden-xs" aria-hidden="true"></i><span> Calendar</span></a></li>
-
-                    <!-- MORE -->
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-link hidden-xs" aria-hidden="true"></i>
-                            <span> More</span>
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ url_for('airpollution') }}"><span>Air Pollution</span></a></li>
-                            <li><a href="{{ url_for('media') }}"><span>Media</span></a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="http://www.passengertransport.co.uk" target="_blank"><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Passenger Transport Magazine</span></a></li>
-                            <li><a href="https://www.transportfocus.org.uk/news-events-media/news" target="_blank"><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Transport Focus News</span></a></li>
-                            <li><a href="https://bettertransport.org.uk" target="_blank"><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Campaign for Better Transport</span></a></li>
-                            <li><a href="https://us3.campaign-archive.com/home/?u=380073952ff0d9c6b5c5c5850&id=c6b51d956f" target="_blank"><span><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Better Places Network newsletters</span></a></li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <!-- ABOUT -->
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ url_for('blog') }}">Blog</a></li>
-                    <li><a href="{{ url_for('about') }}">About</a></li>
-                </ul>
-
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-    </nav>
-    <!-- NAVBAR -->
-
-    <!-- MAIN -->
-    <main class="container">
-        {% block content %}
-        {% endblock %}
-    </main>
-    <!-- /.MAIN -->
-
-    <!-- FOOTER -->
-    <footer class="container-fluid">
-        <!-- Split Footer into 3 columns -->
-        <div class="row">
-
-            <!-- About -->
-            <div class="col-xs-12 col-sm-12 col-md-4">
-                <h5 class="uppercase footer">About</h5>
-                <p class="inline-block">
-                    TWPTUG campaigns for an integrated, publicly-accountable transport system connecting Tyne and Wear, Northumberland and County Durham.
-                </p>
-            </div>
-
-            <!-- Contact -->
-            <div class="col-md-4">
-                <h5 class="uppercase footer">Email us</h5>
-                <p class="inline-block">
-                    Any questions about TWPTUG or want to report a website issue?<br>
-                    Email us here.<a href="" class="email-link" data-toggle="modal" data-target="#emailModalTWPTUG"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                </p>
-            </div>
-
-            <!-- Social Media -->
-            <div class="col-md-4">
-                <h5 class="uppercase footer">Social Media</h5>
-                <!-- 'list-inline' is a Bootstrap class. -->
-                <ul class="list-inline social-media">
-                    <li><a target="_blank" href="https://www.facebook.com/twptug/"><i class="fa fa-facebook"></i></a></li>
-                    <li><a target="_blank" href="https://twitter.com/twptug"><i class="fa fa-twitter"></i></a></li>
-                    <!-- Leave these here in case they are needed in the future:
-                    <li><a target="_blank" href="#"><i class="fa fa-pinterest"></i></a></li>
-                    <li><a target="_blank" href="#"><i class="fa fa-youtube"></i></a></li>
-                     -->
-                </ul>
-            </div>
-        </div>
-
-    </footer>
-    <!-- /.FOOTER -->
 
     <!-- MODAL EMAIL FORM -->
     <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

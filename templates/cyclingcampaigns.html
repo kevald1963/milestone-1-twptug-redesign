@@ -1,21 +1,50 @@
 {% extends 'base.html' %}
 {% block content %}
-        <section class="body-container">
 
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <!-- UNDER CONSTRUCTION MESSAGE -->
-                    <div class="jumbotron under-construction">
-                        <h1><b>Sorry, this page is still under construction!</b></h1>
-                        <p>
-                           Please click the button below to return to the last page.
-                        </p>
-                        <br></br>
-                        <p><button class="btn btn-lg btn-warning" onclick="goBack()">Return</button></p>
-                    </div>
-                    <!-- /.UNDER CONSTRUCTION MESSAGE -->
-                </div>
-            </div>
+<section class="row">
 
-        </section>
+    <!-- IMAGE -->
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <img class="group-image image-cycling" src="static/images/family_bike_day.jpg"
+             alt="Family bike day">
+    </div>
+    <!-- /.IMAGE -->
+
+    <!-- NEWS PANEL -->
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <div class="news-cycling">
+            <span class="uppercase panel-title">Cycling Campaigns & News</span><br><br>
+            <!-- <<                                                                       >> -->
+            <!-- << INSERT NEWS ARTICLES HERE                                             >> -->
+            <!-- <<                                                                       >> -->
+            <!-- << General instructions for updating content:                            >> -->
+            <!-- <<                                                                       >> -->
+            <!-- << 1. Copy and paste the topmost item between the <a> and </a> tags.     >> -->
+            <!-- << 2. Replace the href with the new website address.                     >> -->
+            <!-- << 3. Replace the description between the <p> and </p> tags.             >> -->
+            <!-- <<                                                                       >> -->
+            <!-- << For content to be shown in modal windows, do as above but replace     >> -->
+            <!-- << the opening <a> tag with following template and customise to suit:    >> -->
+            <!-- << <a href="" data-toggle="modal" data-target="#NameOfModal">            >> -->
+            <!-- << Note that href must be left null. Copy new modal from existing modal  >> -->
+            <!-- << further down in document.                                             >> -->
+
+            <a href="https://www.mirror.co.uk/news/politics/bus-firms-pay-fat-cats-13540251" target="_blank">
+                <p>Bus firms pay fat cats £1.5 BILLION - while prices go up 55% and routes are axed - Mirror article.</p>
+            </a>
+
+            <a href="https://capx.co/driving-change-how-hydrogen-can-fuel-a-transport-revolution/" target="_blank">
+                <p>Driving change: how hydrogen can fuel a transport revolution</p>
+            </a>
+
+            <a href="https://www.theguardian.com/world/2018/oct/15/fall-in-local-uk-bus-journeys-to-12-year-low-prompts-talk-of-crisis?CMP=Share_iOSApp_Other" target="_blank">
+                <p>Fall in local UK bus journeys to 12-year low prompts talk of crisis.</p>
+            </a>
+
+        </div>
+    </div>
+     <!-- /.NEWS PANEL-->
+
+</section>
+
 {% endblock %}

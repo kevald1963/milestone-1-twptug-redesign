@@ -156,8 +156,19 @@ ul {
 }
 
 /*-------------------------------------------------- Footer */
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 110px;    /* Footer height */
+}
 
 footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     min-height: 110px;
     margin-top: 5px;
     padding: 5px;
@@ -265,7 +276,7 @@ footer {
     color: yellow;
 }
 
-.local-news, .bus-news, .deregulation, .reregulation {
+.local-news, .deregulation, .reregulation {
     background-color: #f0ad4e;
     margin-top: 15px;
     margin-left: 0;
@@ -347,19 +358,36 @@ footer {
 .campaigns li:first-child {
     margin-top:0;
 }
-
-/*-------------------------------------------------- Bus News Page */
-
-.image-bus-news {
+>>
+/*-------------------------------------------------- Bus Page */
+.image-bus {
+    max-width: 100%;
     min-width: 88%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
 }
 
-.bus-news {
-    height: 555px;
+.news-bus {
+    height: 370px;
+    max-width: 576px;
+    background-color: #337ab7;
+    color: #fafafa;
+    margin: auto;
+    margin-top: 15px;
+    padding: 2px 2px 5px 5px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+    overflow-y: auto;
 }
 
-.bus-news a {
-    color: black;
+.news-bus a {
+    color: #fafafa;
 }
 
 /*-------------------------------------------------- Rail Page */
@@ -410,6 +438,37 @@ footer {
     color: #fafafa;
     border-radius: 6px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+}
+
+/*-------------------------------------------------- Cycling Page */
+.image-cycling {
+    max-width: 100%;
+    min-width: 88%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+}
+
+.news-cycling {
+    height: 370px;
+    max-width: 576px;
+    background-color: #337ab7;
+    color: #fafafa;
+    margin: auto;
+    margin-top: 15px;
+    padding: 2px 2px 5px 5px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+    overflow-y: auto;
+}
+
+.news-cycling a {
+    color: #fafafa;
 }
 
 /*-------------------------------------------------- Air Pollution Page */
