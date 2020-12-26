@@ -455,7 +455,7 @@ footer {
 }
 
 .news-cycling {
-    height: 370px;
+    min-height: 444px;
     max-width: 576px;
     background-color: #337ab7;
     color: #fafafa;
@@ -644,10 +644,20 @@ footer {
 }
 
 @media (max-width:991px) {
+
     .image-metro-lobby {
         margin-left: auto;
     }
+
+    footer {
+        position: relative;
+    }
+
+    #content-wrap {
+        padding-bottom: 0;    /* Remove padding for footer height. Not applicable below 991px. */
+    }
 }
+
 @media (min-width:992px) and (max-width:1199px) {
     
     .about-image {
@@ -661,8 +671,12 @@ footer {
         max-height: 304px;
     }
 
-    .text-metro-lobby {
+   .text-metro-lobby {
         min-height: 290px;
+    }
+
+    .news-cycling {
+        min-height: 364px;
     }
 
     .news-air-pollution {
