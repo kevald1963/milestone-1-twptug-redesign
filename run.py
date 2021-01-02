@@ -83,7 +83,7 @@ def hospitalbuses():
 
 @app.route('/calendar')
 def calendar():
-    return render_template("calendar.html", title="Calendar")
+    return render_template("calendar2.html", title="Calendar")
 
 
 @app.route('/reregulation')
