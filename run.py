@@ -1,9 +1,48 @@
 import os
 from flask import Flask, render_template
+import psycopg2
+from datetime import datetime
+
+DB_NAME = os.environ['DB_NAME']
+DB_USER = os.environ['DB_USER']
+DB_PASS = os.environ['DB_PASS']
+DB_HOST = os.environ['DB_HOST']
+SECRET_KEY = os.environ['SECRET_KEY']
 
 app = Flask(__name__)
 
-app.secret_key = 'some_secret_key'
+app.secret_key = SECRET_KEY
+
+
+@app.route('/calendar')
+def calendar():
+
+    this_month = str(datetime.now().month)
+    if len(this_month) == 1:
+        this_month = "0" + this_month
+    print("thisMonth=" + this_month)
+
+    this_year = str(datetime.now().year)
+    start_day = "01"
+    end_day = "31"
+    start_date = this_year + "-" + this_month + "-" + start_day
+    end_date = this_year + "-" + this_month + "-" + end_day
+    print("start_date=" + start_date)
+    print("end_date=" + end_date)
+
+    conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST)
+    curs = conn.cursor()
+    curs.execute(
+        "SELECT * "
+        "FROM event "
+        "WHERE event_date "
+        "BETWEEN '" + start_date +
+        "' AND '" + end_date + "'"
+    )
+    curs.close()
+    conn.close()
+
+    return render_template("calendar2.html", title="Calendar")
 
 
 @app.route('/')
@@ -79,11 +118,6 @@ def disability():
 @app.route('/hospitalbuses')
 def hospitalbuses():
     return render_template("hospitalbuses.html", title="Hospital Buses")
-
-
-@app.route('/calendar')
-def calendar():
-    return render_template("calendar2.html", title="Calendar")
 
 
 @app.route('/reregulation')
