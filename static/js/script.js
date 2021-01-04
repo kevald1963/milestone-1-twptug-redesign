@@ -45,7 +45,7 @@ const renderCalendar = () => {
     // Show month at top of calendar.
     document.querySelector(".date h1").innerHTML = months[date.getMonth()];
 
-    //document.querySelector(".date p").innerHTML
+    // Show current date at top of calendar
     d = new Date().toDateString();
     document.querySelector(".date p").innerHTML = new Intl.DateTimeFormat('en-GB', {dateStyle:'full'}).format(new Date());
 
@@ -55,11 +55,26 @@ const renderCalendar = () => {
         days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
     }
 
+    // Mark days on calendar where events have been posted.
     for (let i = 1; i <= lastDay; i++) {
         if (i === new Date().getDate() && date.getMonth() === new Date().getMonth() ) {
-            days += `<div class="today">${i}</div>`;
+            // Events today are marked with a purple background and red border. If there are
+            // no events today then the day is marked with red background only.
+            var existingClass = document.getElementById(i).getAttribute("class");
+            if (existingClass == 'event') {
+                days += `<div id="${i}" class="event-today">${i}</div>`;
+            } else {
+                days += `<div id="${i}" class="today">${i}</div>`;
+            }
         } else {
-            days += `<div>${i}</div>`;
+            // Events on other days are marked with a purple background only. If there are
+            // no events on those days then they are not marked at all.
+            var existingClass = document.getElementById(i).getAttribute("class");
+            if (existingClass == 'event') {
+                days += `<div id="${i}" class="event">${i}</div>`;
+            } else {
+                days += `<div id="${i}">${i}</div>`;
+            }
         }
     }
 
@@ -80,3 +95,16 @@ document.querySelector(".next").addEventListener("click", () => {
 });
 
 renderCalendar();
+
+function draw() {
+    var canvas = document.getElementById('canvas');
+    if (canvas.getContext)  {
+        var context = canvas.getContext('2d');
+
+        context.beginPath();
+        context.moveTo(75,75);
+        context.lineTo(10,75);
+        context.lineTo(10,25);
+        context.fill();
+    }
+}

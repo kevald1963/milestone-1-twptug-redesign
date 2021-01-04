@@ -20,15 +20,12 @@ def calendar():
     this_month = str(datetime.now().month)
     if len(this_month) == 1:
         this_month = "0" + this_month
-    print("thisMonth=" + this_month)
 
     this_year = str(datetime.now().year)
     start_day = "01"
     end_day = "31"
     start_date = this_year + "-" + this_month + "-" + start_day
     end_date = this_year + "-" + this_month + "-" + end_day
-    print("start_date=" + start_date)
-    print("end_date=" + end_date)
 
     conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST)
     curs = conn.cursor()

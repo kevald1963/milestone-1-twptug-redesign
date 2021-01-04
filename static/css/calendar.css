@@ -13,7 +13,7 @@ html {
 
 .calendar-container {
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     background-color: white;
     color: #eee;
     display: flex;
@@ -105,7 +105,17 @@ html {
     opacity: 0.5;
 }
 
+/* Set the cell for the current day to red. */
 .today {
-    background-color: #337ab7;
     background-color: red;
+}
+
+/* Set the cell for the current day, with at least one event posted, to purple with a red border. */
+.event-today {
+    background-color: rebeccapurple;
+    border: 2px solid red;
+}
+
+.event {
+    background-color: rebeccapurple;
 }
