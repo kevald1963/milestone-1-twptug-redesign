@@ -29,17 +29,38 @@ def calendar():
 
     conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST)
     curs = conn.cursor()
-    curs.execute(
-        "SELECT * "
-        "FROM event "
-        "WHERE event_date "
-        "BETWEEN '" + start_date +
-        "' AND '" + end_date + "'"
-    )
-    curs.close()
-    conn.close()
 
-    return render_template("calendar2.html", title="Calendar")
+    try:
+        curs.execute(
+            "SELECT * " +
+            "FROM event " +
+            "WHERE event_date " +
+            "BETWEEN '" + start_date +
+            "' AND '" + end_date + "'"
+        )
+
+        events = curs.fetchall()
+
+        for row in events:
+            print("ID = ", row[0])
+            print("Title = ", row[1], "\n")
+            print("Description = ", row[2], "\n")
+            print("Event date  = ", row[3], "\n")
+            print("Event time  = ", row[4], "\n")
+
+    except (Exception, psycopg2.Error) as error:
+        print("Error while fetching data from PostgreSQL: ", error)
+    else:
+        print("events: ")
+        print(*events, sep=", ")
+        return render_template("calendar2.html", title="Calendar", events=events)
+
+    finally:
+        # Closing database connection.
+        if conn:
+            curs.close()
+            conn.close()
+            print("PostgreSQL connection is closed.")
 
 
 @app.route('/')

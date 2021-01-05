@@ -29,10 +29,8 @@
                 <div class="prev-date">29</div>
                 <div class="prev-date">30</div>
                 {% if events %}
-                    {% for item in events %}
-                        {% if item = "1" %}
-                            <div id="{{ item }}" class="event">1</div>
-                        {% endif %}
+                    {% for event in events %}
+                        <div id="{{ event }}" class="event">1</div>
                     {% endfor %}
                 {% else %}
                     <div id="1">2</div>
