@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 
+    {% for event in events %}
+        <p>
+        {{ event.event_date }}
+        {{ event.day_of_month|int }}
+        </p>
+    {% endfor %}
     <div class="calendar-container">
         <div class="calendar">
             <div class="month">
@@ -28,43 +34,16 @@
                 <div class="prev-date">28</div>
                 <div class="prev-date">29</div>
                 <div class="prev-date">30</div>
-                {% if events %}
+                {% for i in range(1, 32) %}
                     {% for event in events %}
-                        <div id="{{ event }}" class="event">1</div>
+                        {% if event.day_of_month|int == i %}
+                            <div id="{{ i }}" class="event">{{ i }}</div>
+                        {% else %}
+                            {% set j = i %}
+                            <div id="{{ j }}">{{ j }}</div>
+                        {% endif %}
                     {% endfor %}
-                {% else %}
-                    <div id="1">2</div>
-                    <div id="2">2</div>
-                    <div id="3">3</div>
-                    <div id="4">4</div>
-                    <div id="5">5</div>
-                    <div id="6">6</div>
-                    <div id="7">7</div>
-                    <div id="8">8</div>
-                    <div id="9">9</div>
-                    <div id="10">10</div>
-                    <div id="11">11</div>
-                    <div id="12">12</div>
-                    <div id="13">13</div>
-                    <div id="14">14</div>
-                    <div id="15">15</div>
-                    <div id="16">16</div>
-                    <div id="17">17</div>
-                    <div id="18">18</div>
-                    <div id="19">19</div>
-                    <div id="20">20</div>
-                    <div id="21">21</div>
-                    <div id="22">22</div>
-                    <div id="23">23</div>
-                    <div id="24">24</div>
-                    <div id="25">25</div>
-                    <div id="26">26</div>
-                    <div id="27">27</div>
-                    <div id="28">28</div>
-                    <div id="29">29</div>
-                    <div id="30">30</div>
-                    <div id="31">31</div>
-                {% endif %}
+                {% endfor %}
                 <div class="date-next">1</div>
                 <div class="date-next">2</div>
                 <div class="date-next">3</div>

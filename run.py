@@ -1,6 +1,7 @@
 import os
 from flask import Flask, render_template
 import psycopg2
+import psycopg2.extras
 from datetime import datetime
 
 DB_NAME = os.environ['DB_NAME']
@@ -12,6 +13,9 @@ SECRET_KEY = os.environ['SECRET_KEY']
 app = Flask(__name__)
 
 app.secret_key = SECRET_KEY
+
+app.jinja_env.add_extension('jinja2.ext.loopcontrols')
+app.config.from_object(__name__)
 
 
 @app.route('/calendar')
@@ -28,32 +32,32 @@ def calendar():
     end_date = this_year + "-" + this_month + "-" + end_day
 
     conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST)
-    curs = conn.cursor()
+    curs = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
     try:
         curs.execute(
-            "SELECT * " +
-            "FROM event " +
-            "WHERE event_date " +
-            "BETWEEN '" + start_date +
-            "' AND '" + end_date + "'"
+            "SELECT title, "
+            "       description, "
+            "       event_date, "
+            "       event_time, "
+            "       EXTRACT(DAY FROM event_date) day_of_month " 
+            "FROM event "
+            "WHERE event_date "
+            "BETWEEN '" + start_date + "' "
+            "AND '" + end_date + "'"
         )
 
-        events = curs.fetchall()
+        result = curs.fetchall()
+        dict_result = []
 
-        for row in events:
-            print("ID = ", row[0])
-            print("Title = ", row[1], "\n")
-            print("Description = ", row[2], "\n")
-            print("Event date  = ", row[3], "\n")
-            print("Event time  = ", row[4], "\n")
+        for row in result:
+            dict_result.append(dict(row))
 
     except (Exception, psycopg2.Error) as error:
         print("Error while fetching data from PostgreSQL: ", error)
     else:
-        print("events: ")
-        print(*events, sep=", ")
-        return render_template("calendar2.html", title="Calendar", events=events)
+        print(str(dict_result))
+        return render_template("calendar2.html", title="Calendar", events=dict_result)
 
     finally:
         # Closing database connection.
