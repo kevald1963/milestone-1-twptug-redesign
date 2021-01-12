@@ -38,13 +38,14 @@ def calendar():
         curs.execute(
             "SELECT title, "
             "       description, "
-            "       event_date, "
-            "       event_time, "
+            "       to_char(event_date, 'DD/MM/YYYY') event_date, "
+            "       to_char(event_time, 'HH24:MI') event_time, "
             "       EXTRACT(DAY FROM event_date) day_of_month " 
             "FROM event "
             "WHERE event_date "
             "BETWEEN '" + start_date + "' "
-            "AND '" + end_date + "'"
+            "AND '" + end_date + "' "
+            "ORDER BY event_date"
         )
 
         result = curs.fetchall()
@@ -64,7 +65,7 @@ def calendar():
         if conn:
             curs.close()
             conn.close()
-            print("PostgreSQL connection is closed.")
+            print("PostgreSQL connection has been closed.")
 
 
 @app.route('/')
