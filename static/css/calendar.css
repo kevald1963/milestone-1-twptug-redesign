@@ -76,6 +76,22 @@ html {
     text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
+/* Set the cell for the current day to red. */
+.today {
+    background-color: red;
+}
+
+/* Set the cell for the current day, with at least one event posted, to purple with a red border. */
+.event-today {
+    background-color: rebeccapurple;
+    border: 2px solid red;
+}
+
+/* Set cells, with at least one event posted, to purple. */
+.event {
+    background-color: rebeccapurple;
+}
+
 .days {
     width: 100%;
     display: flex;
@@ -92,7 +108,6 @@ html {
     justify-content: center;
     align-items: center;
     text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-    transition: background-color 0.2s;
 }
 
 .days div:hover:not(.today) {
@@ -105,17 +120,3 @@ html {
     opacity: 0.5;
 }
 
-/* Set the cell for the current day to red. */
-.today {
-    background-color: red;
-}
-
-/* Set the cell for the current day, with at least one event posted, to purple with a red border. */
-.event-today {
-    background-color: rebeccapurple;
-    border: 2px solid red;
-}
-
-.event {
-    background-color: rebeccapurple;
-}
