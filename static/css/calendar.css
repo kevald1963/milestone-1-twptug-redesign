@@ -119,3 +119,20 @@ html {
 .prev-date, .next-date {
     opacity: 0.5;
 }
+
+#event-panel {
+    max-height: 420px;
+    max-width: 560px;
+    background-color: #337ab7;
+    color: #fafafa;
+    margin: auto;
+    margin-top: 25px;
+    padding: 2px 2px 5px 5px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+    overflow-y: auto;
+}
+
+#event-panel a {
+    color: #fafafa;
+}

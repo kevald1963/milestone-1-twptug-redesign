@@ -48,9 +48,9 @@
 
         <!-- EVENT PANEL -->
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <div class="home-page-news">
+            <div id="event-panel" class="hidden">
                 <span id="panel-title" class="uppercase panel-title"></span><br><br>
-                <div id="event_details" class="event_details">
+                <div id="event-details" class="event-details">
                      <!-- Event details placed here by javascript. -->
                 </div>
             </div>
@@ -114,7 +114,7 @@
                         time.push(item.event_time);
 
                         // Find the parent element under which the event details will be placed.
-                        var parentElem = document.getElementById("event_details");
+                        var parentElem = document.getElementById("event-details");
 
                         // Call function to remove any existing child paragraphs under the parent,
                         //otherwise previous event details will keep appending to it.
@@ -143,6 +143,12 @@
                         };
                     };
                 });
+                // Show the Event panel by removing the 'hidden' class attribute.
+                var eventPanel = document.getElementById("event-panel");
+                var className = "hidden";
+                if (eventPanel.classList.contains(className)) {
+                    eventPanel.classList.remove(className);
+                };
             };
         });
     </script>

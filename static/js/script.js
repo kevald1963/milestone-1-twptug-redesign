@@ -58,8 +58,8 @@ const renderCalendar = () => {
     // Mark days on calendar where events have been posted.
     for (let i = 1; i <= lastDay; i++) {
         if (i === new Date().getDate() && date.getMonth() === new Date().getMonth() ) {
-            // Events today are marked with a purple background and red border. If there are
-            // no events today then the day is marked with red background only.
+            // Events scheduled for today are marked with a purple background and red border.
+            // If there are no events today then the day is marked with red background only.
             var existingClass = document.getElementById(i).getAttribute("class");
             if (existingClass == 'event') {
                 days += `<div id="${i}" class="event-today">${i}</div>`;
