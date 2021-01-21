@@ -25,7 +25,7 @@ html {
     width: 45rem;
     height: 52rem;
     background-color: #222227;
-    box-shadow: 0 0.25rem 2rem rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.4);
 }
 
 .month {
@@ -76,19 +76,20 @@ html {
     text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
-/* Set the cell for the current day to red. */
+/* Set the cell for the current day to red, if no events scheduled for today. */
 .today {
     background-color: red;
+    cursor: pointer;
 }
 
-/* Set the cell for the current day, with at least one event posted, to purple with a red border. */
-.event-today {
+/* Set the cell for the current day, with at least one event scheduled, to purple with a red border. */
+.events-today {
     background-color: rebeccapurple;
     border: 2px solid red;
 }
 
-/* Set cells, with at least one event posted, to purple. */
-.event {
+/* Set cells, with at least one event scheduled, to purple. */
+.events {
     background-color: rebeccapurple;
 }
 
@@ -120,7 +121,7 @@ html {
     opacity: 0.5;
 }
 
-#event-panel {
+#events-panel {
     max-height: 420px;
     max-width: 560px;
     background-color: #337ab7;
@@ -131,8 +132,4 @@ html {
     border-radius: 6px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
     overflow-y: auto;
-}
-
-#event-panel a {
-    color: #fafafa;
 }

@@ -61,8 +61,8 @@ const renderCalendar = () => {
             // Events scheduled for today are marked with a purple background and red border.
             // If there are no events today then the day is marked with red background only.
             var existingClass = document.getElementById(i).getAttribute("class");
-            if (existingClass == 'event') {
-                days += `<div id="${i}" class="event-today">${i}</div>`;
+            if (existingClass == 'events') {
+                days += `<div id="${i}" class="events-today">${i}</div>`;
             } else {
                 days += `<div id="${i}" class="today">${i}</div>`;
             }
@@ -70,8 +70,8 @@ const renderCalendar = () => {
             // Events on other days are marked with a purple background only. If there are
             // no events on those days then they are not marked at all.
             var existingClass = document.getElementById(i).getAttribute("class");
-            if (existingClass == 'event') {
-                days += `<div id="${i}" class="event">${i}</div>`;
+            if (existingClass == 'events') {
+                days += `<div id="${i}" class="events">${i}</div>`;
             } else {
                 days += `<div id="${i}">${i}</div>`;
             }
@@ -82,6 +82,10 @@ const renderCalendar = () => {
         days += `<div class="next-date">${j}</div>`;
         monthDays.innerHTML = days;
     }
+
+    // Check if there are any events scheduled for today.
+    checkEventsForToday()
+
 };
 
 document.querySelector(".prev").addEventListener("click", () => {
