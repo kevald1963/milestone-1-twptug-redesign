@@ -48,7 +48,7 @@
 
         <!-- EVENTS PANEL -->
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <div id="events-panel" class="hidden">
+            <div id="events-panel" class="events-panel hidden">
                 <span id="panel-title" class="uppercase panel-title"></span><br><br>
                 <div id="events-list" class="events-list">
                      <!-- Event details placed here by javascript. -->
@@ -92,9 +92,17 @@
     </script>
 
     <script>
-        function showEventsPanel() {
-            // Show the Events panel by removing the 'hidden' class attribute.
+        function showEventsPanel(eventsToday) {
             var eventsPanel = document.getElementById("events-panel");
+            // Change the Events panel to red if there are events scheduled for today.
+            var className = "highlight-today";
+            if (eventsToday) {
+                eventsPanel.classList.add(className);
+            } else {
+                eventsPanel.classList.remove(className);
+            };
+
+            // Show the Events panel by removing the 'hidden' class attribute.
             var className = "hidden";
             if (eventsPanel.classList.contains(className)) {
                 eventsPanel.classList.remove(className);
@@ -107,8 +115,7 @@
             // Initialise the Events panel.
             parentElem = initialiseEventsPanel();
 
-            var todays_date = new Date().toDateString();
-            document.getElementById("panel-title").innerHTML = "Events for " + todays_date;
+            document.getElementById("panel-title").innerHTML = "Events for today";
 
             var pElemNoEvents = document.createElement("p");
             pElemNoEvents.className = "no-events-today";
@@ -125,9 +132,10 @@
             // Initialise the Events panel.
             parentElem = initialiseEventsPanel();
 
-            var todays_date = new Date().setHours(0,0,0,0);
-            var todays_date_formatted = new Date().toDateString();
-            document.getElementById("panel-title").innerHTML = "Events for " + todays_date_formatted;
+            var todays_date = new Date();
+            todays_date.setHours(0,0,0,0);
+
+            document.getElementById("panel-title").innerHTML = "Events for today";
 
             let events_today = {{ events|safe }};
             let title_today = [];
@@ -138,14 +146,15 @@
             events.forEach(function(item) {
                 // Convert dictionary date to U.S. format first so it can be compared correctly to
                 // the current date.
-                var event_date = item.event_date.split("/");
-                var d = parseInt(event_date[0], 10),
-                    m = parseInt(event_date[1], 10),
-                    y = parseInt(event_date[2], 10);
-                console.log("dictionary date = " + new Date(y, m - 1, d));
-                console.log("todays date = " + todays_date_formatted);
+                var date = item.event_date.split("/");
+                var d = parseInt(date[0], 10),
+                    m = parseInt(date[1], 10),
+                    y = parseInt(date[2], 10);
+                event_date = new Date(y, m - 1, d);
 
-                if (new Date(y, m - 1, d) == todays_date_formatted) {
+                if (event_date.valueOf() == todays_date.valueOf()) {
+
+                    console.log("Dates match!");
 
                     // Extract the remaining fields from the JSON object and display the
                     // details of all events for the selected date.
@@ -184,7 +193,8 @@
             });
 
             // Display the event panel.
-            showEventsPanel();
+            var eventsToday = true;
+            showEventsPanel(eventsToday);
         };
     </script>
 
