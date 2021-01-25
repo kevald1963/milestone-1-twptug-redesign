@@ -121,8 +121,9 @@ html {
     opacity: 0.5;
 }
 
-events-panel {
-    background-color: #337ab7;
+.events-panel {
+    // background-color: #337ab7;
+    background-color: rebeccapurple;
     color: #fafafa;
 }
 
@@ -137,7 +138,7 @@ events-panel {
     overflow-y: auto;
 }
 
-.highlight-today {
+.events-highlight-today {
     background-color: red;
     color: #fafafa;
 }

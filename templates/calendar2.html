@@ -95,7 +95,7 @@
         function showEventsPanel(eventsToday) {
             var eventsPanel = document.getElementById("events-panel");
             // Change the Events panel to red if there are events scheduled for today.
-            var className = "highlight-today";
+            var className = "events-highlight-today";
             if (eventsToday) {
                 eventsPanel.classList.add(className);
             } else {
@@ -153,8 +153,6 @@
                 event_date = new Date(y, m - 1, d);
 
                 if (event_date.valueOf() == todays_date.valueOf()) {
-
-                    console.log("Dates match!");
 
                     // Extract the remaining fields from the JSON object and display the
                     // details of all events for the selected date.
@@ -255,9 +253,15 @@
                                 y = parseInt(event_date[2], 10);
                             new Date(y, m - 1, d);
                             var selected_date = new Date(y, m - 1, d).toDateString();
-                            document.getElementById("panel-title").innerHTML = "Events for " + selected_date;
 
-                            // Extract the remaining fields from the JSON object and display the
+                            // Display the Events panel title.
+                            if (elemClass == "events-today") {
+                                document.getElementById("panel-title").innerHTML = "Events for today";
+                            } else {
+                                document.getElementById("panel-title").innerHTML = "Events for " + selected_date;
+                            };
+
+                            // Extract the remaining fields from the JSON object and list the
                             // details of all events for the selected date.
                             title.push(item.title);
                             description.push(item.description);
@@ -290,10 +294,16 @@
                                 var pElemBreak = document.createElement("br");
                                 parentElem.appendChild(pElemBreak);
                             };
+                            // Display the event panel.
+                            if (elemClass == "events-today") {
+                                var eventsToday = true;
+                                showEventsPanel(eventsToday);
+                            } else {
+                                var eventsToday = false;
+                                showEventsPanel();
+                            };
                         };
                     });
-                    // Display the event panel.
-                    showEventsPanel();
                 };
             };
         });
