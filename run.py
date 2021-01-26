@@ -32,6 +32,8 @@ def calendar():
     end_date = this_year + "-" + this_month + "-" + end_day
 
     conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST)
+    print("PostgreSQL connection has been opened.")
+
     curs = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
     try:
@@ -54,10 +56,12 @@ def calendar():
         for row in result:
             dict_result.append(dict(row))
 
+        print("Events data successfully selected from database.")
+
     except (Exception, psycopg2.Error) as error:
         print("Error while fetching data from PostgreSQL: ", error)
     else:
-        print(str(dict_result))
+        # print("DATA PASSED TO TEMPLATE: " + str(dict_result))
         return render_template("calendar2.html", title="Calendar", events=dict_result)
 
     finally:

@@ -102,7 +102,7 @@ renderCalendar();
 
 function draw() {
     var canvas = document.getElementById('canvas');
-    if (canvas.getContext)  {
+    if (canvas.getContext) {
         var context = canvas.getContext('2d');
 
         context.beginPath();
