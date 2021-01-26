@@ -197,14 +197,17 @@
     </script>
 
     <script>
+        // If events scheduled for today or are there are none for today, check which one to determine
+        // what to display in the Events panel. If neither condition is found then current date is not
+        // on the currently displayed calendar so there is nothing to display.
+        //
+        // Called from: renderCalendar function within scripts.js.
+        //
         function checkEventsForToday() {
 
             var events_today = document.getElementsByClassName("events-today");
             var no_events_today = document.getElementsByClassName("today");
 
-            // If one of the above classes are found, check which one to decide what to display.
-            // If neither are found then current date is not on the currently displayed calendar
-            // so nothing to display.
             if (events_today.length > 0 || no_events_today.length > 0) {
                 // Events found for today, so display them in events panel.
                 if (events_today.length == 1) {
