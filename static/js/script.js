@@ -83,7 +83,7 @@ const renderCalendar = () => {
         monthDays.innerHTML = days;
     }
 
-    // Check if there are any events scheduled for today.
+    // Check if there are any events scheduled for today to display in Events panel.
     checkEventsForToday()
 
 };
@@ -100,6 +100,7 @@ document.querySelector(".next").addEventListener("click", () => {
 
 renderCalendar();
 
+// Draw the canvas.
 function draw() {
     var canvas = document.getElementById('canvas');
     if (canvas.getContext) {
@@ -112,3 +113,22 @@ function draw() {
         context.fill();
     }
 }
+
+// If events scheduled for today, or there are none scheduled for today, check which is true to determine
+// output in the Events panel. If neither condition is found then current date is not in the currently
+// displayed month, in which case there is nothing to display in the Events panel.
+function checkEventsForToday() {
+
+    var events_today = document.getElementsByClassName("events-today");
+    var no_events_today = document.getElementsByClassName("today");
+
+    if (events_today.length > 0 || no_events_today.length > 0) {
+        // Events found for today, so display them in events panel.
+        if (events_today.length == 1) {
+            eventsToday();
+        } else {
+        // No events found for today, so display a message saying no events found.
+            noEventsToday();
+        };
+    };
+};
