@@ -1,6 +1,7 @@
 const date = new Date();
 
 const renderCalendar = () => {
+    // Set day of month to the 1st.
     date.setDate(1);
 
     const monthDays = document.querySelector(".days");
@@ -10,6 +11,8 @@ const renderCalendar = () => {
         date.getMonth() + 1,
         0
     ).getDate();
+    console.log("lastDay = " + lastDay);
+
 
     const prevLastDay = new Date(
         date.getFullYear(),
@@ -84,7 +87,7 @@ const renderCalendar = () => {
     }
 
     // Check if there are any events scheduled for today to display in Events panel.
-    checkEventsForToday()
+    checkEventsForToday();
 
 };
 
@@ -101,18 +104,18 @@ document.querySelector(".next").addEventListener("click", () => {
 renderCalendar();
 
 // Draw the canvas.
-function draw() {
-    var canvas = document.getElementById('canvas');
-    if (canvas.getContext) {
-        var context = canvas.getContext('2d');
+//function draw() {
+//    var canvas = document.getElementById('canvas');
+//   if (canvas.getContext) {
+//        var context = canvas.getContext('2d');
 
-        context.beginPath();
-        context.moveTo(75,75);
-        context.lineTo(10,75);
-        context.lineTo(10,25);
-        context.fill();
-    }
-}
+//        context.beginPath();
+//        context.moveTo(75,75);
+//        context.lineTo(10,75);
+//        context.lineTo(10,25);
+//        context.fill();
+//    };
+//};
 
 // If events scheduled for today, or there are none scheduled for today, check which is true to determine
 // output in the Events panel. If neither condition is found then current date is not in the currently

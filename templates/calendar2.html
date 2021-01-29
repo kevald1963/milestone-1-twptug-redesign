@@ -8,11 +8,17 @@
             <div class="calendar-container">
                 <div class="calendar">
                     <div class="month">
+                        <!-- Go to previous month. -->
                         <i class="fas fa-angle-left prev"></i>
+
                         <div class="date">
+                            <!-- Current month shown here. -->
                             <h1></h1>
+                            <!-- Current date shown here. -->
                             <p></p>
                         </div>
+
+                        <!-- Go to next month. -->
                         <i class="fas fa-angle-right next"></i>
                     </div>
 
@@ -206,64 +212,67 @@
         // Display event information when a day is clicked for the currently displayed month.
         //
         document.addEventListener('click', function(e) {
-            let elemClass = document.getElementById(e.target.id).getAttribute("class");
+            // Only react to a click on and element with a valid ID.
+            if (e.target.id != "") {
+                let elemClass = document.getElementById(e.target.id).getAttribute("class");
 
-            if (elemClass == "today") {
+                if (elemClass == "today") {
 
-                // No event, or events, exist for the current day. However, if the current day was
-                // clicked then display a message to inform user that there are no events today.
-                noEventsToday();
+                    // No event, or events, exist for the current day. However, if the current day was
+                    // clicked then display a message to inform user that there are no events today.
+                    noEventsToday();
 
-            } else {
+                } else {
 
-                // Event, or events, exist for the day that was clicked.
-                if (elemClass == "events" || elemClass == "events-today") {
-                    let events = {{ events|safe }};
-                    let target_id = e.target.id;
-                    let title = [];
-                    let description = [];
-                    let date = [];
-                    let time = [];
-                    events.forEach(function(item) {
-                        if (item.day_of_month == target_id) {
-                            date.push(item.event_date);
+                    // Event, or events, exist for the day that was clicked.
+                    if (elemClass == "events" || elemClass == "events-today") {
+                        let events = {{ events|safe }};
+                        let target_id = e.target.id;
+                        let title = [];
+                        let description = [];
+                        let date = [];
+                        let time = [];
+                        events.forEach(function(item) {
+                            if (item.day_of_month == target_id) {
+                                date.push(item.event_date);
 
-                            // Get the event date from first record and display in event panel title.
-                            // Convert dictionary date to U.S. format first so it can be converted to a date
-                            // string correctly, e.g. "Sat Jan 02 2021".
-                            var event_date = item.event_date.split("/");
-                            var d = parseInt(event_date[0], 10),
-                                m = parseInt(event_date[1], 10),
-                                y = parseInt(event_date[2], 10);
-                            new Date(y, m - 1, d);
-                            var selected_date = new Date(y, m - 1, d).toDateString();
+                                // Get the event date from first record and display in event panel title.
+                                // Convert dictionary date to U.S. format first so it can be converted to a date
+                                // string correctly, e.g. "Sat Jan 02 2021".
+                                var event_date = item.event_date.split("/");
+                                var d = parseInt(event_date[0], 10),
+                                    m = parseInt(event_date[1], 10),
+                                    y = parseInt(event_date[2], 10);
+                                new Date(y, m - 1, d);
+                                var selected_date = new Date(y, m - 1, d).toDateString();
 
-                            // Display the Events panel title.
-                            if (elemClass == "events-today") {
-                                document.getElementById("panel-title").innerHTML = "Events for today";
-                            } else {
-                                document.getElementById("panel-title").innerHTML = "Events for " + selected_date;
+                                // Display the Events panel title.
+                                if (elemClass == "events-today") {
+                                    document.getElementById("panel-title").innerHTML = "Events for today";
+                                } else {
+                                    document.getElementById("panel-title").innerHTML = "Events for " + selected_date;
+                                };
+
+                                // Extract the remaining fields from the JSON object and list the
+                                // details of all events for the selected date.
+                                title.push(item.title);
+                                description.push(item.description);
+                                time.push(item.event_time);
+
+                                // Call function to create new Event panel paragraphs for each event field.
+                                createEventFields(title, description, time);
+
+                                // Display the event panel.
+                                if (elemClass == "events-today") {
+                                    var eventsToday = true;
+                                    showEventsPanel(eventsToday);
+                                } else {
+                                    var eventsToday = false;
+                                    showEventsPanel();
+                                };
                             };
-
-                            // Extract the remaining fields from the JSON object and list the
-                            // details of all events for the selected date.
-                            title.push(item.title);
-                            description.push(item.description);
-                            time.push(item.event_time);
-
-                            // Call function to create new Event panel paragraphs for each event field.
-                            createEventFields(title, description, time);
-
-                            // Display the event panel.
-                            if (elemClass == "events-today") {
-                                var eventsToday = true;
-                                showEventsPanel(eventsToday);
-                            } else {
-                                var eventsToday = false;
-                                showEventsPanel();
-                            };
-                        };
-                    });
+                        });
+                    };
                 };
             };
         });
