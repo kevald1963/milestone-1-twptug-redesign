@@ -92,6 +92,38 @@
     </script>
 
     <script>
+        function createEventFields(title, description, time) {
+            // Initialise the Events panel.
+            parentElem = initialiseEventsPanel();
+
+            for(var i = 0; i < title.length; i += 1) {
+
+                // Show the event Title.
+                var pElemTitle = document.createElement("p");
+                pElemTitle.className = "title";
+                pElemTitle.innerHTML = "Title: " + title[i];
+                parentElem.appendChild(pElemTitle);
+
+                // Show the event Description.
+                var pElemDescription = document.createElement("p");
+                pElemDescription.className = "description";
+                pElemDescription.innerHTML = "Description: " + description[i];
+                parentElem.appendChild(pElemDescription);
+
+                // Show the event Time.
+                var pElemTime = document.createElement("p");
+                pElemTime.className = "time";
+                pElemTime.innerHTML = "Time: " + time[i];
+                parentElem.appendChild(pElemTime);
+
+                // Create a break between separate events for better readability.
+                var pElemBreak = document.createElement("br");
+                parentElem.appendChild(pElemBreak);
+            };
+        };
+    </script>
+
+    <script>
         function showEventsPanel(eventsToday) {
             var eventsPanel = document.getElementById("events-panel");
 
@@ -130,9 +162,6 @@
 
     <script>
         function eventsToday() {
-            // Initialise the Events panel.
-            parentElem = initialiseEventsPanel();
-
             var todays_date = new Date();
             todays_date.setHours(0,0,0,0);
 
@@ -161,33 +190,8 @@
                     description_today.push(item.description);
                     time_today.push(item.event_time);
 
-                    // Initialise the Events panel.
-                    parentElem = initialiseEventsPanel();
-
-                    for(var i = 0; i < title_today.length; i += 1) {
-
-                        // Show the event Title.
-                        var pElemTitle = document.createElement("p");
-                        pElemTitle.className = "title";
-                        pElemTitle.innerHTML = "Title: " + title_today[i];
-                        parentElem.appendChild(pElemTitle);
-
-                        // Show the event Description.
-                        var pElemDescription = document.createElement("p");
-                        pElemDescription.className = "description";
-                        pElemDescription.innerHTML = "Description: " + description_today[i];
-                        parentElem.appendChild(pElemDescription);
-
-                        // Show the event Time.
-                        var pElemTime = document.createElement("p");
-                        pElemTime.className = "time";
-                        pElemTime.innerHTML = "Time: " + time_today[i];
-                        parentElem.appendChild(pElemTime);
-
-                        // Create a break between separate events for better readability.
-                        var pElemBreak = document.createElement("br");
-                        parentElem.appendChild(pElemBreak);
-                    };
+                    // Call function to create new Event panel paragraphs for each event field.
+                    createEventFields(title_today, description_today, time_today);
                 };
             });
 
@@ -247,33 +251,9 @@
                             description.push(item.description);
                             time.push(item.event_time);
 
-                            // Initialise the Events panel.
-                            parentElem = initialiseEventsPanel();
+                            // Call function to create new Event panel paragraphs for each event field.
+                            createEventFields(title, description, time);
 
-                            for(var i = 0; i < title.length; i += 1) {
-
-                                // Show the event Title.
-                                var pElemTitle = document.createElement("p");
-                                pElemTitle.className = "title";
-                                pElemTitle.innerHTML = "Title: " + title[i];
-                                parentElem.appendChild(pElemTitle);
-
-                                // Show the event Description.
-                                var pElemDescription = document.createElement("p");
-                                pElemDescription.className = "description";
-                                pElemDescription.innerHTML = "Description: " + description[i];
-                                parentElem.appendChild(pElemDescription);
-
-                                // Show the event Time.
-                                var pElemTime = document.createElement("p");
-                                pElemTime.className = "time";
-                                pElemTime.innerHTML = "Time: " + time[i];
-                                parentElem.appendChild(pElemTime);
-
-                                // Create a break between separate events for better readability.
-                                var pElemBreak = document.createElement("br");
-                                parentElem.appendChild(pElemBreak);
-                            };
                             // Display the event panel.
                             if (elemClass == "events-today") {
                                 var eventsToday = true;
