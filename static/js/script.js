@@ -91,31 +91,26 @@ const renderCalendar = () => {
 
 };
 
+// Go to previous month.
 document.querySelector(".prev").addEventListener("click", () => {
     date.setMonth(date.getMonth() - 1);
     renderCalendar();
 });
 
+// Go to next month.
 document.querySelector(".next").addEventListener("click", () => {
     date.setMonth(date.getMonth() + 1);
+
+    var nextMonth = date.getMonth() + 1;
+    const URL = '/calendar/get-next-month/?next-month=' + nextMonth;
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', URL);
+    xhr.send();
+
     renderCalendar();
 });
 
 renderCalendar();
-
-// Draw the canvas.
-//function draw() {
-//    var canvas = document.getElementById('canvas');
-//   if (canvas.getContext) {
-//        var context = canvas.getContext('2d');
-
-//        context.beginPath();
-//        context.moveTo(75,75);
-//        context.lineTo(10,75);
-//        context.lineTo(10,25);
-//        context.fill();
-//    };
-//};
 
 // If events scheduled for today, or there are none scheduled for today, check which is true to determine
 // output in the Events panel. If neither condition is found then current date is not in the currently

@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import psycopg2
 import psycopg2.extras
 from datetime import datetime
@@ -19,17 +19,41 @@ app.config.from_object(__name__)
 
 
 @app.route('/calendar')
+@app.route('/calendar/get-next-month/', endpoint='get-next-month', methods=["POST", "GET"])
 def calendar():
 
-    this_month = str(datetime.now().month)
+    if request.endpoint == 'get-next-month':
+        msg = 'View function called from: get-next-month route.'
+    elif request.endpoint == 'get-prev-month':
+        msg = 'View function called from: get-prev-month route.'
+    elif request.endpoint == 'calendar':
+        msg = 'Default view function called: calendar'
+    else:
+        msg = 'Unexpected view function called: ' + request.endpoint
+
+    print(msg)
+
+    next_month = None
+    if request.endpoint == 'get-next-month':
+        next_month = request.args.get("next-month")
+
+    if next_month:
+        print("next_month = " + str(next_month))
+        this_month = next_month
+    else:
+        this_month = str(datetime.now().month)
+
     if len(this_month) == 1:
         this_month = "0" + this_month
 
     this_year = str(datetime.now().year)
     start_day = "01"
-    end_day = "31"
+    end_day = "28"
     start_date = this_year + "-" + this_month + "-" + start_day
     end_date = this_year + "-" + this_month + "-" + end_day
+
+    print("start_date = " + start_date)
+    print("end_date = " + end_date)
 
     conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST)
     print("PostgreSQL connection has been opened.")
