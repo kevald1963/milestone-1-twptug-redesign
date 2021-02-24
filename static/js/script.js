@@ -1,6 +1,10 @@
 const date = new Date();
 
 const renderCalendar = () => {
+
+    // Mark events from events table on calendar.
+    markEventsOnCalendar();
+
     // Set day of month to the 1st.
     date.setDate(1);
 
@@ -11,8 +15,8 @@ const renderCalendar = () => {
         date.getMonth() + 1,
         0
     ).getDate();
-    console.log("lastDay = " + lastDay);
 
+    console.log("lastDay = " + lastDay);
 
     const prevLastDay = new Date(
         date.getFullYear(),
@@ -64,7 +68,7 @@ const renderCalendar = () => {
             // Events scheduled for today are marked with a purple background and red border.
             // If there are no events today then the day is marked with red background only.
             var existingClass = document.getElementById(i).getAttribute("class");
-            if (existingClass == 'events') {
+            if (existingClass == "events") {
                 days += `<div id="${i}" class="events-today">${i}</div>`;
             } else {
                 days += `<div id="${i}" class="today">${i}</div>`;
@@ -72,8 +76,9 @@ const renderCalendar = () => {
         } else {
             // Events on other days are marked with a purple background only. If there are
             // no events on those days then they are not marked at all.
+            console.log("i = " + i);
             var existingClass = document.getElementById(i).getAttribute("class");
-            if (existingClass == 'events') {
+            if (existingClass == "events") {
                 days += `<div id="${i}" class="events">${i}</div>`;
             } else {
                 days += `<div id="${i}">${i}</div>`;
@@ -102,12 +107,27 @@ document.querySelector(".next").addEventListener("click", () => {
     date.setMonth(date.getMonth() + 1);
 
     var nextMonth = date.getMonth() + 1;
-    const URL = '/calendar/get-next-month/?next-month=' + nextMonth;
+    var nextYear = date.getFullYear();
+
+    // If end of year, revert next month to January and increment the full year value.
+    if (nextMonth == 12) {
+        var nextMonth = 1;
+        var nextYear = year + 1;
+    };
+
+    console.log("nextMonth = " + nextMonth);
+    console.log("nextYear = " + nextYear);
+
+    console.log("nextMonth request sent.");
+    const URL = '/get-next-month/?next-month=' + nextMonth + '&next-year=' + nextYear;
     const xhr = new XMLHttpRequest();
     xhr.open('GET', URL);
     xhr.send();
 
-    renderCalendar();
+    console.log("Ready to render calendar for next month.");
+    //renderCalendar();
+    console.log("Calendar successfully rendered for next month.");
+
 });
 
 renderCalendar();

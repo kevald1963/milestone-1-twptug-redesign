@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 import psycopg2
 import psycopg2.extras
 from datetime import datetime
@@ -11,44 +11,67 @@ DB_HOST = os.environ['DB_HOST']
 SECRET_KEY = os.environ['SECRET_KEY']
 
 app = Flask(__name__)
-
 app.secret_key = SECRET_KEY
 
 app.jinja_env.add_extension('jinja2.ext.loopcontrols')
 app.config.from_object(__name__)
 
 
-@app.route('/calendar')
-@app.route('/calendar/get-next-month/', endpoint='get-next-month', methods=["POST", "GET"])
-def calendar():
+@app.route('/get-next-month/', endpoint='get-next-month', methods=['GET'])
+def getnextmonth():
 
-    if request.endpoint == 'get-next-month':
-        msg = 'View function called from: get-next-month route.'
-    elif request.endpoint == 'get-prev-month':
-        msg = 'View function called from: get-prev-month route.'
-    elif request.endpoint == 'calendar':
-        msg = 'Default view function called: calendar'
-    else:
-        msg = 'Unexpected view function called: ' + request.endpoint
+    # Check if a request for next, or previous, month and year parameters.
+    request_month = request.args.get("next-month")
+    request_year = request.args.get("next-year")
+    print("request_month = " + str(request_month))
+    print("request_year = " + str(request_year))
 
-    print(msg)
+    return redirect(url_for("calendar", request_month=request_month, request_year=request_year))
 
-    next_month = None
-    if request.endpoint == 'get-next-month':
-        next_month = request.args.get("next-month")
 
-    if next_month:
-        print("next_month = " + str(next_month))
-        this_month = next_month
-    else:
-        this_month = str(datetime.now().month)
-
-    if len(this_month) == 1:
-        this_month = "0" + this_month
-
-    this_year = str(datetime.now().year)
+@app.route('/calendar', defaults={'request_month': None, 'request_year': None})
+@app.route('/calendar/<request_month>/<request_year>')
+def calendar(request_month, request_year):
+    import calendar
     start_day = "01"
-    end_day = "28"
+
+    if request_month is None:
+
+        # This is a default calendar request, so set the start and end dates for the current month.
+        this_year = datetime.now().year
+        this_month = datetime.now().month
+        end_day = str(calendar.monthrange(this_year, this_month)[1])
+
+        this_year = str(this_year)
+        this_month = str(this_month)
+
+        # Add a leading zero to month value if a single digit.
+        if len(this_month) == 1:
+            this_month = "0" + this_month
+    else:
+        # If a valid request has been made use the parameters to set the start and end date
+        # parameters for the query on the database Events table.
+
+        print("GOT HERE")
+        int_request_year = int(request_year)
+        int_request_month = int(request_month)
+
+        end_day = calendar.monthrange(int_request_year, int_request_month)[1]
+        end_day = str(end_day)
+
+        # Add a leading zero to month value if a single digit.
+        if len(str(request_month)) == 1:
+            this_month = "0" + str(request_month)
+        else:
+            this_month = str(request_month)
+
+        this_year = request_year
+
+    print("this_year = " + str(this_year))
+    print("this_month = " + str(this_month))
+    print("end_day = " + str(end_day))
+    print("start_day = " + str(start_day))
+
     start_date = this_year + "-" + this_month + "-" + start_day
     end_date = this_year + "-" + this_month + "-" + end_day
 
@@ -85,8 +108,9 @@ def calendar():
     except (Exception, psycopg2.Error) as error:
         print("Error while fetching data from PostgreSQL: ", error)
     else:
-        # print("DATA PASSED TO TEMPLATE: " + str(dict_result))
-        return render_template("calendar2.html", title="Calendar", events=dict_result)
+        print("END DAY PASSED TO TEMPLATE: " + str(end_day))
+        print("DATA PASSED TO TEMPLATE: " + str(dict_result))
+        return render_template("calendar.html", title="Calendar", end_day=end_day, events=dict_result)
 
     finally:
         # Closing database connection.
