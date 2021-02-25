@@ -120,9 +120,14 @@ document.querySelector(".next").addEventListener("click", () => {
 
     console.log("nextMonth request sent.");
     const URL = '/get-next-month/?next-month=' + nextMonth + '&next-year=' + nextYear;
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', URL);
-    xhr.send();
+    const request = new XMLHttpRequest();
+    request.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log("This is the returned data: " + request.response);
+        };
+    };
+    request.open('GET', URL);
+    request.send();
 
     console.log("Ready to render calendar for next month.");
     //renderCalendar();

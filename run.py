@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, jsonify
 import psycopg2
 import psycopg2.extras
 from datetime import datetime
@@ -17,7 +17,77 @@ app.jinja_env.add_extension('jinja2.ext.loopcontrols')
 app.config.from_object(__name__)
 
 
-@app.route('/get-next-month/', endpoint='get-next-month', methods=['GET'])
+def query(month, year):
+    import calendar
+    int_request_month = int(month)
+    int_request_year = int(year)
+
+    # Get the start and end days.
+    start_day = "01"
+    end_day = calendar.monthrange(int_request_year, int_request_month)[1]
+    end_day = str(end_day)
+
+    # Add a leading zero to month value if a single digit.
+    if len(str(month)) == 1:
+        this_month = "0" + str(month)
+    else:
+        this_month = str(month)
+
+    this_year = year
+
+    print("this_year = " + str(this_year))
+    print("this_month = " + str(this_month))
+    print("end_day = " + str(end_day))
+    print("start_day = " + str(start_day))
+
+    start_date = this_year + "-" + this_month + "-" + start_day
+    end_date = this_year + "-" + this_month + "-" + end_day
+
+    print("start_date = " + start_date)
+    print("end_date = " + end_date)
+
+    conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST)
+    print("PostgreSQL connection has been opened.")
+
+    curs = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+
+    try:
+        curs.execute(
+            "SELECT title, "
+            "       description, "
+            "       to_char(event_date, 'DD/MM/YYYY') event_date, "
+            "       to_char(event_time, 'HH24:MI') event_time, "
+            "       EXTRACT(DAY FROM event_date) day_of_month "
+            "FROM event "
+            "WHERE event_date "
+            "BETWEEN '" + start_date + "' "
+            "AND '" + end_date + "' "
+            "ORDER BY event_date"
+        )
+
+        result = curs.fetchall()
+        dict_result = []
+
+        for row in result:
+            dict_result.append(dict(row))
+
+        print("Requested events data successfully selected from database.")
+
+    except (Exception, psycopg2.Error) as error:
+        print("Error while fetching data from PostgreSQL: ", error)
+    else:
+        print("REQUESTED DATA PASSED TO TEMPLATE: " + str(dict_result))
+        return dict_result
+
+    finally:
+        # Closing database connection.
+        if conn:
+            curs.close()
+            conn.close()
+            print("PostgreSQL connection has been closed.")
+
+
+@app.route('/get-next-month/', endpoint='get-next-month', methods=['GET', 'POST'])
 def getnextmonth():
 
     # Check if a request for next, or previous, month and year parameters.
@@ -26,7 +96,9 @@ def getnextmonth():
     print("request_month = " + str(request_month))
     print("request_year = " + str(request_year))
 
-    return redirect(url_for("calendar", request_month=request_month, request_year=request_year))
+    result = query(request_month, request_year)
+
+    return jsonify(result)
 
 
 @app.route('/calendar', defaults={'request_month': None, 'request_year': None})

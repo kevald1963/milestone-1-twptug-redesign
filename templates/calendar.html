@@ -71,12 +71,30 @@
         function markEventsOnCalendar() {
 
             let events = {{ events|safe }};
+
             let day_of_month = [];
 
             for (let item of events) {
+                console.log("event item = " + item.title);
                 day_of_month.push(item.day_of_month);
                 document.getElementById(item.day_of_month.toString()).setAttribute("class", "events");
             };
+        };
+    </script>
+
+    <script>
+        //
+        // Get last day of month passed back from server after GET request.
+        //
+        function getEndDay() {
+
+            let end_day = {{ end_day|safe }};
+            console.log("end_day = " + end_day);
+
+            //for (let item of events) {
+            //    day_of_month.push(item.day_of_month);
+            //    document.getElementById(item.day_of_month.toString()).setAttribute("class", "events");
+            // };
         };
     </script>
 
