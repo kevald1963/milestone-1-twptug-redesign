@@ -121,8 +121,8 @@ def calendar(request_month, request_year):
         if len(this_month) == 1:
             this_month = "0" + this_month
     else:
-        # If a valid request has been made use the parameters to set the start and end date
-        # parameters for the query on the database Events table.
+        # If a valid request has been made, use the input parameters to set the start and end date
+        # parameters prior to running the query on the Events table.
 
         print("GOT HERE")
         int_request_year = int(request_year)
@@ -182,7 +182,8 @@ def calendar(request_month, request_year):
     else:
         print("END DAY PASSED TO TEMPLATE: " + str(end_day))
         print("DATA PASSED TO TEMPLATE: " + str(dict_result))
-        return render_template("calendar.html", title="Calendar", end_day=end_day, events=dict_result)
+        # return render_template("calendar.html", title="Calendar", end_day=end_day, events=dict_result)
+        return render_template("calendar.html", title="Calendar")
 
     finally:
         # Closing database connection.

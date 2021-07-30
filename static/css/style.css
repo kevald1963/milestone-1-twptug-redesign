@@ -524,6 +524,7 @@ html {
     height: 52rem;
     background-color: #222227;
     box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
 }
 
 .month {
@@ -535,7 +536,7 @@ html {
     align-items: center;
     padding: 0 2rem;
     text-align: center;
-/*    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5); */
+    border-radius: 6px 6px 0px 0px;
 }
 
 .month i {
@@ -620,8 +621,8 @@ html {
 }
 
 .events-panel {
-    // background-color: #337ab7;
-    background-color: rebeccapurple;
+    background-color: #337ab7;
+    //background-color: rebeccapurple;
     color: #fafafa;
 }
 
@@ -629,7 +630,7 @@ html {
     max-height: 420px;
     max-width: 560px;
     margin: auto;
-    margin-top: 25px;
+    margin-top: 43px;
     padding: 2px 2px 5px 5px;
     border-radius: 6px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
