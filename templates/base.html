@@ -113,8 +113,12 @@
                             <!-- AIR POLLUTION -->
                             <li><a href="{{ url_for('airpollution') }}"><i class="fa fa-cloud hidden-xs" aria-hidden="true"></i><span> Air Pollution</span></a></li>
 
+                            <!-- EVENTS -->
+                            <li><a href="{{ url_for('events') }}"><i class="fa fa-calendar hidden-xs" aria-hidden="true"></i><span> Events</span></a></li>
+
                             <!-- CALENDAR -->
-                            <li><a href="{{ url_for('calendar') }}"><i class="fa fa-calendar hidden-xs" aria-hidden="true"></i><span> Calendar</span></a></li>
+                            <!-- A dynamic calendar with events functionality is under development using javascript. -->
+                            <!-- <li><a href="{{ url_for('calendar') }}"><i class="fa fa-calendar hidden-xs" aria-hidden="true"></i><span> Calendar</span></a></li>-->
 
                             <!-- MORE -->
                             <li class="dropdown">
@@ -155,14 +159,15 @@
 
         <!-- FOOTER -->
         <footer class="container-fluid">
-            <!-- Split Footer into 3 columns -->
+            <!-- Split Footer into three columns. -->
             <div class="row">
 
                 <!-- About -->
                 <div class="col-xs-12 col-sm-12 col-md-4">
                     <h5 class="uppercase footer">About</h5>
                     <p class="inline-block">
-                        TWPTUG campaigns for an integrated, publicly-accountable transport system connecting Tyne and Wear, Northumberland and County Durham.
+                        TWPTUG campaigns for an integrated, publicly-accountable transport system connecting
+                        Tyne and Wear, Northumberland and County Durham.
                     </p>
                 </div>
 
@@ -185,7 +190,7 @@
                         <!-- Leave these here in case they are needed in the future:
                         <li><a target="_blank" href="#"><i class="fa fa-pinterest"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-youtube"></i></a></li>
-                         -->
+                        -->
                     </ul>
                 </div>
             </div>
@@ -243,7 +248,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="modal-video" id="modal-video">
-                        <!-- Embedded video (mp4) or iframe (Youtube) HTML is placed here by javascript. -->
+                        <!-- Embedded video (mp4) or iframe (YouTube) HTML is placed here by javascript. -->
                     </div>
                 </div>
             </div>
@@ -297,11 +302,11 @@
     <script>
         function showModal(videoItem) {
             var title = videoItem.getAttribute("data-title");
-            var videoType = videoItem.getAttribute("data-video-type");  // 'mp4' or 'youtube'
+            var videoType = videoItem.getAttribute("data-video-type");  // 'mp4' or 'YouTube'
             var videoSource = videoItem.getAttribute("data-video-source");
 
-            // Add the autoplay parameter to the source for Youtube videos.
-            if (videoType == 'youtube') {
+            // Add the autoplay parameter to the source for YouTube videos.
+            if (videoType == 'YouTube') {
                 videoSource = videoSource + "?&autoplay=1";
             };
 
@@ -317,7 +322,7 @@
                     </video> \
                 </div>';
             } else {
-                if (videoType == "youtube") {
+                if (videoType == "YouTube") {
                     var videoHTML = ' \
                     <iframe id="source" width="560" height="315" \
                         src="" \
@@ -345,7 +350,7 @@
         });
     </script>
 
-    <!-- Stop Youtube video playing when modal is closed. -->
+    <!-- Stop YouTube video playing when modal is closed. -->
     <script>
         $('#videoModal').on('hidden.bs.modal', function () {
             $('#modal-video iframe').attr('src', '');

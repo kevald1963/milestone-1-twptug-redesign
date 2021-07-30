@@ -160,11 +160,11 @@ ul {
 }
 
 #content-wrap {
-  padding-bottom: 110px;    /* Footer height */
+  padding-bottom: 30px;    /* Footer height */
 }
 
 footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     min-height: 110px;
@@ -503,8 +503,34 @@ footer {
     color: #fafafa;
 }
 
-/*-------------------------------------------------- Calendar Page */
+/*-------------------------------------------------- Events Page */
+.image-events {
+    max-width: 100%;
+    min-width: 88%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+}
 
+.news-events {
+    height: 370px;
+    max-width: 576px;
+    background-color: #337ab7;
+    color: #fafafa;
+    margin: auto;
+    margin-top: 15px;
+    padding: 2px 2px 5px 5px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+    overflow-y: auto;
+}
+
+/*-------------------------------------------------- Calendar Page */
 html {
     font-size: 62.5%;
 }

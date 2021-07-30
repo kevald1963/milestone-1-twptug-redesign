@@ -228,6 +228,11 @@ def airpollution():
     return render_template("airpollution.html", title="Air Pollution")
 
 
+@app.route('/events')
+def events():
+    return render_template("events.html", title="Events")
+
+
 @app.route('/cyclingcampaigns')
 def cyclingcampaigns():
     return render_template("cyclingcampaigns.html", title="Cycling Campaigns")
