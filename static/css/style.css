@@ -1,5 +1,15 @@
 /*---------------------------------------------------- General stylings */
 
+#page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+#content-container {
+    margin-bottom: 30px;
+}
+
 header {
     margin: 0;
 }
@@ -121,7 +131,7 @@ ul {
 }
 
 /*-------------------------------------------------- Modal Windows */
-/* Modal windows are used show email contact forms, videos and audio podcasts. */
+/* Modal windows are used to show email contact forms, videos and audio podcasts. */
 
 .modal-footer {
     text-align: left;
@@ -154,21 +164,14 @@ ul {
 }
 
 /*-------------------------------------------------- Footer */
-#page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
-#content-wrap {
-  padding-bottom: 30px;    /* Footer height */
-}
 
 footer {
-    position: relative;
+    display: flex;
+    flex-flow: column;
+    margin-top: auto;
     bottom: 0;
     width: 100%;
     min-height: 110px;
-    margin-top: 5px;
     padding: 5px;
     background-color: #676767;
     color: #fafafa;
@@ -709,10 +712,6 @@ html {
 }
 
 /*-------------------------------------------------- Acknowledgement Page */
-
-.body-container {
-    min-height: calc(100vh - 245px);
-}
 
 .jumbotron {
     text-align: center;
