@@ -41,10 +41,9 @@ ul {
     font-weight: bold;
 }
 
-.email-link i {
+.email-link i  {
     color: #fafafa;
     text-align: center;
-    font-size: 18px;
     padding-left: 5px;
 }
 
@@ -55,7 +54,6 @@ ul {
     -webkit-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
 }
-
 /*-------------------------------------------------- Font Awesome stylings */
 
 .multi-media-icon {
@@ -180,6 +178,23 @@ footer {
 .footer {
     font-family: "Exo", sans-serif;
     font-weight: 500;
+    color: #f0ad4e;
+}
+
+.email-link-footer  {
+    color: #f0ad4e;
+    text-align: center;
+}
+
+.email-link-footer:hover {
+    color: #f0ad4e;
+}
+
+.email-link-footer:focus {
+    color: #f0ad4e;
+}
+
+.email-link-footer:visited {
     color: #f0ad4e;
 }
 
