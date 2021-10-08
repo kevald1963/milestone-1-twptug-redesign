@@ -548,6 +548,10 @@ footer {
     overflow-y: auto;
 }
 
+.news-events a {
+    color: #fafafa;
+}
+
 /*-------------------------------------------------- Calendar Page */
 html {
     font-size: 62.5%;
